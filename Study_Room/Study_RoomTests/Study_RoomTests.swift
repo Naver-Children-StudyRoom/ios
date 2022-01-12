@@ -1,14 +1,14 @@
 //
-//  StudyRoomProjectTests.swift
-//  StudyRoomProjectTests
+//  Study_RoomTests.swift
+//  Study_RoomTests
 //
 //  Created by JooYoung Kim on 2022/01/12.
 //
 
 import XCTest
-@testable import StudyRoomProject
+@testable import Study_Room
 
-class StudyRoomProjectTests: XCTestCase {
+class Study_RoomTests: XCTestCase {
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.

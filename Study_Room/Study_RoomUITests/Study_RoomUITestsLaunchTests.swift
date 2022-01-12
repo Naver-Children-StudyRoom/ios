@@ -1,13 +1,13 @@
 //
-//  StudyRoomProjectUITestsLaunchTests.swift
-//  StudyRoomProjectUITests
+//  Study_RoomUITestsLaunchTests.swift
+//  Study_RoomUITests
 //
 //  Created by JooYoung Kim on 2022/01/12.
 //
 
 import XCTest
 
-class StudyRoomProjectUITestsLaunchTests: XCTestCase {
+class Study_RoomUITestsLaunchTests: XCTestCase {
 
     override class var runsForEachTargetApplicationUIConfiguration: Bool {
         true

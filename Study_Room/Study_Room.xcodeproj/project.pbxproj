@@ -7,66 +7,61 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		CE9BE899278EF750009338D9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9BE898278EF750009338D9 /* AppDelegate.swift */; };
-		CE9BE89B278EF750009338D9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9BE89A278EF750009338D9 /* SceneDelegate.swift */; };
-		CE9BE89D278EF750009338D9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9BE89C278EF750009338D9 /* ViewController.swift */; };
-		CE9BE8A0278EF750009338D9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE9BE89E278EF750009338D9 /* Main.storyboard */; };
-		CE9BE8A2278EF753009338D9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE9BE8A1278EF753009338D9 /* Assets.xcassets */; };
-		CE9BE8A5278EF753009338D9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE9BE8A3278EF753009338D9 /* LaunchScreen.storyboard */; };
-		CE9BE8B0278EF753009338D9 /* StudyRoomProjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9BE8AF278EF753009338D9 /* StudyRoomProjectTests.swift */; };
-		CE9BE8BA278EF753009338D9 /* StudyRoomProjectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9BE8B9278EF753009338D9 /* StudyRoomProjectUITests.swift */; };
-		CE9BE8BC278EF753009338D9 /* StudyRoomProjectUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9BE8BB278EF753009338D9 /* StudyRoomProjectUITestsLaunchTests.swift */; };
+		CE9BE8D5278F10C3009338D9 /* Study_RoomApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9BE8D4278F10C3009338D9 /* Study_RoomApp.swift */; };
+		CE9BE8D7278F10C3009338D9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9BE8D6278F10C3009338D9 /* ContentView.swift */; };
+		CE9BE8D9278F10C5009338D9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE9BE8D8278F10C5009338D9 /* Assets.xcassets */; };
+		CE9BE8DC278F10C5009338D9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE9BE8DB278F10C5009338D9 /* Preview Assets.xcassets */; };
+		CE9BE8E6278F10C6009338D9 /* Study_RoomTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9BE8E5278F10C6009338D9 /* Study_RoomTests.swift */; };
+		CE9BE8F0278F10C6009338D9 /* Study_RoomUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9BE8EF278F10C6009338D9 /* Study_RoomUITests.swift */; };
+		CE9BE8F2278F10C6009338D9 /* Study_RoomUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9BE8F1278F10C6009338D9 /* Study_RoomUITestsLaunchTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		CE9BE8AC278EF753009338D9 /* PBXContainerItemProxy */ = {
+		CE9BE8E2278F10C6009338D9 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = CE9BE88D278EF750009338D9 /* Project object */;
+			containerPortal = CE9BE8C9278F10C3009338D9 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = CE9BE894278EF750009338D9;
-			remoteInfo = StudyRoomProject;
+			remoteGlobalIDString = CE9BE8D0278F10C3009338D9;
+			remoteInfo = Study_Room;
 		};
-		CE9BE8B6278EF753009338D9 /* PBXContainerItemProxy */ = {
+		CE9BE8EC278F10C6009338D9 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = CE9BE88D278EF750009338D9 /* Project object */;
+			containerPortal = CE9BE8C9278F10C3009338D9 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = CE9BE894278EF750009338D9;
-			remoteInfo = StudyRoomProject;
+			remoteGlobalIDString = CE9BE8D0278F10C3009338D9;
+			remoteInfo = Study_Room;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		CE9BE895278EF750009338D9 /* StudyRoomProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StudyRoomProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		CE9BE898278EF750009338D9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		CE9BE89A278EF750009338D9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		CE9BE89C278EF750009338D9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		CE9BE89F278EF750009338D9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		CE9BE8A1278EF753009338D9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		CE9BE8A4278EF753009338D9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		CE9BE8A6278EF753009338D9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CE9BE8AB278EF753009338D9 /* StudyRoomProjectTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StudyRoomProjectTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		CE9BE8AF278EF753009338D9 /* StudyRoomProjectTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudyRoomProjectTests.swift; sourceTree = "<group>"; };
-		CE9BE8B5278EF753009338D9 /* StudyRoomProjectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StudyRoomProjectUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		CE9BE8B9278EF753009338D9 /* StudyRoomProjectUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudyRoomProjectUITests.swift; sourceTree = "<group>"; };
-		CE9BE8BB278EF753009338D9 /* StudyRoomProjectUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudyRoomProjectUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		CE9BE8D1278F10C3009338D9 /* Study_Room.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Study_Room.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE9BE8D4278F10C3009338D9 /* Study_RoomApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Study_RoomApp.swift; sourceTree = "<group>"; };
+		CE9BE8D6278F10C3009338D9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		CE9BE8D8278F10C5009338D9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CE9BE8DB278F10C5009338D9 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		CE9BE8E1278F10C6009338D9 /* Study_RoomTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Study_RoomTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE9BE8E5278F10C6009338D9 /* Study_RoomTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Study_RoomTests.swift; sourceTree = "<group>"; };
+		CE9BE8EB278F10C6009338D9 /* Study_RoomUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Study_RoomUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE9BE8EF278F10C6009338D9 /* Study_RoomUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Study_RoomUITests.swift; sourceTree = "<group>"; };
+		CE9BE8F1278F10C6009338D9 /* Study_RoomUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Study_RoomUITestsLaunchTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		CE9BE892278EF750009338D9 /* Frameworks */ = {
+		CE9BE8CE278F10C3009338D9 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		CE9BE8A8278EF753009338D9 /* Frameworks */ = {
+		CE9BE8DE278F10C6009338D9 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		CE9BE8B2278EF753009338D9 /* Frameworks */ = {
+		CE9BE8E8278F10C6009338D9 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -76,137 +71,142 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		CE9BE88C278EF750009338D9 = {
+		CE9BE8C8278F10C3009338D9 = {
 			isa = PBXGroup;
 			children = (
-				CE9BE897278EF750009338D9 /* StudyRoomProject */,
-				CE9BE8AE278EF753009338D9 /* StudyRoomProjectTests */,
-				CE9BE8B8278EF753009338D9 /* StudyRoomProjectUITests */,
-				CE9BE896278EF750009338D9 /* Products */,
+				CE9BE8D3278F10C3009338D9 /* Study_Room */,
+				CE9BE8E4278F10C6009338D9 /* Study_RoomTests */,
+				CE9BE8EE278F10C6009338D9 /* Study_RoomUITests */,
+				CE9BE8D2278F10C3009338D9 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		CE9BE896278EF750009338D9 /* Products */ = {
+		CE9BE8D2278F10C3009338D9 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				CE9BE895278EF750009338D9 /* StudyRoomProject.app */,
-				CE9BE8AB278EF753009338D9 /* StudyRoomProjectTests.xctest */,
-				CE9BE8B5278EF753009338D9 /* StudyRoomProjectUITests.xctest */,
+				CE9BE8D1278F10C3009338D9 /* Study_Room.app */,
+				CE9BE8E1278F10C6009338D9 /* Study_RoomTests.xctest */,
+				CE9BE8EB278F10C6009338D9 /* Study_RoomUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		CE9BE897278EF750009338D9 /* StudyRoomProject */ = {
+		CE9BE8D3278F10C3009338D9 /* Study_Room */ = {
 			isa = PBXGroup;
 			children = (
-				CE9BE898278EF750009338D9 /* AppDelegate.swift */,
-				CE9BE89A278EF750009338D9 /* SceneDelegate.swift */,
-				CE9BE89C278EF750009338D9 /* ViewController.swift */,
-				CE9BE89E278EF750009338D9 /* Main.storyboard */,
-				CE9BE8A1278EF753009338D9 /* Assets.xcassets */,
-				CE9BE8A3278EF753009338D9 /* LaunchScreen.storyboard */,
-				CE9BE8A6278EF753009338D9 /* Info.plist */,
+				CE9BE8D4278F10C3009338D9 /* Study_RoomApp.swift */,
+				CE9BE8D6278F10C3009338D9 /* ContentView.swift */,
+				CE9BE8D8278F10C5009338D9 /* Assets.xcassets */,
+				CE9BE8DA278F10C5009338D9 /* Preview Content */,
 			);
-			path = StudyRoomProject;
+			path = Study_Room;
 			sourceTree = "<group>";
 		};
-		CE9BE8AE278EF753009338D9 /* StudyRoomProjectTests */ = {
+		CE9BE8DA278F10C5009338D9 /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
-				CE9BE8AF278EF753009338D9 /* StudyRoomProjectTests.swift */,
+				CE9BE8DB278F10C5009338D9 /* Preview Assets.xcassets */,
 			);
-			path = StudyRoomProjectTests;
+			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		CE9BE8B8278EF753009338D9 /* StudyRoomProjectUITests */ = {
+		CE9BE8E4278F10C6009338D9 /* Study_RoomTests */ = {
 			isa = PBXGroup;
 			children = (
-				CE9BE8B9278EF753009338D9 /* StudyRoomProjectUITests.swift */,
-				CE9BE8BB278EF753009338D9 /* StudyRoomProjectUITestsLaunchTests.swift */,
+				CE9BE8E5278F10C6009338D9 /* Study_RoomTests.swift */,
 			);
-			path = StudyRoomProjectUITests;
+			path = Study_RoomTests;
+			sourceTree = "<group>";
+		};
+		CE9BE8EE278F10C6009338D9 /* Study_RoomUITests */ = {
+			isa = PBXGroup;
+			children = (
+				CE9BE8EF278F10C6009338D9 /* Study_RoomUITests.swift */,
+				CE9BE8F1278F10C6009338D9 /* Study_RoomUITestsLaunchTests.swift */,
+			);
+			path = Study_RoomUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		CE9BE894278EF750009338D9 /* StudyRoomProject */ = {
+		CE9BE8D0278F10C3009338D9 /* Study_Room */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = CE9BE8BF278EF753009338D9 /* Build configuration list for PBXNativeTarget "StudyRoomProject" */;
+			buildConfigurationList = CE9BE8F5278F10C6009338D9 /* Build configuration list for PBXNativeTarget "Study_Room" */;
 			buildPhases = (
-				CE9BE891278EF750009338D9 /* Sources */,
-				CE9BE892278EF750009338D9 /* Frameworks */,
-				CE9BE893278EF750009338D9 /* Resources */,
+				CE9BE8CD278F10C3009338D9 /* Sources */,
+				CE9BE8CE278F10C3009338D9 /* Frameworks */,
+				CE9BE8CF278F10C3009338D9 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = StudyRoomProject;
-			productName = StudyRoomProject;
-			productReference = CE9BE895278EF750009338D9 /* StudyRoomProject.app */;
+			name = Study_Room;
+			productName = Study_Room;
+			productReference = CE9BE8D1278F10C3009338D9 /* Study_Room.app */;
 			productType = "com.apple.product-type.application";
 		};
-		CE9BE8AA278EF753009338D9 /* StudyRoomProjectTests */ = {
+		CE9BE8E0278F10C6009338D9 /* Study_RoomTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = CE9BE8C2278EF753009338D9 /* Build configuration list for PBXNativeTarget "StudyRoomProjectTests" */;
+			buildConfigurationList = CE9BE8F8278F10C6009338D9 /* Build configuration list for PBXNativeTarget "Study_RoomTests" */;
 			buildPhases = (
-				CE9BE8A7278EF753009338D9 /* Sources */,
-				CE9BE8A8278EF753009338D9 /* Frameworks */,
-				CE9BE8A9278EF753009338D9 /* Resources */,
+				CE9BE8DD278F10C6009338D9 /* Sources */,
+				CE9BE8DE278F10C6009338D9 /* Frameworks */,
+				CE9BE8DF278F10C6009338D9 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				CE9BE8AD278EF753009338D9 /* PBXTargetDependency */,
+				CE9BE8E3278F10C6009338D9 /* PBXTargetDependency */,
 			);
-			name = StudyRoomProjectTests;
-			productName = StudyRoomProjectTests;
-			productReference = CE9BE8AB278EF753009338D9 /* StudyRoomProjectTests.xctest */;
+			name = Study_RoomTests;
+			productName = Study_RoomTests;
+			productReference = CE9BE8E1278F10C6009338D9 /* Study_RoomTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		CE9BE8B4278EF753009338D9 /* StudyRoomProjectUITests */ = {
+		CE9BE8EA278F10C6009338D9 /* Study_RoomUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = CE9BE8C5278EF753009338D9 /* Build configuration list for PBXNativeTarget "StudyRoomProjectUITests" */;
+			buildConfigurationList = CE9BE8FB278F10C6009338D9 /* Build configuration list for PBXNativeTarget "Study_RoomUITests" */;
 			buildPhases = (
-				CE9BE8B1278EF753009338D9 /* Sources */,
-				CE9BE8B2278EF753009338D9 /* Frameworks */,
-				CE9BE8B3278EF753009338D9 /* Resources */,
+				CE9BE8E7278F10C6009338D9 /* Sources */,
+				CE9BE8E8278F10C6009338D9 /* Frameworks */,
+				CE9BE8E9278F10C6009338D9 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				CE9BE8B7278EF753009338D9 /* PBXTargetDependency */,
+				CE9BE8ED278F10C6009338D9 /* PBXTargetDependency */,
 			);
-			name = StudyRoomProjectUITests;
-			productName = StudyRoomProjectUITests;
-			productReference = CE9BE8B5278EF753009338D9 /* StudyRoomProjectUITests.xctest */;
+			name = Study_RoomUITests;
+			productName = Study_RoomUITests;
+			productReference = CE9BE8EB278F10C6009338D9 /* Study_RoomUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		CE9BE88D278EF750009338D9 /* Project object */ = {
+		CE9BE8C9278F10C3009338D9 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1320;
 				LastUpgradeCheck = 1320;
 				TargetAttributes = {
-					CE9BE894278EF750009338D9 = {
+					CE9BE8D0278F10C3009338D9 = {
 						CreatedOnToolsVersion = 13.2;
 					};
-					CE9BE8AA278EF753009338D9 = {
+					CE9BE8E0278F10C6009338D9 = {
 						CreatedOnToolsVersion = 13.2;
-						TestTargetID = CE9BE894278EF750009338D9;
+						TestTargetID = CE9BE8D0278F10C3009338D9;
 					};
-					CE9BE8B4278EF753009338D9 = {
+					CE9BE8EA278F10C6009338D9 = {
 						CreatedOnToolsVersion = 13.2;
-						TestTargetID = CE9BE894278EF750009338D9;
+						TestTargetID = CE9BE8D0278F10C3009338D9;
 					};
 				};
 			};
-			buildConfigurationList = CE9BE890278EF750009338D9 /* Build configuration list for PBXProject "StudyRoomProject" */;
+			buildConfigurationList = CE9BE8CC278F10C3009338D9 /* Build configuration list for PBXProject "Study_Room" */;
 			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -214,37 +214,36 @@
 				en,
 				Base,
 			);
-			mainGroup = CE9BE88C278EF750009338D9;
-			productRefGroup = CE9BE896278EF750009338D9 /* Products */;
+			mainGroup = CE9BE8C8278F10C3009338D9;
+			productRefGroup = CE9BE8D2278F10C3009338D9 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				CE9BE894278EF750009338D9 /* StudyRoomProject */,
-				CE9BE8AA278EF753009338D9 /* StudyRoomProjectTests */,
-				CE9BE8B4278EF753009338D9 /* StudyRoomProjectUITests */,
+				CE9BE8D0278F10C3009338D9 /* Study_Room */,
+				CE9BE8E0278F10C6009338D9 /* Study_RoomTests */,
+				CE9BE8EA278F10C6009338D9 /* Study_RoomUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		CE9BE893278EF750009338D9 /* Resources */ = {
+		CE9BE8CF278F10C3009338D9 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE9BE8A5278EF753009338D9 /* LaunchScreen.storyboard in Resources */,
-				CE9BE8A2278EF753009338D9 /* Assets.xcassets in Resources */,
-				CE9BE8A0278EF750009338D9 /* Main.storyboard in Resources */,
+				CE9BE8DC278F10C5009338D9 /* Preview Assets.xcassets in Resources */,
+				CE9BE8D9278F10C5009338D9 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		CE9BE8A9278EF753009338D9 /* Resources */ = {
+		CE9BE8DF278F10C6009338D9 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		CE9BE8B3278EF753009338D9 /* Resources */ = {
+		CE9BE8E9278F10C6009338D9 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -254,69 +253,49 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		CE9BE891278EF750009338D9 /* Sources */ = {
+		CE9BE8CD278F10C3009338D9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE9BE89D278EF750009338D9 /* ViewController.swift in Sources */,
-				CE9BE899278EF750009338D9 /* AppDelegate.swift in Sources */,
-				CE9BE89B278EF750009338D9 /* SceneDelegate.swift in Sources */,
+				CE9BE8D7278F10C3009338D9 /* ContentView.swift in Sources */,
+				CE9BE8D5278F10C3009338D9 /* Study_RoomApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		CE9BE8A7278EF753009338D9 /* Sources */ = {
+		CE9BE8DD278F10C6009338D9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE9BE8B0278EF753009338D9 /* StudyRoomProjectTests.swift in Sources */,
+				CE9BE8E6278F10C6009338D9 /* Study_RoomTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		CE9BE8B1278EF753009338D9 /* Sources */ = {
+		CE9BE8E7278F10C6009338D9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE9BE8BA278EF753009338D9 /* StudyRoomProjectUITests.swift in Sources */,
-				CE9BE8BC278EF753009338D9 /* StudyRoomProjectUITestsLaunchTests.swift in Sources */,
+				CE9BE8F0278F10C6009338D9 /* Study_RoomUITests.swift in Sources */,
+				CE9BE8F2278F10C6009338D9 /* Study_RoomUITestsLaunchTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		CE9BE8AD278EF753009338D9 /* PBXTargetDependency */ = {
+		CE9BE8E3278F10C6009338D9 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = CE9BE894278EF750009338D9 /* StudyRoomProject */;
-			targetProxy = CE9BE8AC278EF753009338D9 /* PBXContainerItemProxy */;
+			target = CE9BE8D0278F10C3009338D9 /* Study_Room */;
+			targetProxy = CE9BE8E2278F10C6009338D9 /* PBXContainerItemProxy */;
 		};
-		CE9BE8B7278EF753009338D9 /* PBXTargetDependency */ = {
+		CE9BE8ED278F10C6009338D9 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = CE9BE894278EF750009338D9 /* StudyRoomProject */;
-			targetProxy = CE9BE8B6278EF753009338D9 /* PBXContainerItemProxy */;
+			target = CE9BE8D0278F10C3009338D9 /* Study_Room */;
+			targetProxy = CE9BE8EC278F10C6009338D9 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
-/* Begin PBXVariantGroup section */
-		CE9BE89E278EF750009338D9 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				CE9BE89F278EF750009338D9 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		CE9BE8A3278EF753009338D9 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				CE9BE8A4278EF753009338D9 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
-
 /* Begin XCBuildConfiguration section */
-		CE9BE8BD278EF753009338D9 /* Debug */ = {
+		CE9BE8F3278F10C6009338D9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -377,7 +356,7 @@
 			};
 			name = Debug;
 		};
-		CE9BE8BE278EF753009338D9 /* Release */ = {
+		CE9BE8F4278F10C6009338D9 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -432,19 +411,20 @@
 			};
 			name = Release;
 		};
-		CE9BE8C0278EF753009338D9 /* Debug */ = {
+		CE9BE8F6278F10C6009338D9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Study_Room/Preview Content\"";
 				DEVELOPMENT_TEAM = R2L74ZCJY3;
+				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = StudyRoomProject/Info.plist;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -452,7 +432,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = studyroom.StudyRoomProject;
+				PRODUCT_BUNDLE_IDENTIFIER = "studyroom.Study-Room";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -460,19 +440,20 @@
 			};
 			name = Debug;
 		};
-		CE9BE8C1278EF753009338D9 /* Release */ = {
+		CE9BE8F7278F10C6009338D9 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Study_Room/Preview Content\"";
 				DEVELOPMENT_TEAM = R2L74ZCJY3;
+				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = StudyRoomProject/Info.plist;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -480,7 +461,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = studyroom.StudyRoomProject;
+				PRODUCT_BUNDLE_IDENTIFIER = "studyroom.Study-Room";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -488,7 +469,7 @@
 			};
 			name = Release;
 		};
-		CE9BE8C3278EF753009338D9 /* Debug */ = {
+		CE9BE8F9278F10C6009338D9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
@@ -499,16 +480,16 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = studyroom.StudyRoomProjectTests;
+				PRODUCT_BUNDLE_IDENTIFIER = "studyroom.Study-RoomTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/StudyRoomProject.app/StudyRoomProject";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Study_Room.app/Study_Room";
 			};
 			name = Debug;
 		};
-		CE9BE8C4278EF753009338D9 /* Release */ = {
+		CE9BE8FA278F10C6009338D9 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
@@ -519,16 +500,16 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = studyroom.StudyRoomProjectTests;
+				PRODUCT_BUNDLE_IDENTIFIER = "studyroom.Study-RoomTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/StudyRoomProject.app/StudyRoomProject";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Study_Room.app/Study_Room";
 			};
 			name = Release;
 		};
-		CE9BE8C6278EF753009338D9 /* Debug */ = {
+		CE9BE8FC278F10C6009338D9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
@@ -537,16 +518,16 @@
 				DEVELOPMENT_TEAM = R2L74ZCJY3;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = studyroom.StudyRoomProjectUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = "studyroom.Study-RoomUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = StudyRoomProject;
+				TEST_TARGET_NAME = Study_Room;
 			};
 			name = Debug;
 		};
-		CE9BE8C7278EF753009338D9 /* Release */ = {
+		CE9BE8FD278F10C6009338D9 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
@@ -555,55 +536,55 @@
 				DEVELOPMENT_TEAM = R2L74ZCJY3;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = studyroom.StudyRoomProjectUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = "studyroom.Study-RoomUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = StudyRoomProject;
+				TEST_TARGET_NAME = Study_Room;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		CE9BE890278EF750009338D9 /* Build configuration list for PBXProject "StudyRoomProject" */ = {
+		CE9BE8CC278F10C3009338D9 /* Build configuration list for PBXProject "Study_Room" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				CE9BE8BD278EF753009338D9 /* Debug */,
-				CE9BE8BE278EF753009338D9 /* Release */,
+				CE9BE8F3278F10C6009338D9 /* Debug */,
+				CE9BE8F4278F10C6009338D9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		CE9BE8BF278EF753009338D9 /* Build configuration list for PBXNativeTarget "StudyRoomProject" */ = {
+		CE9BE8F5278F10C6009338D9 /* Build configuration list for PBXNativeTarget "Study_Room" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				CE9BE8C0278EF753009338D9 /* Debug */,
-				CE9BE8C1278EF753009338D9 /* Release */,
+				CE9BE8F6278F10C6009338D9 /* Debug */,
+				CE9BE8F7278F10C6009338D9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		CE9BE8C2278EF753009338D9 /* Build configuration list for PBXNativeTarget "StudyRoomProjectTests" */ = {
+		CE9BE8F8278F10C6009338D9 /* Build configuration list for PBXNativeTarget "Study_RoomTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				CE9BE8C3278EF753009338D9 /* Debug */,
-				CE9BE8C4278EF753009338D9 /* Release */,
+				CE9BE8F9278F10C6009338D9 /* Debug */,
+				CE9BE8FA278F10C6009338D9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		CE9BE8C5278EF753009338D9 /* Build configuration list for PBXNativeTarget "StudyRoomProjectUITests" */ = {
+		CE9BE8FB278F10C6009338D9 /* Build configuration list for PBXNativeTarget "Study_RoomUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				CE9BE8C6278EF753009338D9 /* Debug */,
-				CE9BE8C7278EF753009338D9 /* Release */,
+				CE9BE8FC278F10C6009338D9 /* Debug */,
+				CE9BE8FD278F10C6009338D9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = CE9BE88D278EF750009338D9 /* Project object */;
+	rootObject = CE9BE8C9278F10C3009338D9 /* Project object */;
 }
