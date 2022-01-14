@@ -1,0 +1,26 @@
+source 'https://github.com/CocoaPods/Specs.git'
+
+platform :ios, '9.0'
+inhibit_all_warnings! 
+use_frameworks!
+
+target 'Study_Room' do
+	pod 'SwiftyJSON', '~> 4.0'
+  # Pods for Study_Room
+
+  target 'Study_RoomTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+  target 'Study_RoomUITests' do
+    # Pods for testing
+  end
+
+end
+
+post_install do |installer|
+  installer.pods_project.targets.each do |target|
+    puts target.name
+  end
+end
