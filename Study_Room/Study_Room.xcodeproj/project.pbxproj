@@ -164,7 +164,6 @@
 				6A9518D8697687EA0071E7C6 /* Pods-Study_RoomTests.debug.xcconfig */,
 				38C26925CDDE2265BFD9E6ED /* Pods-Study_RoomTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};

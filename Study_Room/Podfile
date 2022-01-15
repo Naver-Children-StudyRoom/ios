@@ -1,11 +1,12 @@
 source 'https://github.com/CocoaPods/Specs.git'
 
-platform :ios, '9.0'
+platform :ios, '10.0'
 inhibit_all_warnings! 
 use_frameworks!
 
 target 'Study_Room' do
 	pod 'SwiftyJSON', '~> 4.0'
+    pod 'Alamofire', '~> 5.5'
   # Pods for Study_Room
 
   target 'Study_RoomTests' do
