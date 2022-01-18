@@ -17,6 +17,8 @@
 		CE9BE8E6278F10C6009338D9 /* Study_RoomTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9BE8E5278F10C6009338D9 /* Study_RoomTests.swift */; };
 		CE9BE8F0278F10C6009338D9 /* Study_RoomUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9BE8EF278F10C6009338D9 /* Study_RoomUITests.swift */; };
 		CE9BE8F2278F10C6009338D9 /* Study_RoomUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9BE8F1278F10C6009338D9 /* Study_RoomUITestsLaunchTests.swift */; };
+		CE9BE9252796CB21009338D9 /* CleanroomLogger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE9BE9242796CB21009338D9 /* CleanroomLogger.framework */; };
+		CE9BE9262796CB21009338D9 /* CleanroomLogger.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CE9BE9242796CB21009338D9 /* CleanroomLogger.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D833F6823C6837FD12223BE9 /* Pods_Study_Room.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A602662C61FB01414F3C797 /* Pods_Study_Room.framework */; };
 /* End PBXBuildFile section */
 
@@ -36,6 +38,20 @@
 			remoteInfo = Study_Room;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		CE9BE9272796CB21009338D9 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				CE9BE9262796CB21009338D9 /* CleanroomLogger.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		0A602662C61FB01414F3C797 /* Pods_Study_Room.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Study_Room.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -57,6 +73,8 @@
 		CE9BE8EB278F10C6009338D9 /* Study_RoomUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Study_RoomUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE9BE8EF278F10C6009338D9 /* Study_RoomUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Study_RoomUITests.swift; sourceTree = "<group>"; };
 		CE9BE8F1278F10C6009338D9 /* Study_RoomUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Study_RoomUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		CE9BE9232796CB17009338D9 /* Carthage */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Carthage; sourceTree = "<group>"; };
+		CE9BE9242796CB21009338D9 /* CleanroomLogger.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CleanroomLogger.framework; path = Carthage/Build/iOS/CleanroomLogger.framework; sourceTree = "<group>"; };
 		F5F2031ADD3D7FC8EDF2F6C9 /* Pods-Study_Room.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Study_Room.release.xcconfig"; path = "Target Support Files/Pods-Study_Room/Pods-Study_Room.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -66,6 +84,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D833F6823C6837FD12223BE9 /* Pods_Study_Room.framework in Frameworks */,
+				CE9BE9252796CB21009338D9 /* CleanroomLogger.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -91,6 +110,8 @@
 		27C43978E491A07A208624C9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CE9BE9242796CB21009338D9 /* CleanroomLogger.framework */,
+				CE9BE9232796CB17009338D9 /* Carthage */,
 				0A602662C61FB01414F3C797 /* Pods_Study_Room.framework */,
 				5BD3E3F7A835D96070B05850 /* Pods_Study_Room_Study_RoomUITests.framework */,
 				3066F504A0DC27F550F76A3C /* Pods_Study_RoomTests.framework */,
@@ -182,6 +203,8 @@
 				CE9BE8CE278F10C3009338D9 /* Frameworks */,
 				CE9BE8CF278F10C3009338D9 /* Resources */,
 				453A5132BAA142753BC5DDD6 /* [CP] Embed Pods Frameworks */,
+				CE9BE9272796CB21009338D9 /* Embed Frameworks */,
+				CE9BE9282796CB26009338D9 /* Carthage Run Script */,
 			);
 			buildRules = (
 			);
@@ -401,6 +424,25 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		CE9BE9282796CB26009338D9 /* Carthage Run Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/CleanroomLogger.framework",
+			);
+			name = "Carthage Run Script";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "export PATH=\"$PATH:/opt/local/bin:/opt/local/sbin:/usr/local/bin:/opt/homebrew/bin\"\n\ncarthage copy-frameworks\n";
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -574,6 +616,10 @@
 				DEVELOPMENT_ASSET_PATHS = "\"Study_Room/Preview Content\"";
 				DEVELOPMENT_TEAM = R2L74ZCJY3;
 				ENABLE_PREVIEWS = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -606,6 +652,10 @@
 				DEVELOPMENT_ASSET_PATHS = "\"Study_Room/Preview Content\"";
 				DEVELOPMENT_TEAM = R2L74ZCJY3;
 				ENABLE_PREVIEWS = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
