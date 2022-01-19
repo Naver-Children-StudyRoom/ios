@@ -1,14 +1,15 @@
 source 'https://github.com/CocoaPods/Specs.git'
 
-platform :ios, '10.0'
+platform :ios, '13.0'
 inhibit_all_warnings! 
 use_frameworks!
 
 target 'Study_Room' do
-	pod 'SwiftyJSON', '~> 4.0'
+    pod 'SwiftyJSON', '~> 4.0'
     pod 'Alamofire', '~> 5.5'
     pod 'RxSwift', '6.5.0'
     pod 'RxCocoa', '6.5.0'
+    pod 'SwiftLint'
   # Pods for Study_Room
 
   target 'Study_RoomTests' do
@@ -21,7 +22,7 @@ target 'Study_Room' do
   end
 
 end
-
+inhibit_all_warnings! # cocoapods의 swiftlint 경고 메시지 해제
 post_install do |installer|
   installer.pods_project.targets.each do |target|
     puts target.name

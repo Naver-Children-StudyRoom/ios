@@ -199,6 +199,7 @@
 			buildConfigurationList = CE9BE8F5278F10C6009338D9 /* Build configuration list for PBXNativeTarget "Study_Room" */;
 			buildPhases = (
 				5C19920578B7A324DB310194 /* [CP] Check Pods Manifest.lock */,
+				CE9BE9292797BD57009338D9 /* SwiftLint Run Script */,
 				CE9BE8CD278F10C3009338D9 /* Sources */,
 				CE9BE8CE278F10C3009338D9 /* Frameworks */,
 				CE9BE8CF278F10C3009338D9 /* Resources */,
@@ -443,6 +444,24 @@
 			shellPath = /bin/sh;
 			shellScript = "export PATH=\"$PATH:/opt/local/bin:/opt/local/sbin:/usr/local/bin:/opt/homebrew/bin\"\n\ncarthage copy-frameworks\n";
 		};
+		CE9BE9292797BD57009338D9 /* SwiftLint Run Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "SwiftLint Run Script";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -638,6 +657,8 @@
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = NO;
+				VALIDATE_WORKSPACE = YES;
 			};
 			name = Debug;
 		};
@@ -674,6 +695,8 @@
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VALIDATE_WORKSPACE = YES;
 			};
 			name = Release;
 		};
