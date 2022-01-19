@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		29452F11B33B401F5C85C0BF /* Pods_Study_RoomTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3066F504A0DC27F550F76A3C /* Pods_Study_RoomTests.framework */; };
 		34799944ADD2B32094FD5DD1 /* Pods_Study_Room_Study_RoomUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BD3E3F7A835D96070B05850 /* Pods_Study_Room_Study_RoomUITests.framework */; };
+		CE6FC8C527980CC30093BC4C /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6FC8C427980CC30093BC4C /* Logger.swift */; };
 		CE88C97E2792B279003A6C7E /* ApiRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE88C97D2792B279003A6C7E /* ApiRequest.swift */; };
 		CE9BE8D5278F10C3009338D9 /* Study_RoomApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9BE8D4278F10C3009338D9 /* Study_RoomApp.swift */; };
 		CE9BE8D7278F10C3009338D9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9BE8D6278F10C3009338D9 /* ContentView.swift */; };
@@ -62,6 +63,7 @@
 		5BD3E3F7A835D96070B05850 /* Pods_Study_Room_Study_RoomUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Study_Room_Study_RoomUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6A9518D8697687EA0071E7C6 /* Pods-Study_RoomTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Study_RoomTests.debug.xcconfig"; path = "Target Support Files/Pods-Study_RoomTests/Pods-Study_RoomTests.debug.xcconfig"; sourceTree = "<group>"; };
 		6FB58A6C1D8DCBA848124B0A /* Pods-Study_Room.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Study_Room.debug.xcconfig"; path = "Target Support Files/Pods-Study_Room/Pods-Study_Room.debug.xcconfig"; sourceTree = "<group>"; };
+		CE6FC8C427980CC30093BC4C /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		CE88C97D2792B279003A6C7E /* ApiRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiRequest.swift; sourceTree = "<group>"; };
 		CE9BE8D1278F10C3009338D9 /* Study_Room.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Study_Room.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE9BE8D4278F10C3009338D9 /* Study_RoomApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Study_RoomApp.swift; sourceTree = "<group>"; };
@@ -119,6 +121,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		CE6FC8C327980CB60093BC4C /* Logger */ = {
+			isa = PBXGroup;
+			children = (
+				CE6FC8C427980CC30093BC4C /* Logger.swift */,
+			);
+			path = Logger;
+			sourceTree = "<group>";
+		};
 		CE9BE8C8278F10C3009338D9 = {
 			isa = PBXGroup;
 			children = (
@@ -144,6 +154,7 @@
 		CE9BE8D3278F10C3009338D9 /* Study_Room */ = {
 			isa = PBXGroup;
 			children = (
+				CE6FC8C327980CB60093BC4C /* Logger */,
 				CE9BE8D4278F10C3009338D9 /* Study_RoomApp.swift */,
 				CE9BE8D6278F10C3009338D9 /* ContentView.swift */,
 				CE9BE8D8278F10C5009338D9 /* Assets.xcassets */,
@@ -460,7 +471,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "if which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\"\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -472,6 +483,7 @@
 				CE9BE8D7278F10C3009338D9 /* ContentView.swift in Sources */,
 				CE9BE8D5278F10C3009338D9 /* Study_RoomApp.swift in Sources */,
 				CE88C97E2792B279003A6C7E /* ApiRequest.swift in Sources */,
+				CE6FC8C527980CC30093BC4C /* Logger.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
