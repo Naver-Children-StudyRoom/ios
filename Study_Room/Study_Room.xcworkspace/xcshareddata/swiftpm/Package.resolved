@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "CleanroomLogger",
+        "repositoryURL": "https://github.com/emaloney/CleanroomLogger.git",
+        "state": {
+          "branch": "master",
+          "revision": "d732baead85b77471505daf290212700b9d87a05",
+          "version": null
+        }
+      }
+    ]
+  },
+  "version": 1
+}
