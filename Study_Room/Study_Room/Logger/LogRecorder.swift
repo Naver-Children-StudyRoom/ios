@@ -41,8 +41,6 @@ open class ConsoleLogRecorder: StandardStreamsLogRecorder {
 extension LogChannel {
     
     /// 에러타입이 추가된 로그 메세지를 남긴다.
-    ///
-    /// - Attention: warning, error 레벨이거나 errorType 값이 존재하는 경우에는 Nelo에도 Log를 남긴다.
     func message(_ msg: String, function: String = #function, filePath: String = #file, fileLine: Int = #line, errorType: String, errorCode: Int?) {
         let msgWithErrCode = msg.append(errorType: errorType, errorCode: errorCode)
         
