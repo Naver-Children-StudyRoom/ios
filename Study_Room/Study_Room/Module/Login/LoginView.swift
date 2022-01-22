@@ -10,7 +10,7 @@ import NaverThirdPartyLogin
 
 struct LoginView: View {
     var body: some View {
-        Text("Hello, world!")
+        Text("로그인 화면")
             .padding()
     }
 }
