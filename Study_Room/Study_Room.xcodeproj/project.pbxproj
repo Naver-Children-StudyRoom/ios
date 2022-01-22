@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		29452F11B33B401F5C85C0BF /* Pods_Study_RoomTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3066F504A0DC27F550F76A3C /* Pods_Study_RoomTests.framework */; };
 		34799944ADD2B32094FD5DD1 /* Pods_Study_Room_Study_RoomUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BD3E3F7A835D96070B05850 /* Pods_Study_Room_Study_RoomUITests.framework */; };
+		CE041787279BC14500FA8520 /* View+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE041786279BC14500FA8520 /* View+Extension.swift */; };
 		CE6FC8C527980CC30093BC4C /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6FC8C427980CC30093BC4C /* Logger.swift */; };
 		CE6FC8C9279A2BE60093BC4C /* LoggerEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6FC8C8279A2BE60093BC4C /* LoggerEnum.swift */; };
 		CE6FC8CB279A3B6F0093BC4C /* LogRecorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6FC8CA279A3B6F0093BC4C /* LogRecorder.swift */; };
@@ -52,6 +53,7 @@
 		5BD3E3F7A835D96070B05850 /* Pods_Study_Room_Study_RoomUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Study_Room_Study_RoomUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6A9518D8697687EA0071E7C6 /* Pods-Study_RoomTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Study_RoomTests.debug.xcconfig"; path = "Target Support Files/Pods-Study_RoomTests/Pods-Study_RoomTests.debug.xcconfig"; sourceTree = "<group>"; };
 		6FB58A6C1D8DCBA848124B0A /* Pods-Study_Room.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Study_Room.debug.xcconfig"; path = "Target Support Files/Pods-Study_Room/Pods-Study_Room.debug.xcconfig"; sourceTree = "<group>"; };
+		CE041786279BC14500FA8520 /* View+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extension.swift"; sourceTree = "<group>"; };
 		CE6FC8C427980CC30093BC4C /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		CE6FC8C8279A2BE60093BC4C /* LoggerEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggerEnum.swift; sourceTree = "<group>"; };
 		CE6FC8CA279A3B6F0093BC4C /* LogRecorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogRecorder.swift; sourceTree = "<group>"; };
@@ -110,6 +112,22 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		CE041784279BBFD000FA8520 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				CE88C97D2792B279003A6C7E /* ApiRequest.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		CE041785279BC10700FA8520 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				CE041786279BC14500FA8520 /* View+Extension.swift */,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
 		CE6FC8C327980CB60093BC4C /* Logger */ = {
 			isa = PBXGroup;
 			children = (
@@ -162,13 +180,14 @@
 		CE9BE8D3278F10C3009338D9 /* Study_Room */ = {
 			isa = PBXGroup;
 			children = (
+				CE041785279BC10700FA8520 /* Utility */,
+				CE041784279BBFD000FA8520 /* Networking */,
 				CE6FC8CD279A3C890093BC4C /* Module */,
 				CE6FC8C327980CB60093BC4C /* Logger */,
 				CE9BE8D4278F10C3009338D9 /* Study_RoomApp.swift */,
 				CE9BE8D6278F10C3009338D9 /* ContentView.swift */,
 				CE9BE8D8278F10C5009338D9 /* Assets.xcassets */,
 				CE9BE8DA278F10C5009338D9 /* Preview Content */,
-				CE88C97D2792B279003A6C7E /* ApiRequest.swift */,
 			);
 			path = Study_Room;
 			sourceTree = "<group>";
@@ -481,6 +500,7 @@
 				CE6FC8CF279A3C9F0093BC4C /* BootLoader.swift in Sources */,
 				CE6FC8C9279A2BE60093BC4C /* LoggerEnum.swift in Sources */,
 				CE88C97E2792B279003A6C7E /* ApiRequest.swift in Sources */,
+				CE041787279BC14500FA8520 /* View+Extension.swift in Sources */,
 				CE6FC8C527980CC30093BC4C /* Logger.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -650,6 +670,7 @@
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Study-Room-Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -688,6 +709,7 @@
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Study-Room-Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
