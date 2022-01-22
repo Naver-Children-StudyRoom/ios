@@ -13,8 +13,6 @@ struct LoginView: View {
         HStack{
             Text("로그인 화면")
                 .padding()
-            Text("id: ")
-                .padding()
         }
         
     }
