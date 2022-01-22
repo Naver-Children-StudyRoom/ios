@@ -10,8 +10,13 @@ import NaverThirdPartyLogin
 
 struct LoginView: View {
     var body: some View {
-        Text("로그인 화면")
-            .padding()
+        HStack{
+            Text("로그인 화면")
+                .padding()
+            Text("id: ")
+                .padding()
+        }
+        
     }
 }
 
