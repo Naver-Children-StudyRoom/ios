@@ -9,12 +9,14 @@ import SwiftUI
 import NaverThirdPartyLogin
 
 struct LoginView: View {
+    @State private var ID: String = ""
+    @State private var PW: String = ""
+    
     var body: some View {
-        HStack{
+        HStack {
             Text("로그인 화면")
                 .padding()
         }
-        
     }
 }
 
