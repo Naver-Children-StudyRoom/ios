@@ -19,6 +19,7 @@ target 'Study_Room' do
   end
 
   target 'Study_RoomUITests' do
+    inherit! :search_paths
     # Pods for testing
   end
 

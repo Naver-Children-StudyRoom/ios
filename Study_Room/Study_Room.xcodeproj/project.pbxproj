@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		29452F11B33B401F5C85C0BF /* Pods_Study_RoomTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3066F504A0DC27F550F76A3C /* Pods_Study_RoomTests.framework */; };
-		34799944ADD2B32094FD5DD1 /* Pods_Study_Room_Study_RoomUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BD3E3F7A835D96070B05850 /* Pods_Study_Room_Study_RoomUITests.framework */; };
+		47F8028B6E0F0C42298937B8 /* Pods_Study_RoomUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CBAAA5D1F50F2909C926AB8 /* Pods_Study_RoomUITests.framework */; };
 		CE041787279BC14500FA8520 /* View+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE041786279BC14500FA8520 /* View+Extension.swift */; };
 		CE04178A279BE9E000FA8520 /* LoginBootModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE041789279BE9E000FA8520 /* LoginBootModule.swift */; };
 		CE04178D279BEAB400FA8520 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE04178C279BEAB400FA8520 /* LoginView.swift */; };
@@ -52,9 +52,11 @@
 		3066F504A0DC27F550F76A3C /* Pods_Study_RoomTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Study_RoomTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		38C26925CDDE2265BFD9E6ED /* Pods-Study_RoomTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Study_RoomTests.release.xcconfig"; path = "Target Support Files/Pods-Study_RoomTests/Pods-Study_RoomTests.release.xcconfig"; sourceTree = "<group>"; };
 		4150A29A97BBD02422EC4F9E /* Pods-Study_Room-Study_RoomUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Study_Room-Study_RoomUITests.release.xcconfig"; path = "Target Support Files/Pods-Study_Room-Study_RoomUITests/Pods-Study_Room-Study_RoomUITests.release.xcconfig"; sourceTree = "<group>"; };
-		5BD3E3F7A835D96070B05850 /* Pods_Study_Room_Study_RoomUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Study_Room_Study_RoomUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6023423182647C116A7BEB94 /* Pods-Study_RoomUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Study_RoomUITests.debug.xcconfig"; path = "Target Support Files/Pods-Study_RoomUITests/Pods-Study_RoomUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		6A9518D8697687EA0071E7C6 /* Pods-Study_RoomTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Study_RoomTests.debug.xcconfig"; path = "Target Support Files/Pods-Study_RoomTests/Pods-Study_RoomTests.debug.xcconfig"; sourceTree = "<group>"; };
 		6FB58A6C1D8DCBA848124B0A /* Pods-Study_Room.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Study_Room.debug.xcconfig"; path = "Target Support Files/Pods-Study_Room/Pods-Study_Room.debug.xcconfig"; sourceTree = "<group>"; };
+		9CBAAA5D1F50F2909C926AB8 /* Pods_Study_RoomUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Study_RoomUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A170C73601343A670C831A07 /* Pods-Study_RoomUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Study_RoomUITests.release.xcconfig"; path = "Target Support Files/Pods-Study_RoomUITests/Pods-Study_RoomUITests.release.xcconfig"; sourceTree = "<group>"; };
 		CE041786279BC14500FA8520 /* View+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extension.swift"; sourceTree = "<group>"; };
 		CE041789279BE9E000FA8520 /* LoginBootModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginBootModule.swift; sourceTree = "<group>"; };
 		CE04178C279BEAB400FA8520 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
@@ -100,7 +102,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				34799944ADD2B32094FD5DD1 /* Pods_Study_Room_Study_RoomUITests.framework in Frameworks */,
+				47F8028B6E0F0C42298937B8 /* Pods_Study_RoomUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -111,8 +113,8 @@
 			isa = PBXGroup;
 			children = (
 				0A602662C61FB01414F3C797 /* Pods_Study_Room.framework */,
-				5BD3E3F7A835D96070B05850 /* Pods_Study_Room_Study_RoomUITests.framework */,
 				3066F504A0DC27F550F76A3C /* Pods_Study_RoomTests.framework */,
+				9CBAAA5D1F50F2909C926AB8 /* Pods_Study_RoomUITests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -242,6 +244,8 @@
 				4150A29A97BBD02422EC4F9E /* Pods-Study_Room-Study_RoomUITests.release.xcconfig */,
 				6A9518D8697687EA0071E7C6 /* Pods-Study_RoomTests.debug.xcconfig */,
 				38C26925CDDE2265BFD9E6ED /* Pods-Study_RoomTests.release.xcconfig */,
+				6023423182647C116A7BEB94 /* Pods-Study_RoomUITests.debug.xcconfig */,
+				A170C73601343A670C831A07 /* Pods-Study_RoomUITests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -299,7 +303,6 @@
 				CE9BE8E7278F10C6009338D9 /* Sources */,
 				CE9BE8E8278F10C6009338D9 /* Frameworks */,
 				CE9BE8E9278F10C6009338D9 /* Resources */,
-				37DAD244D0CD7485E44ED5A0 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -344,7 +347,7 @@
 			);
 			mainGroup = CE9BE8C8278F10C3009338D9;
 			packageReferences = (
-				CE88C98B27994677003A6C7E /* XCRemoteSwiftPackageReference "CleanroomLogger" */,
+				CE88C98B27994677003A6C7E /* XCRemoteSwiftPackageReference "CleanroomLogger.git" */,
 			);
 			productRefGroup = CE9BE8D2278F10C3009338D9 /* Products */;
 			projectDirPath = "";
@@ -406,23 +409,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		37DAD244D0CD7485E44ED5A0 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Study_Room-Study_RoomUITests/Pods-Study_Room-Study_RoomUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Study_Room-Study_RoomUITests/Pods-Study_Room-Study_RoomUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Study_Room-Study_RoomUITests/Pods-Study_Room-Study_RoomUITests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		453A5132BAA142753BC5DDD6 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -455,7 +441,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Study_Room-Study_RoomUITests-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-Study_RoomUITests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -794,7 +780,7 @@
 		};
 		CE9BE8FC278F10C6009338D9 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2D26EBC69B7F83B4EF9E0AE0 /* Pods-Study_Room-Study_RoomUITests.debug.xcconfig */;
+			baseConfigurationReference = 6023423182647C116A7BEB94 /* Pods-Study_RoomUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -813,7 +799,7 @@
 		};
 		CE9BE8FD278F10C6009338D9 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4150A29A97BBD02422EC4F9E /* Pods-Study_Room-Study_RoomUITests.release.xcconfig */;
+			baseConfigurationReference = A170C73601343A670C831A07 /* Pods-Study_RoomUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -872,7 +858,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		CE88C98B27994677003A6C7E /* XCRemoteSwiftPackageReference "CleanroomLogger" */ = {
+		CE88C98B27994677003A6C7E /* XCRemoteSwiftPackageReference "CleanroomLogger.git" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/emaloney/CleanroomLogger.git";
 			requirement = {
@@ -885,7 +871,7 @@
 /* Begin XCSwiftPackageProductDependency section */
 		CE88C98C27994677003A6C7E /* CleanroomLogger */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = CE88C98B27994677003A6C7E /* XCRemoteSwiftPackageReference "CleanroomLogger" */;
+			package = CE88C98B27994677003A6C7E /* XCRemoteSwiftPackageReference "CleanroomLogger.git" */;
 			productName = CleanroomLogger;
 		};
 /* End XCSwiftPackageProductDependency section */
