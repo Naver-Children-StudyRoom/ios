@@ -347,7 +347,7 @@
 			);
 			mainGroup = CE9BE8C8278F10C3009338D9;
 			packageReferences = (
-				CE88C98B27994677003A6C7E /* XCRemoteSwiftPackageReference "CleanroomLogger.git" */,
+				CE88C98B27994677003A6C7E /* XCRemoteSwiftPackageReference "CleanroomLogger" */,
 			);
 			productRefGroup = CE9BE8D2278F10C3009338D9 /* Products */;
 			projectDirPath = "";
@@ -674,7 +674,7 @@
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				GENERATE_INFOPLIST_FILE = NO;
-				INFOPLIST_FILE = /Users/user/Desktop/JY/ios/Study_Room/Study_Room/info.plist;
+				INFOPLIST_FILE = /Users/user/Desktop/jy/project/ios/Study_Room/Study_Room/info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -713,7 +713,7 @@
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				GENERATE_INFOPLIST_FILE = NO;
-				INFOPLIST_FILE = /Users/user/Desktop/JY/ios/Study_Room/Study_Room/info.plist;
+				INFOPLIST_FILE = /Users/user/Desktop/jy/project/ios/Study_Room/Study_Room/info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -858,7 +858,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		CE88C98B27994677003A6C7E /* XCRemoteSwiftPackageReference "CleanroomLogger.git" */ = {
+		CE88C98B27994677003A6C7E /* XCRemoteSwiftPackageReference "CleanroomLogger" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/emaloney/CleanroomLogger.git";
 			requirement = {
@@ -871,7 +871,7 @@
 /* Begin XCSwiftPackageProductDependency section */
 		CE88C98C27994677003A6C7E /* CleanroomLogger */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = CE88C98B27994677003A6C7E /* XCRemoteSwiftPackageReference "CleanroomLogger.git" */;
+			package = CE88C98B27994677003A6C7E /* XCRemoteSwiftPackageReference "CleanroomLogger" */;
 			productName = CleanroomLogger;
 		};
 /* End XCSwiftPackageProductDependency section */
