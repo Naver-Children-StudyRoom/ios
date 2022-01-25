@@ -17,6 +17,7 @@
 		CE6FC8CB279A3B6F0093BC4C /* LogRecorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6FC8CA279A3B6F0093BC4C /* LogRecorder.swift */; };
 		CE6FC8CF279A3C9F0093BC4C /* BootLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6FC8CE279A3C9F0093BC4C /* BootLoader.swift */; };
 		CE6FC8D1279A3D270093BC4C /* LoggerBootModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6FC8D0279A3D270093BC4C /* LoggerBootModule.swift */; };
+		CE6FC8D3279FC65D0093BC4C /* URLBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6FC8D2279FC65C0093BC4C /* URLBuilder.swift */; };
 		CE88C97E2792B279003A6C7E /* ApiRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE88C97D2792B279003A6C7E /* ApiRequest.swift */; };
 		CE88C98D27994677003A6C7E /* CleanroomLogger in Frameworks */ = {isa = PBXBuildFile; productRef = CE88C98C27994677003A6C7E /* CleanroomLogger */; };
 		CE9BE8D5278F10C3009338D9 /* Study_RoomApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9BE8D4278F10C3009338D9 /* Study_RoomApp.swift */; };
@@ -66,6 +67,7 @@
 		CE6FC8CA279A3B6F0093BC4C /* LogRecorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogRecorder.swift; sourceTree = "<group>"; };
 		CE6FC8CE279A3C9F0093BC4C /* BootLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BootLoader.swift; sourceTree = "<group>"; };
 		CE6FC8D0279A3D270093BC4C /* LoggerBootModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggerBootModule.swift; sourceTree = "<group>"; };
+		CE6FC8D2279FC65C0093BC4C /* URLBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLBuilder.swift; sourceTree = "<group>"; };
 		CE88C97D2792B279003A6C7E /* ApiRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiRequest.swift; sourceTree = "<group>"; };
 		CE9BE8D1278F10C3009338D9 /* Study_Room.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Study_Room.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE9BE8D4278F10C3009338D9 /* Study_RoomApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Study_RoomApp.swift; sourceTree = "<group>"; };
@@ -123,6 +125,7 @@
 			isa = PBXGroup;
 			children = (
 				CE88C97D2792B279003A6C7E /* ApiRequest.swift */,
+				CE6FC8D2279FC65C0093BC4C /* URLBuilder.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -500,6 +503,7 @@
 				CE6FC8CB279A3B6F0093BC4C /* LogRecorder.swift in Sources */,
 				CE9BE8D5278F10C3009338D9 /* Study_RoomApp.swift in Sources */,
 				CE6FC8D1279A3D270093BC4C /* LoggerBootModule.swift in Sources */,
+				CE6FC8D3279FC65D0093BC4C /* URLBuilder.swift in Sources */,
 				CE6FC8CF279A3C9F0093BC4C /* BootLoader.swift in Sources */,
 				CE6FC8C9279A2BE60093BC4C /* LoggerEnum.swift in Sources */,
 				CE88C97E2792B279003A6C7E /* ApiRequest.swift in Sources */,
