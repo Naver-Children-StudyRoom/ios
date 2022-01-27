@@ -18,39 +18,22 @@ public class UrlBuilder {
     ///   - apiType: 태그검색은 .tagSearch 명시. 미입력시 GP gateway로 동작한다.
     ///   - parameters: paramter dictionary
     /// - Returns: 생성된 url String
-    public class func createUrl(relativePath: String, apiType: APIGatewayType = .gp, parameters: [String: Any]? = nil) -> String {
-        var url = apiPath(apiType: apiType) + validate(relativePath: relativePath).apiEncoded
+    public class func createUrl(relativePath: String, parameters: [String: Any]? = nil) -> String {
+        var url = apiPath() + validate(relativePath: relativePath).apiEncoded
         
         if let param = parameters {
             let query = queryString(with: param)
             url = url.appending(query)
         }
         
-        switch apiType {
-        case .store: return url.hmacEncrypt
-        case .prism: return url.hmacEncryptForPrism
-        default:     return url.hmacEncryptForLive
-        }
-    }
-    
-    /// next key parameter 생성
-    class func createParameter(nextKey: Int?, apiType: APIGatewayType = .live) -> [String: Any] {
-        let countField: String = apiType == .live ? "pageSize" : "count"
-        var parameters: [String: Any] = [countField: 20]
-        
-        if let nextKey = nextKey {
-            let nextField: String = apiType == .live ? "page" : "next"
-            parameters[nextField] = nextKey
-        }
-        
-        return parameters
+        return url
     }
 }
 
 extension UrlBuilder {
     
-    fileprivate class func apiPath(apiType: APIGatewayType) -> String {
-        return "https://\(apiType.gatewayPrefix)apis.naver.com/" + consumer + "/" + apiType.provider + "/"
+    fileprivate class func apiPath() -> String {
+        return "https://apis.naver.com/" + consumer + "/"
     }
     
     // 주소 앞에 /가 붙어있으면 제거한다.

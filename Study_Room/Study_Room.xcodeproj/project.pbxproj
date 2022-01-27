@@ -18,7 +18,11 @@
 		CE6FC8CF279A3C9F0093BC4C /* BootLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6FC8CE279A3C9F0093BC4C /* BootLoader.swift */; };
 		CE6FC8D1279A3D270093BC4C /* LoggerBootModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6FC8D0279A3D270093BC4C /* LoggerBootModule.swift */; };
 		CE6FC8D3279FC65D0093BC4C /* URLBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6FC8D2279FC65C0093BC4C /* URLBuilder.swift */; };
-		CE88C97E2792B279003A6C7E /* ApiRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE88C97D2792B279003A6C7E /* ApiRequest.swift */; };
+		CE6FC8D527A22B710093BC4C /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6FC8D427A22B710093BC4C /* String+Extension.swift */; };
+		CE6FC8D727A22FDF0093BC4C /* Alamofire+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6FC8D627A22FDF0093BC4C /* Alamofire+Extension.swift */; };
+		CE6FC8D927A2340A0093BC4C /* CommonError.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6FC8D827A2340A0093BC4C /* CommonError.swift */; };
+		CE6FC8DC27A237000093BC4C /* SwifterSwift in Frameworks */ = {isa = PBXBuildFile; productRef = CE6FC8DB27A237000093BC4C /* SwifterSwift */; };
+		CE88C97E2792B279003A6C7E /* APIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE88C97D2792B279003A6C7E /* APIRequest.swift */; };
 		CE88C98D27994677003A6C7E /* CleanroomLogger in Frameworks */ = {isa = PBXBuildFile; productRef = CE88C98C27994677003A6C7E /* CleanroomLogger */; };
 		CE9BE8D5278F10C3009338D9 /* Study_RoomApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9BE8D4278F10C3009338D9 /* Study_RoomApp.swift */; };
 		CE9BE8D7278F10C3009338D9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9BE8D6278F10C3009338D9 /* ContentView.swift */; };
@@ -68,7 +72,10 @@
 		CE6FC8CE279A3C9F0093BC4C /* BootLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BootLoader.swift; sourceTree = "<group>"; };
 		CE6FC8D0279A3D270093BC4C /* LoggerBootModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggerBootModule.swift; sourceTree = "<group>"; };
 		CE6FC8D2279FC65C0093BC4C /* URLBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLBuilder.swift; sourceTree = "<group>"; };
-		CE88C97D2792B279003A6C7E /* ApiRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiRequest.swift; sourceTree = "<group>"; };
+		CE6FC8D427A22B710093BC4C /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
+		CE6FC8D627A22FDF0093BC4C /* Alamofire+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Alamofire+Extension.swift"; sourceTree = "<group>"; };
+		CE6FC8D827A2340A0093BC4C /* CommonError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonError.swift; sourceTree = "<group>"; };
+		CE88C97D2792B279003A6C7E /* APIRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequest.swift; sourceTree = "<group>"; };
 		CE9BE8D1278F10C3009338D9 /* Study_Room.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Study_Room.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE9BE8D4278F10C3009338D9 /* Study_RoomApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Study_RoomApp.swift; sourceTree = "<group>"; };
 		CE9BE8D6278F10C3009338D9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -87,6 +94,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE6FC8DC27A237000093BC4C /* SwifterSwift in Frameworks */,
 				D833F6823C6837FD12223BE9 /* Pods_Study_Room.framework in Frameworks */,
 				CE88C98D27994677003A6C7E /* CleanroomLogger in Frameworks */,
 			);
@@ -124,8 +132,9 @@
 		CE041784279BBFD000FA8520 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
-				CE88C97D2792B279003A6C7E /* ApiRequest.swift */,
+				CE88C97D2792B279003A6C7E /* APIRequest.swift */,
 				CE6FC8D2279FC65C0093BC4C /* URLBuilder.swift */,
+				CE6FC8D827A2340A0093BC4C /* CommonError.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -134,6 +143,8 @@
 			isa = PBXGroup;
 			children = (
 				CE041786279BC14500FA8520 /* View+Extension.swift */,
+				CE6FC8D427A22B710093BC4C /* String+Extension.swift */,
+				CE6FC8D627A22FDF0093BC4C /* Alamofire+Extension.swift */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -274,6 +285,7 @@
 			name = Study_Room;
 			packageProductDependencies = (
 				CE88C98C27994677003A6C7E /* CleanroomLogger */,
+				CE6FC8DB27A237000093BC4C /* SwifterSwift */,
 			);
 			productName = Study_Room;
 			productReference = CE9BE8D1278F10C3009338D9 /* Study_Room.app */;
@@ -351,6 +363,7 @@
 			mainGroup = CE9BE8C8278F10C3009338D9;
 			packageReferences = (
 				CE88C98B27994677003A6C7E /* XCRemoteSwiftPackageReference "CleanroomLogger" */,
+				CE6FC8DA27A237000093BC4C /* XCRemoteSwiftPackageReference "SwifterSwift" */,
 			);
 			productRefGroup = CE9BE8D2278F10C3009338D9 /* Products */;
 			projectDirPath = "";
@@ -504,9 +517,12 @@
 				CE9BE8D5278F10C3009338D9 /* Study_RoomApp.swift in Sources */,
 				CE6FC8D1279A3D270093BC4C /* LoggerBootModule.swift in Sources */,
 				CE6FC8D3279FC65D0093BC4C /* URLBuilder.swift in Sources */,
+				CE6FC8D727A22FDF0093BC4C /* Alamofire+Extension.swift in Sources */,
+				CE6FC8D527A22B710093BC4C /* String+Extension.swift in Sources */,
 				CE6FC8CF279A3C9F0093BC4C /* BootLoader.swift in Sources */,
 				CE6FC8C9279A2BE60093BC4C /* LoggerEnum.swift in Sources */,
-				CE88C97E2792B279003A6C7E /* ApiRequest.swift in Sources */,
+				CE6FC8D927A2340A0093BC4C /* CommonError.swift in Sources */,
+				CE88C97E2792B279003A6C7E /* APIRequest.swift in Sources */,
 				CE04178D279BEAB400FA8520 /* LoginView.swift in Sources */,
 				CE041787279BC14500FA8520 /* View+Extension.swift in Sources */,
 				CE6FC8C527980CC30093BC4C /* Logger.swift in Sources */,
@@ -862,6 +878,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		CE6FC8DA27A237000093BC4C /* XCRemoteSwiftPackageReference "SwifterSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwifterSwift/SwifterSwift.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 		CE88C98B27994677003A6C7E /* XCRemoteSwiftPackageReference "CleanroomLogger" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/emaloney/CleanroomLogger.git";
@@ -873,6 +897,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		CE6FC8DB27A237000093BC4C /* SwifterSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CE6FC8DA27A237000093BC4C /* XCRemoteSwiftPackageReference "SwifterSwift" */;
+			productName = SwifterSwift;
+		};
 		CE88C98C27994677003A6C7E /* CleanroomLogger */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = CE88C98B27994677003A6C7E /* XCRemoteSwiftPackageReference "CleanroomLogger" */;

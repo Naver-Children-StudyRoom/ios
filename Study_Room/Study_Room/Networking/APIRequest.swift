@@ -8,8 +8,11 @@
 import SwiftyJSON
 import Alamofire
 
-open class ApiRequest {
-    public static let shared = ApiRequest()
+open class APIRequest {
+    public static let shared = APIRequest()
+    
+    private var ongoingSessionManager: [String: Session] = [:]
+    private let sessionManagerHandlingQueue = DispatchQueue(label: "SessionManagerHandlingQueue")
     
     /// JSON response를 받는 API Request
     /// - Parameters:
@@ -71,14 +74,10 @@ open class ApiRequest {
         
         dataRequest.responseJSON(queue: queue ?? .main) { (response: AFDataResponse<Any>) -> Void in
             if let result = response.value, response.error == nil {
-                Dependency.record(apiType: apiType.rawValue, api: api, method: method.rawValue)
                 completion?(.success(JSON(result)))
             } else {
                 let error = response.parsedError
-                shared.tryLoginClosure?(api, error)
                 recordError(response: response, method: method, queryParameters: queryParameters, requestParameters: requestParameters, error: error)
-                
-                Dependency.record(apiType: apiType.rawValue, api: api, method: method.rawValue, error: error)
                 completion?(.failure(error))
             }
             
@@ -108,18 +107,124 @@ open class ApiRequest {
         headers: HTTPHeaders? = nil,
         queue: DispatchQueue? = nil,
         retrier: RequestInterceptor? = nil) -> (DataRequest, String) {
-        let url = api.isValidUrlHeader ? api : UrlBuilder.createUrl(relativePath: api, apiType: apiType, parameters: queryParameters)
+        let url = api.isValidUrlHeader ? api : UrlBuilder.createUrl(relativePath: api, parameters: queryParameters)
         debugLog("API Request :: url = \(url)")
         
         let sessionManager = Session.createInstance(retrier: retrier)
         let sessionManagerID = UUID().uuidString
         shared.add(sessionManager: sessionManager, id: sessionManagerID)
         
-        let encoding: ParameterEncoding = {
-            guard let encoding = customParameters?.encoding else { return requestParameters == nil ? URLEncoding.default : JSONEncoding.default }
-            return encoding
-        }()
-        let dataRequest = sessionManager.request(url, method: method, parameters: requestParameters ?? customParameters?.asParameters, encoding: encoding, headers: createHeaders(with: headers, apiType: apiType)).validate()
+        let encoding: ParameterEncoding = URLEncoding.default
+            
+        let dataRequest = sessionManager.request(url, method: method, parameters: requestParameters, encoding: encoding, headers: headers).validate()
         return (dataRequest, sessionManagerID)
     }
 }
+
+// MARK:- 에러 처리
+
+extension APIRequest {
+    
+    private class func recordError<T>(response: AFDataResponse<T>, method: HTTPMethod, queryParameters: Parameters? = nil, requestParameters: Parameters? = nil, error: Any? = nil) {
+        // GP 이외의 API (ex. like) 는 result 구조가 달라서 에러로 분류될 수 있다. 이 경우에는 로그 남기지 않음.
+        guard let url = response.request?.url?.absoluteString else { return }
+        
+        // 에러코드 -999 (취소됨) 은 이벤트 무시
+        let errorCode = (error as? NSError)?.code
+        guard errorCode != NSURLErrorCancelled else { return }
+        
+        var errorMessage: String?
+        
+        switch error {
+        case is NSError: errorMessage = (error as? NSError)?.description
+        case is Error: errorMessage = (error as? Error)?.localizedDescription
+        default: break
+        }
+        
+        let message = """
+        \(url)
+        method = \(method.rawValue)
+        queryParameters = \(queryParameters?.description ?? "nil")
+        requestParameters = \(requestParameters?.description ?? "nil")
+        rawJson = \(response.getRawJson() ?? "nil")
+        description = \(response.debugDescription)
+        \(errorMessage ?? "no error message found")
+        """
+        
+        apiLog(message, errorCode: errorCode)
+    }
+    
+    /// SessionManager를 shared instance의 dictionary에 보관해둔다.
+    /// 이렇게 해야 API response를 받을 때까지 SessionManager instance가 release되지 않고 유지됨.
+    private func add(sessionManager: Session, id: String) {
+        sessionManagerHandlingQueue.async { [weak self] in
+            self?.ongoingSessionManager[id] = sessionManager
+        }
+    }
+    
+    /// 사용 완료한 SessionManager를 shared instance의 dictionary에서 제거한다.
+    public func removeSessionManager(id: String) {
+        sessionManagerHandlingQueue.async { [weak self] in
+            self?.ongoingSessionManager[id] = nil
+        }
+    }
+}
+
+public extension DataResponse {
+    
+    /// response에서 에러값을 추출한다.
+    ///
+    /// 1. 서버 규칙에 따라 code, message로 이루어진 JSON을 parsing해서 NSError를 생성, 리턴하고
+    /// 2. 1번을 실패할 경우 response.error를 리턴한다.
+    var parsedNSError: NSError? {
+        guard let failJson = try? JSON(data: self.data ?? Data()), let message = parsedErrorMessage else { return parsedError as NSError? }
+        
+        return NSError(domain: Bundle.main.bundleIdentifier! + ".error.server.response",
+                       code: failJson["code"].int ?? self.response?.statusCode ?? 0,
+                       userInfo: [NSLocalizedDescriptionKey: message])
+    }
+    
+    /// 서버 응답은 성공이지만 에러 메세지가 내려오는 경우 에러를 추출한다.
+    ///
+    /// 1. 서버 규칙에 따라 code, message로 이루어진 JSON을 parsing해서 Error를 생성, 리턴하고
+    /// 2. 1번을 실패할 경우 response.error를 리턴한다.
+    var parsedError: Error {
+        if response?.statusCode == 401 {
+            return CommonError.unauthorized
+        } else if isOfflineError {
+            return CommonError.offline
+        } else {
+            guard let message = parsedErrorMessage else { return error?.asAFError?.underlyingError ?? error ?? CommonError.failedToFetch }
+            return CommonError.custom(message)
+        }
+    }
+    
+    /// response에서 에러값을 추출해서 message를 리턴한다.
+    var parsedErrorMessage: String? {
+        let messageFields = ["message", "errorMessage", "error"]
+        guard let failJson = try? JSON(data: self.data ?? Data()) else { return nil }
+        return messageFields.compactMap({ failJson[$0].string }).first(where: { !$0.isEmpty })
+    }
+    
+    private var isOfflineError: Bool {
+        return error?.asAFError?.original?.code.isOfflineErrorCode == true
+            || error?.asAFError?.retry?.code.isOfflineErrorCode == true
+            || response?.statusCode.isOfflineErrorCode == true
+    }
+}
+
+fileprivate extension AFError {
+    
+    var original: Error? { return errorTuple?.1 }
+    var retry: Error? { return errorTuple?.0 }
+    
+    private var errorTuple: (Error, Error)? {
+        switch self {
+        case .requestRetryFailed(retryError: let retry, originalError: let original):
+            return (retry, original)
+            
+        default: return nil
+        }
+    }
+}
+
