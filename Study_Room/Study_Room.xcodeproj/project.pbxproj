@@ -22,6 +22,7 @@
 		CE6FC8D727A22FDF0093BC4C /* Alamofire+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6FC8D627A22FDF0093BC4C /* Alamofire+Extension.swift */; };
 		CE6FC8D927A2340A0093BC4C /* CommonError.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6FC8D827A2340A0093BC4C /* CommonError.swift */; };
 		CE6FC8DC27A237000093BC4C /* SwifterSwift in Frameworks */ = {isa = PBXBuildFile; productRef = CE6FC8DB27A237000093BC4C /* SwifterSwift */; };
+		CE6FC8E027A23CB40093BC4C /* RegexParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6FC8DF27A23CB40093BC4C /* RegexParser.swift */; };
 		CE88C97E2792B279003A6C7E /* APIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE88C97D2792B279003A6C7E /* APIRequest.swift */; };
 		CE88C98D27994677003A6C7E /* CleanroomLogger in Frameworks */ = {isa = PBXBuildFile; productRef = CE88C98C27994677003A6C7E /* CleanroomLogger */; };
 		CE9BE8D5278F10C3009338D9 /* Study_RoomApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9BE8D4278F10C3009338D9 /* Study_RoomApp.swift */; };
@@ -75,6 +76,7 @@
 		CE6FC8D427A22B710093BC4C /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		CE6FC8D627A22FDF0093BC4C /* Alamofire+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Alamofire+Extension.swift"; sourceTree = "<group>"; };
 		CE6FC8D827A2340A0093BC4C /* CommonError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonError.swift; sourceTree = "<group>"; };
+		CE6FC8DF27A23CB40093BC4C /* RegexParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegexParser.swift; sourceTree = "<group>"; };
 		CE88C97D2792B279003A6C7E /* APIRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequest.swift; sourceTree = "<group>"; };
 		CE9BE8D1278F10C3009338D9 /* Study_Room.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Study_Room.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE9BE8D4278F10C3009338D9 /* Study_RoomApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Study_RoomApp.swift; sourceTree = "<group>"; };
@@ -145,6 +147,7 @@
 				CE041786279BC14500FA8520 /* View+Extension.swift */,
 				CE6FC8D427A22B710093BC4C /* String+Extension.swift */,
 				CE6FC8D627A22FDF0093BC4C /* Alamofire+Extension.swift */,
+				CE6FC8DF27A23CB40093BC4C /* RegexParser.swift */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -515,6 +518,7 @@
 				CE04178A279BE9E000FA8520 /* LoginBootModule.swift in Sources */,
 				CE6FC8CB279A3B6F0093BC4C /* LogRecorder.swift in Sources */,
 				CE9BE8D5278F10C3009338D9 /* Study_RoomApp.swift in Sources */,
+				CE6FC8E027A23CB40093BC4C /* RegexParser.swift in Sources */,
 				CE6FC8D1279A3D270093BC4C /* LoggerBootModule.swift in Sources */,
 				CE6FC8D3279FC65D0093BC4C /* URLBuilder.swift in Sources */,
 				CE6FC8D727A22FDF0093BC4C /* Alamofire+Extension.swift in Sources */,
