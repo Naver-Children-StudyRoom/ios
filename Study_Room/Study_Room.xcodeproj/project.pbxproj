@@ -12,6 +12,7 @@
 		CE041787279BC14500FA8520 /* View+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE041786279BC14500FA8520 /* View+Extension.swift */; };
 		CE04178A279BE9E000FA8520 /* LoginBootModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE041789279BE9E000FA8520 /* LoginBootModule.swift */; };
 		CE04178D279BEAB400FA8520 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE04178C279BEAB400FA8520 /* LoginView.swift */; };
+		CE04179127A3C47900FA8520 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE04179027A3C47900FA8520 /* Result.swift */; };
 		CE6FC8C527980CC30093BC4C /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6FC8C427980CC30093BC4C /* Logger.swift */; };
 		CE6FC8C9279A2BE60093BC4C /* LoggerEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6FC8C8279A2BE60093BC4C /* LoggerEnum.swift */; };
 		CE6FC8CB279A3B6F0093BC4C /* LogRecorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6FC8CA279A3B6F0093BC4C /* LogRecorder.swift */; };
@@ -67,6 +68,7 @@
 		CE041789279BE9E000FA8520 /* LoginBootModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginBootModule.swift; sourceTree = "<group>"; };
 		CE04178C279BEAB400FA8520 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		CE04178E279BEDA700FA8520 /* info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = info.plist; sourceTree = "<group>"; };
+		CE04179027A3C47900FA8520 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		CE6FC8C427980CC30093BC4C /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		CE6FC8C8279A2BE60093BC4C /* LoggerEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggerEnum.swift; sourceTree = "<group>"; };
 		CE6FC8CA279A3B6F0093BC4C /* LogRecorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogRecorder.swift; sourceTree = "<group>"; };
@@ -148,6 +150,7 @@
 				CE6FC8D427A22B710093BC4C /* String+Extension.swift */,
 				CE6FC8D627A22FDF0093BC4C /* Alamofire+Extension.swift */,
 				CE6FC8DF27A23CB40093BC4C /* RegexParser.swift */,
+				CE04179027A3C47900FA8520 /* Result.swift */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -528,6 +531,7 @@
 				CE6FC8D927A2340A0093BC4C /* CommonError.swift in Sources */,
 				CE88C97E2792B279003A6C7E /* APIRequest.swift in Sources */,
 				CE04178D279BEAB400FA8520 /* LoginView.swift in Sources */,
+				CE04179127A3C47900FA8520 /* Result.swift in Sources */,
 				CE041787279BC14500FA8520 /* View+Extension.swift in Sources */,
 				CE6FC8C527980CC30093BC4C /* Logger.swift in Sources */,
 			);

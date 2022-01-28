@@ -17,11 +17,9 @@ open class APIRequest {
     /// JSON response를 받는 API Request
     /// - Parameters:
     ///   - api: 사용할 API. relative path만 전달하는 경우는 `UrlBuilder`에서 api gateway 주소와 조합해서 full url을 생성합니다. (ex : "members/{memberId}/documents")
-    ///   - apiType: `APIGatewayType`에서 해당되는 타입을 선택한다. 기본값은 `live`
     ///   - method: `HTTPMethod`. 기본값은 `get`
     ///   - parameters: API URL에 추가하는 query parameter dictionary
     ///   - requestParameters: HTTP Request body에 추가하는 parameter dictionary
-    ///   - customParameters: HTTP Request body에 추가하지만 dictionary가 아닌 String이나 Array 타입의 파라미터. 일반적으로 잘 사용하지 않는다.
     ///   - headers: 헤더
     ///   - queue: completion handler가 호출될 Queue
     ///   - retrier: API 실패시 재시도 처리를 해주는 `RequestRetryHandler`
@@ -50,11 +48,9 @@ open class APIRequest {
     /// JSON response를 받는 API Request
     /// - Parameters:
     ///   - api: 사용할 API. relative path만 전달하는 경우는 `UrlBuilder`에서 api gateway 주소와 조합해서 full url을 생성합니다. (ex : "members/{memberId}/documents")
-    ///   - apiType: `APIGatewayType`에서 해당되는 타입을 선택한다. 기본값은 `live`
     ///   - method: `HTTPMethod`. 기본값은 `get`
     ///   - parameters: API URL에 추가하는 query parameter dictionary
     ///   - requestParameters: HTTP Request body에 추가하는 parameter dictionary
-    ///   - customParameters: HTTP Request body에 추가하지만 dictionary가 아닌 String이나 Array 타입의 파라미터. 일반적으로 잘 사용하지 않는다.
     ///   - headers: 헤더
     ///   - queue: completion handler가 호출될 Queue
     ///   - retrier: API 실패시 재시도 처리를 해주는 `RequestRetryHandler`
@@ -91,11 +87,9 @@ open class APIRequest {
     ///
     /// - Parameters:
     ///   - api: 사용할 API. relative path만 전달하는 경우는 `UrlBuilder`에서 api gateway 주소와 조합해서 full url을 생성합니다. (ex : "members/{memberId}/documents")
-    ///   - apiType: `APIGatewayType`에서 해당되는 타입을 선택한다. 기본값은 `live`
     ///   - method: `HTTPMethod`. 기본값은 `get`
     ///   - parameters: API URL에 추가하는 query parameter dictionary
     ///   - requestParameters: API Request body에 추가하는 parameter dictionary
-    ///   - customParameters: dictionary가 아닌 String이나 Array 타입의 파라미터. 일반적으로 잘 사용하지 않는다.
     ///   - headers: 헤더
     ///   - queue: completion handler가 호출될 Queue
     ///   - retrier: API 실패시 재시도 처리를 해주는 `RequestRetryHandler`
