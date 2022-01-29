@@ -8,4 +8,4 @@
 import Foundation
 
 // Alamofire.Result랑 겹치는 경우가 많아 typealias 선언
-typealias Result = Swift.Result
+public typealias Result = Swift.Result

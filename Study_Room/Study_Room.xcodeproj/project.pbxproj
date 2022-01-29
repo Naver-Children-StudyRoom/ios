@@ -13,6 +13,7 @@
 		CE04178A279BE9E000FA8520 /* LoginBootModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE041789279BE9E000FA8520 /* LoginBootModule.swift */; };
 		CE04178D279BEAB400FA8520 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE04178C279BEAB400FA8520 /* LoginView.swift */; };
 		CE04179127A3C47900FA8520 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE04179027A3C47900FA8520 /* Result.swift */; };
+		CE04179427A4D99700FA8520 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = CE04179327A4D99700FA8520 /* Alamofire */; };
 		CE6FC8C527980CC30093BC4C /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6FC8C427980CC30093BC4C /* Logger.swift */; };
 		CE6FC8C9279A2BE60093BC4C /* LoggerEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6FC8C8279A2BE60093BC4C /* LoggerEnum.swift */; };
 		CE6FC8CB279A3B6F0093BC4C /* LogRecorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6FC8CA279A3B6F0093BC4C /* LogRecorder.swift */; };
@@ -99,6 +100,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE6FC8DC27A237000093BC4C /* SwifterSwift in Frameworks */,
+				CE04179427A4D99700FA8520 /* Alamofire in Frameworks */,
 				D833F6823C6837FD12223BE9 /* Pods_Study_Room.framework in Frameworks */,
 				CE88C98D27994677003A6C7E /* CleanroomLogger in Frameworks */,
 			);
@@ -292,6 +294,7 @@
 			packageProductDependencies = (
 				CE88C98C27994677003A6C7E /* CleanroomLogger */,
 				CE6FC8DB27A237000093BC4C /* SwifterSwift */,
+				CE04179327A4D99700FA8520 /* Alamofire */,
 			);
 			productName = Study_Room;
 			productReference = CE9BE8D1278F10C3009338D9 /* Study_Room.app */;
@@ -370,6 +373,7 @@
 			packageReferences = (
 				CE88C98B27994677003A6C7E /* XCRemoteSwiftPackageReference "CleanroomLogger" */,
 				CE6FC8DA27A237000093BC4C /* XCRemoteSwiftPackageReference "SwifterSwift" */,
+				CE04179227A4D99700FA8520 /* XCRemoteSwiftPackageReference "Alamofire" */,
 			);
 			productRefGroup = CE9BE8D2278F10C3009338D9 /* Products */;
 			projectDirPath = "";
@@ -886,6 +890,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		CE04179227A4D99700FA8520 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
 		CE6FC8DA27A237000093BC4C /* XCRemoteSwiftPackageReference "SwifterSwift" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SwifterSwift/SwifterSwift.git";
@@ -905,6 +917,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		CE04179327A4D99700FA8520 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CE04179227A4D99700FA8520 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
 		CE6FC8DB27A237000093BC4C /* SwifterSwift */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = CE6FC8DA27A237000093BC4C /* XCRemoteSwiftPackageReference "SwifterSwift" */;

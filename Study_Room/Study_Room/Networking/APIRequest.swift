@@ -5,6 +5,7 @@
 //  Created by Joo Young Kim on 2022/01/15.
 //
 
+import UIKit
 import SwiftyJSON
 import Alamofire
 

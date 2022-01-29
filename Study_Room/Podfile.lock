@@ -1,5 +1,4 @@
 PODS:
-  - Alamofire (5.5.0)
   - naveridlogin-sdk-ios (4.1.3)
   - RxCocoa (6.5.0):
     - RxRelay (= 6.5.0)
@@ -11,7 +10,6 @@ PODS:
   - SwiftyJSON (4.3.0)
 
 DEPENDENCIES:
-  - Alamofire (~> 5.5)
   - naveridlogin-sdk-ios
   - RxCocoa (= 6.5.0)
   - RxSwift (= 6.5.0)
@@ -20,7 +18,6 @@ DEPENDENCIES:
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
-    - Alamofire
     - naveridlogin-sdk-ios
     - RxCocoa
     - RxRelay
@@ -29,7 +26,6 @@ SPEC REPOS:
     - SwiftyJSON
 
 SPEC CHECKSUMS:
-  Alamofire: 1c4fb5369c3fe93d2857c780d8bbe09f06f97e7c
   naveridlogin-sdk-ios: b9d7c20677981177ed994ecb1c8c2b49f223277d
   RxCocoa: 94f817b71c07517321eb4f9ad299112ca8af743b
   RxRelay: 1de1523e604c72b6c68feadedd1af3b1b4d0ecbd
@@ -37,6 +33,6 @@ SPEC CHECKSUMS:
   SwiftLint: 06ac37e4d38c7068e0935bb30cda95f093bec761
   SwiftyJSON: 6faa0040f8b59dead0ee07436cbf76b73c08fd08
 
-PODFILE CHECKSUM: 6a66c36ab2947ad415f7dc68ed2c6f63a44cbcb6
+PODFILE CHECKSUM: b4c6ecf4b7d58a32145c6fe48118b91804225bfc
 
 COCOAPODS: 1.11.2
