@@ -337,22 +337,6 @@ public extension String {
     }
 }
 
-// AttributedString으로 변경하기
-
-extension String {
-    public func colored(at subString: String, baseColor: UIColor, highlightColor: UIColor) -> NSAttributedString {
-        let fullString: NSString = self as NSString
-        let fullRange = (fullString).range(of: self)
-        let range = (fullString).range(of: subString)
-        
-        let attribute = NSMutableAttributedString(string: self)
-        attribute.addAttribute(.foregroundColor, value: baseColor, range: fullRange)
-        attribute.addAttribute(.foregroundColor, value: highlightColor, range: range)
-        
-        return attribute
-    }
-}
-
 // MARK: - Date
 
 public extension String {

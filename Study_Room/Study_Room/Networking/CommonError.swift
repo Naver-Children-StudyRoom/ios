@@ -19,7 +19,6 @@ public enum CommonError: Error, LocalizedError {
     case invalidUrl
     case invalidResponse
     
-    case liveIdUnknown
     case missingInfo
     case notSupportedFilter
     
@@ -44,7 +43,6 @@ public enum CommonError: Error, LocalizedError {
         case .invalidUrl:       return "Invalid URL"
         case .invalidResponse:  return "Invalid API Response"
             
-        case .liveIdUnknown:      return "BroadcastID is not found"
         case .missingInfo:        return "Required Information missing"
         case .notSupportedFilter: return "Not supported filter"
             
