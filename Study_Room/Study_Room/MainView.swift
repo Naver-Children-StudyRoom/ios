@@ -7,15 +7,16 @@
 
 import SwiftUI
 
-struct ContentView: View {
+/// 메인 화면으로 쓰자
+struct MainView: View {
     var body: some View {
         Text("Hello, world!")
             .padding()
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct MainView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        MainView()
     }
 }
