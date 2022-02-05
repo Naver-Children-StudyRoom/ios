@@ -34,7 +34,7 @@ struct Study_RoomApp: App {
     
     var body: some Scene {
         WindowGroup {
-            LoginView()
+            MainView()
         }
         .onChange(of: scenePhase) { (newScenePhase) in
             switch newScenePhase {
