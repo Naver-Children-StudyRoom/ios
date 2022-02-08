@@ -7,6 +7,7 @@
 
 import SwiftUI
 import NaverThirdPartyLogin
+import UIKit
 
 struct LoginView: View {
     @State private var ID: String = ""

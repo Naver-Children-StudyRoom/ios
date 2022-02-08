@@ -10,7 +10,13 @@ import SwifterSwift
 
 struct Alert: View {
     var body: some View {
-        Text("Alert")
+        HStack {
+            Text("Alert")
+            
+            Button("test", action: {
+                print("Asd")
+            })
+        }
     }
 }
 
