@@ -8,6 +8,7 @@
 import SwiftUI
 import SwifterSwift
 
+/// CustomAlert를 위한 View
 struct Alert: View {
     var body: some View {
         HStack {
