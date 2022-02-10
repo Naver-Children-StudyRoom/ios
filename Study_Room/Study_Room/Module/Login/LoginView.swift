@@ -17,6 +17,10 @@ struct LoginView: View {
         HStack {
             Text("로그인 화면")
                 .padding()
+            
+            Button("로그인", action: {
+                debugLog("test")
+            })
         }
     }
 }
