@@ -10,18 +10,69 @@ import NaverThirdPartyLogin
 import UIKit
 
 struct LoginView: View {
-    @State private var ID: String = ""
-    @State private var PW: String = ""
+    @State private var userEmail: String = ""
+    @State private var userPassword: String = ""
+    
+    var body: some View {
+        VStack {
+            HStack {
+                Image(systemName: "envelope").frame(width: 50.0, height: 50.0)
+                TextField("ID / Email", text: $userEmail)
+                    .frame(width: 100.0, height: 10.0)
+                    .padding()
+                    .background(RoundedRectangle(cornerRadius: 10).strokeBorder())
+            }
+            HStack {
+                Image(systemName: "lock").frame(width: 50.0, height: 50.0)
+                SecureField("Password", text: $userPassword)
+                    .frame(width: 100.0, height: 10.0)
+                    .padding()
+                    .background(RoundedRectangle(cornerRadius: 10).strokeBorder())
+            }
+            
+            LoginAction()
+            LoginAccountManager()
+        }
+    }
+}
+
+struct LoginAction: View {
+    @State private var isOn = true
+    
+    init() {
+        UISwitch.appearance().onTintColor = .gray
+        UISwitch.appearance().thumbTintColor = .white
+    }
     
     var body: some View {
         HStack {
-            Text("로그인 화면")
-                .padding()
+            Toggle(isOn: $isOn) {
+                Text("자동")
+            }
+            .frame(width: 90, height: 80)
             
-            Button("로그인", action: {
-                debugLog("test")
-            })
+            Button(action: { }) {
+                Text("로그인")
+                    .frame(width: 80, height: 10)
+                    .padding()
+                    .background(RoundedRectangle(cornerRadius: 10).strokeBorder())
+            }
+        }.padding()
+    }
+}
+
+struct LoginAccountManager: View {
+    var body: some View {
+        HStack (spacing: 20){
+            Button(action: {}) {
+                Text("아이디/비밀번호 찾기")
+            }
+            Button(action: {}) {
+                Text("회원가입")
+            }
         }
+        .frame(maxHeight: 250, alignment: .bottom)
+        .padding()
     }
 }
 
