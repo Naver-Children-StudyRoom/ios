@@ -7,14 +7,12 @@ PODS:
     - RxSwift (= 6.5.0)
   - RxSwift (6.5.0)
   - SwiftLint (0.45.1)
-  - SwiftyJSON (4.3.0)
 
 DEPENDENCIES:
   - naveridlogin-sdk-ios
   - RxCocoa (= 6.5.0)
   - RxSwift (= 6.5.0)
   - SwiftLint
-  - SwiftyJSON (~> 4.0)
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
@@ -23,7 +21,6 @@ SPEC REPOS:
     - RxRelay
     - RxSwift
     - SwiftLint
-    - SwiftyJSON
 
 SPEC CHECKSUMS:
   naveridlogin-sdk-ios: b9d7c20677981177ed994ecb1c8c2b49f223277d
@@ -31,8 +28,7 @@ SPEC CHECKSUMS:
   RxRelay: 1de1523e604c72b6c68feadedd1af3b1b4d0ecbd
   RxSwift: 5710a9e6b17f3c3d6e40d6e559b9fa1e813b2ef8
   SwiftLint: 06ac37e4d38c7068e0935bb30cda95f093bec761
-  SwiftyJSON: 6faa0040f8b59dead0ee07436cbf76b73c08fd08
 
-PODFILE CHECKSUM: b4c6ecf4b7d58a32145c6fe48118b91804225bfc
+PODFILE CHECKSUM: 127811e42e040b1f89bcbf61b96b03e3a376b0ec
 
 COCOAPODS: 1.11.2
