@@ -15,6 +15,9 @@
 		CE04179127A3C47900FA8520 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE04179027A3C47900FA8520 /* Result.swift */; };
 		CE04179427A4D99700FA8520 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = CE04179327A4D99700FA8520 /* Alamofire */; };
 		CE396B6E27AE2137001966F9 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE396B6D27AE2136001966F9 /* Alert.swift */; };
+		CE396B7127B76908001966F9 /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE396B7027B76908001966F9 /* UserManager.swift */; };
+		CE396B7327B76930001966F9 /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE396B7227B76930001966F9 /* UserInfo.swift */; };
+		CE396B7627B76A0D001966F9 /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = CE396B7527B76A0D001966F9 /* SwiftyJSON */; };
 		CE6FC8C527980CC30093BC4C /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6FC8C427980CC30093BC4C /* Logger.swift */; };
 		CE6FC8C9279A2BE60093BC4C /* LoggerEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6FC8C8279A2BE60093BC4C /* LoggerEnum.swift */; };
 		CE6FC8CB279A3B6F0093BC4C /* LogRecorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6FC8CA279A3B6F0093BC4C /* LogRecorder.swift */; };
@@ -72,6 +75,8 @@
 		CE04178E279BEDA700FA8520 /* info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = info.plist; sourceTree = "<group>"; };
 		CE04179027A3C47900FA8520 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		CE396B6D27AE2136001966F9 /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
+		CE396B7027B76908001966F9 /* UserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
+		CE396B7227B76930001966F9 /* UserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
 		CE6FC8C427980CC30093BC4C /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		CE6FC8C8279A2BE60093BC4C /* LoggerEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggerEnum.swift; sourceTree = "<group>"; };
 		CE6FC8CA279A3B6F0093BC4C /* LogRecorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogRecorder.swift; sourceTree = "<group>"; };
@@ -104,6 +109,7 @@
 				CE6FC8DC27A237000093BC4C /* SwifterSwift in Frameworks */,
 				CE04179427A4D99700FA8520 /* Alamofire in Frameworks */,
 				D833F6823C6837FD12223BE9 /* Pods_Study_Room.framework in Frameworks */,
+				CE396B7627B76A0D001966F9 /* SwiftyJSON in Frameworks */,
 				CE88C98D27994677003A6C7E /* CleanroomLogger in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -170,9 +176,19 @@
 		CE396B6C27AE2125001966F9 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				CE396B6F27B768E6001966F9 /* User */,
 				CE396B6D27AE2136001966F9 /* Alert.swift */,
 			);
 			path = Common;
+			sourceTree = "<group>";
+		};
+		CE396B6F27B768E6001966F9 /* User */ = {
+			isa = PBXGroup;
+			children = (
+				CE396B7027B76908001966F9 /* UserManager.swift */,
+				CE396B7227B76930001966F9 /* UserInfo.swift */,
+			);
+			path = User;
 			sourceTree = "<group>";
 		};
 		CE6FC8C327980CB60093BC4C /* Logger */ = {
@@ -306,6 +322,7 @@
 				CE88C98C27994677003A6C7E /* CleanroomLogger */,
 				CE6FC8DB27A237000093BC4C /* SwifterSwift */,
 				CE04179327A4D99700FA8520 /* Alamofire */,
+				CE396B7527B76A0D001966F9 /* SwiftyJSON */,
 			);
 			productName = Study_Room;
 			productReference = CE9BE8D1278F10C3009338D9 /* Study_Room.app */;
@@ -385,6 +402,7 @@
 				CE88C98B27994677003A6C7E /* XCRemoteSwiftPackageReference "CleanroomLogger" */,
 				CE6FC8DA27A237000093BC4C /* XCRemoteSwiftPackageReference "SwifterSwift" */,
 				CE04179227A4D99700FA8520 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				CE396B7427B76A0D001966F9 /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
 			);
 			productRefGroup = CE9BE8D2278F10C3009338D9 /* Products */;
 			projectDirPath = "";
@@ -534,11 +552,13 @@
 			files = (
 				CE396B6E27AE2137001966F9 /* Alert.swift in Sources */,
 				CE9BE8D7278F10C3009338D9 /* MainView.swift in Sources */,
+				CE396B7127B76908001966F9 /* UserManager.swift in Sources */,
 				CE04178A279BE9E000FA8520 /* LoginBootModule.swift in Sources */,
 				CE6FC8CB279A3B6F0093BC4C /* LogRecorder.swift in Sources */,
 				CE9BE8D5278F10C3009338D9 /* Study_RoomApp.swift in Sources */,
 				CE6FC8E027A23CB40093BC4C /* RegexParser.swift in Sources */,
 				CE6FC8D1279A3D270093BC4C /* LoggerBootModule.swift in Sources */,
+				CE396B7327B76930001966F9 /* UserInfo.swift in Sources */,
 				CE6FC8D3279FC65D0093BC4C /* URLBuilder.swift in Sources */,
 				CE6FC8D727A22FDF0093BC4C /* Alamofire+Extension.swift in Sources */,
 				CE6FC8D527A22B710093BC4C /* String+Extension.swift in Sources */,
@@ -718,14 +738,14 @@
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				GENERATE_INFOPLIST_FILE = NO;
-				INFOPLIST_FILE = /Users/user/Desktop/jy/project/ios/Study_Room/Study_Room/info.plist;
+				INFOPLIST_FILE = /Users/user/Desktop/JY/ios/Study_Room/Study_Room/info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -757,14 +777,14 @@
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				GENERATE_INFOPLIST_FILE = NO;
-				INFOPLIST_FILE = /Users/user/Desktop/jy/project/ios/Study_Room/Study_Room/info.plist;
+				INFOPLIST_FILE = /Users/user/Desktop/JY/ios/Study_Room/Study_Room/info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -910,6 +930,14 @@
 				minimumVersion = 5.0.0;
 			};
 		};
+		CE396B7427B76A0D001966F9 /* XCRemoteSwiftPackageReference "SwiftyJSON" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwiftyJSON/SwiftyJSON.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 		CE6FC8DA27A237000093BC4C /* XCRemoteSwiftPackageReference "SwifterSwift" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SwifterSwift/SwifterSwift.git";
@@ -933,6 +961,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = CE04179227A4D99700FA8520 /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
+		};
+		CE396B7527B76A0D001966F9 /* SwiftyJSON */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CE396B7427B76A0D001966F9 /* XCRemoteSwiftPackageReference "SwiftyJSON" */;
+			productName = SwiftyJSON;
 		};
 		CE6FC8DB27A237000093BC4C /* SwifterSwift */ = {
 			isa = XCSwiftPackageProductDependency;
