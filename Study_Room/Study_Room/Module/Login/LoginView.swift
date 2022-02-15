@@ -63,7 +63,7 @@ struct LoginAction: View {
 
 struct LoginAccountManager: View {
     var body: some View {
-        HStack (spacing: 20){
+        HStack(spacing: 20) {
             Button(action: {}) {
                 Text("아이디/비밀번호 찾기")
             }
