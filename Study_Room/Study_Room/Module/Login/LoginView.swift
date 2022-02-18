@@ -8,6 +8,7 @@
 import SwiftUI
 import NaverThirdPartyLogin
 import UIKit
+import RxSwift
 
 struct LoginView: View {
     @State private var userEmail: String = ""
@@ -15,8 +16,10 @@ struct LoginView: View {
     
     var body: some View {
         VStack {
+            Spacer()
             HStack {
-                Image(systemName: "envelope").frame(width: 50.0, height: 50.0)
+                Image(systemName: "envelope")
+                    .frame(width: 50.0, height: 50.0)
                 TextField("ID / Email", text: $userEmail)
                     .frame(width: 100.0, height: 10.0)
                     .padding()
@@ -38,6 +41,7 @@ struct LoginView: View {
 
 struct LoginAction: View {
     @State private var isOn = true
+    @Environment(\.presentationMode) var presentationMode
     
     init() {
         UISwitch.appearance().onTintColor = .gray
@@ -51,7 +55,16 @@ struct LoginAction: View {
             }
             .frame(width: 90, height: 80)
             
-            Button(action: { }) {
+            Button(action: {
+                requestLogin { result in
+                    switch result {
+                    case .success:
+                        self.presentationMode.wrappedValue.dismiss()
+                    case .failure(let error):
+                        debugLog("Login Api 실패 : \(error.localizedDescription)")
+                    }
+                }
+            }) { // api 호출
                 Text("로그인")
                     .frame(width: 80, height: 10)
                     .padding()
@@ -74,6 +87,17 @@ struct LoginAccountManager: View {
         .frame(maxHeight: 250, alignment: .bottom)
         .padding()
     }
+}
+
+private func requestLogin(completion: @escaping (((Result<Void, Error>) -> Void))) {
+    UserManager.shared.requestLoginUser(completion: { result in
+        switch result {
+        case .success:
+            completion(.success(()))
+        case .failure(let error):
+            completion(.failure(error))
+        }
+    })
 }
 
 struct LoginView_Previews: PreviewProvider {
