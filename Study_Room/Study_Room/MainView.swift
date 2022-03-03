@@ -10,8 +10,15 @@ import SwiftUI
 /// 메인 화면으로 쓰자
 struct MainView: View {
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        VStack {
+            NavigationView {
+                NavigationLink(destination: LoginView()) {
+                    Text("Login")
+                }
+            }
+            Text("Hello, world!")
+                .padding()
+        }
     }
 }
 

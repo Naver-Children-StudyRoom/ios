@@ -13,4 +13,8 @@ open class UserManager {
     public static let shared = UserManager()
     
     public var userInfo: UserInfo?
+
+    public func requestLoginUser(completion: @escaping ((Result<UserInfo,Error>) -> Void)) {
+        // 여기서 로그인 api호출을 진행할 거고
+    }
 }
