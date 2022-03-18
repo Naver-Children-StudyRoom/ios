@@ -38,6 +38,7 @@
 		CE9BE8E6278F10C6009338D9 /* Study_RoomTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9BE8E5278F10C6009338D9 /* Study_RoomTests.swift */; };
 		CE9BE8F0278F10C6009338D9 /* Study_RoomUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9BE8EF278F10C6009338D9 /* Study_RoomUITests.swift */; };
 		CE9BE8F2278F10C6009338D9 /* Study_RoomUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9BE8F1278F10C6009338D9 /* Study_RoomUITestsLaunchTests.swift */; };
+		CEEA6ED027E44EB300C648C7 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEA6ECF27E44EB300C648C7 /* MenuView.swift */; };
 		D833F6823C6837FD12223BE9 /* Pods_Study_Room.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A602662C61FB01414F3C797 /* Pods_Study_Room.framework */; };
 /* End PBXBuildFile section */
 
@@ -98,6 +99,7 @@
 		CE9BE8EB278F10C6009338D9 /* Study_RoomUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Study_RoomUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE9BE8EF278F10C6009338D9 /* Study_RoomUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Study_RoomUITests.swift; sourceTree = "<group>"; };
 		CE9BE8F1278F10C6009338D9 /* Study_RoomUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Study_RoomUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		CEEA6ECF27E44EB300C648C7 /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
 		F5F2031ADD3D7FC8EDF2F6C9 /* Pods-Study_Room.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Study_Room.release.xcconfig"; path = "Target Support Files/Pods-Study_Room/Pods-Study_Room.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -156,9 +158,7 @@
 		CE041785279BC10700FA8520 /* Utility */ = {
 			isa = PBXGroup;
 			children = (
-				CE041786279BC14500FA8520 /* View+Extension.swift */,
-				CE6FC8D427A22B710093BC4C /* String+Extension.swift */,
-				CE6FC8D627A22FDF0093BC4C /* Alamofire+Extension.swift */,
+				CEEA6ECE27E44E8000C648C7 /* Extension */,
 				CE6FC8DF27A23CB40093BC4C /* RegexParser.swift */,
 				CE04179027A3C47900FA8520 /* Result.swift */,
 			);
@@ -178,6 +178,7 @@
 			children = (
 				CE396B6F27B768E6001966F9 /* User */,
 				CE396B6D27AE2136001966F9 /* Alert.swift */,
+				CEEA6ECF27E44EB300C648C7 /* MenuView.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -282,6 +283,16 @@
 				CE9BE8F1278F10C6009338D9 /* Study_RoomUITestsLaunchTests.swift */,
 			);
 			path = Study_RoomUITests;
+			sourceTree = "<group>";
+		};
+		CEEA6ECE27E44E8000C648C7 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				CE041786279BC14500FA8520 /* View+Extension.swift */,
+				CE6FC8D427A22B710093BC4C /* String+Extension.swift */,
+				CE6FC8D627A22FDF0093BC4C /* Alamofire+Extension.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 		FC0F4633491745919C92C2A8 /* Pods */ = {
@@ -557,6 +568,7 @@
 				CE6FC8CB279A3B6F0093BC4C /* LogRecorder.swift in Sources */,
 				CE9BE8D5278F10C3009338D9 /* Study_RoomApp.swift in Sources */,
 				CE6FC8E027A23CB40093BC4C /* RegexParser.swift in Sources */,
+				CEEA6ED027E44EB300C648C7 /* MenuView.swift in Sources */,
 				CE6FC8D1279A3D270093BC4C /* LoggerBootModule.swift in Sources */,
 				CE396B7327B76930001966F9 /* UserInfo.swift in Sources */,
 				CE6FC8D3279FC65D0093BC4C /* URLBuilder.swift in Sources */,
