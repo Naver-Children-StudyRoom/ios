@@ -18,6 +18,9 @@
 		CE396B7127B76908001966F9 /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE396B7027B76908001966F9 /* UserManager.swift */; };
 		CE396B7327B76930001966F9 /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE396B7227B76930001966F9 /* UserInfo.swift */; };
 		CE396B7627B76A0D001966F9 /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = CE396B7527B76A0D001966F9 /* SwiftyJSON */; };
+		CE50B5F527E83D7A007B7A4C /* MenuDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE50B5F427E83D7A007B7A4C /* MenuDetailView.swift */; };
+		CE50B5F827E84724007B7A4C /* ServiceIntroView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE50B5F727E84724007B7A4C /* ServiceIntroView.swift */; };
+		CE50B5FA27E84738007B7A4C /* ServiceIntroDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE50B5F927E84738007B7A4C /* ServiceIntroDetailView.swift */; };
 		CE6FC8C527980CC30093BC4C /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6FC8C427980CC30093BC4C /* Logger.swift */; };
 		CE6FC8C9279A2BE60093BC4C /* LoggerEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6FC8C8279A2BE60093BC4C /* LoggerEnum.swift */; };
 		CE6FC8CB279A3B6F0093BC4C /* LogRecorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6FC8CA279A3B6F0093BC4C /* LogRecorder.swift */; };
@@ -78,6 +81,9 @@
 		CE396B6D27AE2136001966F9 /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 		CE396B7027B76908001966F9 /* UserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
 		CE396B7227B76930001966F9 /* UserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
+		CE50B5F427E83D7A007B7A4C /* MenuDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuDetailView.swift; sourceTree = "<group>"; };
+		CE50B5F727E84724007B7A4C /* ServiceIntroView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceIntroView.swift; sourceTree = "<group>"; };
+		CE50B5F927E84738007B7A4C /* ServiceIntroDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceIntroDetailView.swift; sourceTree = "<group>"; };
 		CE6FC8C427980CC30093BC4C /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		CE6FC8C8279A2BE60093BC4C /* LoggerEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggerEnum.swift; sourceTree = "<group>"; };
 		CE6FC8CA279A3B6F0093BC4C /* LogRecorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogRecorder.swift; sourceTree = "<group>"; };
@@ -176,9 +182,9 @@
 		CE396B6C27AE2125001966F9 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				CE50B5F327E83D6B007B7A4C /* Menu */,
 				CE396B6F27B768E6001966F9 /* User */,
 				CE396B6D27AE2136001966F9 /* Alert.swift */,
-				CEEA6ECF27E44EB300C648C7 /* MenuView.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -190,6 +196,24 @@
 				CE396B7227B76930001966F9 /* UserInfo.swift */,
 			);
 			path = User;
+			sourceTree = "<group>";
+		};
+		CE50B5F327E83D6B007B7A4C /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+				CEEA6ECF27E44EB300C648C7 /* MenuView.swift */,
+				CE50B5F427E83D7A007B7A4C /* MenuDetailView.swift */,
+			);
+			path = Menu;
+			sourceTree = "<group>";
+		};
+		CE50B5F627E8461C007B7A4C /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				CE50B5F727E84724007B7A4C /* ServiceIntroView.swift */,
+				CE50B5F927E84738007B7A4C /* ServiceIntroDetailView.swift */,
+			);
+			path = Main;
 			sourceTree = "<group>";
 		};
 		CE6FC8C327980CB60093BC4C /* Logger */ = {
@@ -215,6 +239,7 @@
 		CE6FC8CD279A3C890093BC4C /* Module */ = {
 			isa = PBXGroup;
 			children = (
+				CE50B5F627E8461C007B7A4C /* Main */,
 				CE04178B279BEA8300FA8520 /* Login */,
 				CE6FC8CC279A3C770093BC4C /* Boot */,
 			);
@@ -564,9 +589,11 @@
 				CE396B6E27AE2137001966F9 /* Alert.swift in Sources */,
 				CE9BE8D7278F10C3009338D9 /* MainView.swift in Sources */,
 				CE396B7127B76908001966F9 /* UserManager.swift in Sources */,
+				CE50B5F827E84724007B7A4C /* ServiceIntroView.swift in Sources */,
 				CE04178A279BE9E000FA8520 /* LoginBootModule.swift in Sources */,
 				CE6FC8CB279A3B6F0093BC4C /* LogRecorder.swift in Sources */,
 				CE9BE8D5278F10C3009338D9 /* Study_RoomApp.swift in Sources */,
+				CE50B5F527E83D7A007B7A4C /* MenuDetailView.swift in Sources */,
 				CE6FC8E027A23CB40093BC4C /* RegexParser.swift in Sources */,
 				CEEA6ED027E44EB300C648C7 /* MenuView.swift in Sources */,
 				CE6FC8D1279A3D270093BC4C /* LoggerBootModule.swift in Sources */,
@@ -577,6 +604,7 @@
 				CE6FC8CF279A3C9F0093BC4C /* BootLoader.swift in Sources */,
 				CE6FC8C9279A2BE60093BC4C /* LoggerEnum.swift in Sources */,
 				CE6FC8D927A2340A0093BC4C /* CommonError.swift in Sources */,
+				CE50B5FA27E84738007B7A4C /* ServiceIntroDetailView.swift in Sources */,
 				CE88C97E2792B279003A6C7E /* APIRequest.swift in Sources */,
 				CE04178D279BEAB400FA8520 /* LoginView.swift in Sources */,
 				CE04179127A3C47900FA8520 /* Result.swift in Sources */,
