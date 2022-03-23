@@ -42,6 +42,7 @@ struct LoginView: View {
 struct LoginAction: View {
     @State private var isOn = true
     @Environment(\.presentationMode) var presentationMode
+    @StateObject private var userManager: UserManager = UserManager()
     
     init() {
         UISwitch.appearance().onTintColor = .gray
@@ -56,14 +57,14 @@ struct LoginAction: View {
             .frame(width: 90, height: 80)
             
             Button(action: {
-                requestLogin { result in
+                requestLogin(userManager: userManager, completion: { result in
                     switch result {
                     case .success:
                         self.presentationMode.wrappedValue.dismiss()
                     case .failure(let error):
                         debugLog("Login Api 실패 : \(error.localizedDescription)")
                     }
-                }
+                })
             }) { // api 호출
                 Text("로그인")
                     .frame(width: 80, height: 10)
@@ -89,8 +90,8 @@ struct LoginAccountManager: View {
     }
 }
 
-private func requestLogin(completion: @escaping (((Result<Void, Error>) -> Void))) {
-    UserManager.shared.requestLoginUser(completion: { result in
+private func requestLogin(userManager: UserManager, completion: @escaping (((Result<Void, Error>) -> Void))) {
+    userManager.requestLoginUser(completion: { result in
         switch result {
         case .success:
             completion(.success(()))

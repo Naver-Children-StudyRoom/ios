@@ -21,6 +21,7 @@
 		CE50B5F527E83D7A007B7A4C /* MenuDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE50B5F427E83D7A007B7A4C /* MenuDetailView.swift */; };
 		CE50B5F827E84724007B7A4C /* ServiceIntroView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE50B5F727E84724007B7A4C /* ServiceIntroView.swift */; };
 		CE50B5FA27E84738007B7A4C /* ServiceIntroDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE50B5F927E84738007B7A4C /* ServiceIntroDetailView.swift */; };
+		CE50B5FE27EB11F9007B7A4C /* SideMenuViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE50B5FD27EB11F9007B7A4C /* SideMenuViewModel.swift */; };
 		CE6FC8C527980CC30093BC4C /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6FC8C427980CC30093BC4C /* Logger.swift */; };
 		CE6FC8C9279A2BE60093BC4C /* LoggerEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6FC8C8279A2BE60093BC4C /* LoggerEnum.swift */; };
 		CE6FC8CB279A3B6F0093BC4C /* LogRecorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6FC8CA279A3B6F0093BC4C /* LogRecorder.swift */; };
@@ -84,6 +85,7 @@
 		CE50B5F427E83D7A007B7A4C /* MenuDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuDetailView.swift; sourceTree = "<group>"; };
 		CE50B5F727E84724007B7A4C /* ServiceIntroView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceIntroView.swift; sourceTree = "<group>"; };
 		CE50B5F927E84738007B7A4C /* ServiceIntroDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceIntroDetailView.swift; sourceTree = "<group>"; };
+		CE50B5FD27EB11F9007B7A4C /* SideMenuViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuViewModel.swift; sourceTree = "<group>"; };
 		CE6FC8C427980CC30093BC4C /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		CE6FC8C8279A2BE60093BC4C /* LoggerEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggerEnum.swift; sourceTree = "<group>"; };
 		CE6FC8CA279A3B6F0093BC4C /* LogRecorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogRecorder.swift; sourceTree = "<group>"; };
@@ -203,6 +205,7 @@
 			children = (
 				CEEA6ECF27E44EB300C648C7 /* MenuView.swift */,
 				CE50B5F427E83D7A007B7A4C /* MenuDetailView.swift */,
+				CE50B5FD27EB11F9007B7A4C /* SideMenuViewModel.swift */,
 			);
 			path = Menu;
 			sourceTree = "<group>";
@@ -210,10 +213,18 @@
 		CE50B5F627E8461C007B7A4C /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				CE9BE8D6278F10C3009338D9 /* MainView.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		CE50B5FF27EB4449007B7A4C /* ServiceInfo */ = {
+			isa = PBXGroup;
+			children = (
 				CE50B5F727E84724007B7A4C /* ServiceIntroView.swift */,
 				CE50B5F927E84738007B7A4C /* ServiceIntroDetailView.swift */,
 			);
-			path = Main;
+			path = ServiceInfo;
 			sourceTree = "<group>";
 		};
 		CE6FC8C327980CB60093BC4C /* Logger */ = {
@@ -239,8 +250,6 @@
 		CE6FC8CD279A3C890093BC4C /* Module */ = {
 			isa = PBXGroup;
 			children = (
-				CE50B5F627E8461C007B7A4C /* Main */,
-				CE04178B279BEA8300FA8520 /* Login */,
 				CE6FC8CC279A3C770093BC4C /* Boot */,
 			);
 			path = Module;
@@ -271,13 +280,15 @@
 		CE9BE8D3278F10C3009338D9 /* Study_Room */ = {
 			isa = PBXGroup;
 			children = (
+				CE04178B279BEA8300FA8520 /* Login */,
+				CE50B5FF27EB4449007B7A4C /* ServiceInfo */,
+				CE50B5F627E8461C007B7A4C /* Main */,
 				CE396B6C27AE2125001966F9 /* Common */,
 				CE041785279BC10700FA8520 /* Utility */,
 				CE041784279BBFD000FA8520 /* Networking */,
 				CE6FC8CD279A3C890093BC4C /* Module */,
 				CE6FC8C327980CB60093BC4C /* Logger */,
 				CE9BE8D4278F10C3009338D9 /* Study_RoomApp.swift */,
-				CE9BE8D6278F10C3009338D9 /* MainView.swift */,
 				CE9BE8D8278F10C5009338D9 /* Assets.xcassets */,
 				CE9BE8DA278F10C5009338D9 /* Preview Content */,
 				CE04178E279BEDA700FA8520 /* info.plist */,
@@ -594,6 +605,7 @@
 				CE6FC8CB279A3B6F0093BC4C /* LogRecorder.swift in Sources */,
 				CE9BE8D5278F10C3009338D9 /* Study_RoomApp.swift in Sources */,
 				CE50B5F527E83D7A007B7A4C /* MenuDetailView.swift in Sources */,
+				CE50B5FE27EB11F9007B7A4C /* SideMenuViewModel.swift in Sources */,
 				CE6FC8E027A23CB40093BC4C /* RegexParser.swift in Sources */,
 				CEEA6ED027E44EB300C648C7 /* MenuView.swift in Sources */,
 				CE6FC8D1279A3D270093BC4C /* LoggerBootModule.swift in Sources */,

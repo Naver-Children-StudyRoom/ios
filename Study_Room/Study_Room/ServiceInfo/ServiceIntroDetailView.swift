@@ -9,7 +9,15 @@ import SwiftUI
 
 struct ServiceIntroDetailView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        HStack {
+            Image(systemName: "star")
+            Text("Service Info")
+            Button {
+                debugLog("서비스 소개로 이동")
+            } label: {
+                Image(systemName: "calendar")
+            }
+        }
     }
 }
 

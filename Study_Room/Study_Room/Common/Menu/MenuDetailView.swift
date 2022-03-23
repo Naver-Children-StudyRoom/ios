@@ -8,20 +8,23 @@
 import SwiftUI
 
 struct MenuDetailView: View {
-    var menuTitle: String
+    let sideMenuItem: MenuItemEnum
     
     var body: some View {
         HStack {
-            Text(menuTitle)
-                .foregroundColor(.gray)
-                .font(.headline)
+            Image(systemName: sideMenuItem.imageName)
+             .frame(width: 24, height: 24, alignment: .center)
+            Spacer()
+                .frame(width: 10, height: 0, alignment: .center)
+            Text(sideMenuItem.title).bold()
+            Spacer()
         }
-        .frame(maxWidth: .infinity)
+        .foregroundColor(.white)
     }
 }
 
 struct MenuDetailView_Previews: PreviewProvider {
     static var previews: some View {
-        MenuDetailView(menuTitle: "test")
+        MenuDetailView(sideMenuItem: .profile)
     }
 }
