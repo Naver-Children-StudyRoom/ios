@@ -22,6 +22,7 @@
 		CE50B5F827E84724007B7A4C /* ServiceIntroView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE50B5F727E84724007B7A4C /* ServiceIntroView.swift */; };
 		CE50B5FA27E84738007B7A4C /* ServiceIntroDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE50B5F927E84738007B7A4C /* ServiceIntroDetailView.swift */; };
 		CE50B5FE27EB11F9007B7A4C /* SideMenuViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE50B5FD27EB11F9007B7A4C /* SideMenuViewModel.swift */; };
+		CE50B60327EC2E79007B7A4C /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE50B60227EC2E78007B7A4C /* MainViewModel.swift */; };
 		CE6FC8C527980CC30093BC4C /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6FC8C427980CC30093BC4C /* Logger.swift */; };
 		CE6FC8C9279A2BE60093BC4C /* LoggerEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6FC8C8279A2BE60093BC4C /* LoggerEnum.swift */; };
 		CE6FC8CB279A3B6F0093BC4C /* LogRecorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6FC8CA279A3B6F0093BC4C /* LogRecorder.swift */; };
@@ -86,6 +87,7 @@
 		CE50B5F727E84724007B7A4C /* ServiceIntroView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceIntroView.swift; sourceTree = "<group>"; };
 		CE50B5F927E84738007B7A4C /* ServiceIntroDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceIntroDetailView.swift; sourceTree = "<group>"; };
 		CE50B5FD27EB11F9007B7A4C /* SideMenuViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuViewModel.swift; sourceTree = "<group>"; };
+		CE50B60227EC2E78007B7A4C /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		CE6FC8C427980CC30093BC4C /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		CE6FC8C8279A2BE60093BC4C /* LoggerEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggerEnum.swift; sourceTree = "<group>"; };
 		CE6FC8CA279A3B6F0093BC4C /* LogRecorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogRecorder.swift; sourceTree = "<group>"; };
@@ -214,6 +216,7 @@
 			isa = PBXGroup;
 			children = (
 				CE9BE8D6278F10C3009338D9 /* MainView.swift */,
+				CE50B60227EC2E78007B7A4C /* MainViewModel.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -602,6 +605,7 @@
 				CE396B7127B76908001966F9 /* UserManager.swift in Sources */,
 				CE50B5F827E84724007B7A4C /* ServiceIntroView.swift in Sources */,
 				CE04178A279BE9E000FA8520 /* LoginBootModule.swift in Sources */,
+				CE50B60327EC2E79007B7A4C /* MainViewModel.swift in Sources */,
 				CE6FC8CB279A3B6F0093BC4C /* LogRecorder.swift in Sources */,
 				CE9BE8D5278F10C3009338D9 /* Study_RoomApp.swift in Sources */,
 				CE50B5F527E83D7A007B7A4C /* MenuDetailView.swift in Sources */,
