@@ -44,6 +44,7 @@
 		CE9BE8F0278F10C6009338D9 /* Study_RoomUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9BE8EF278F10C6009338D9 /* Study_RoomUITests.swift */; };
 		CE9BE8F2278F10C6009338D9 /* Study_RoomUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9BE8F1278F10C6009338D9 /* Study_RoomUITestsLaunchTests.swift */; };
 		CEEA6ED027E44EB300C648C7 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEA6ECF27E44EB300C648C7 /* MenuView.swift */; };
+		CEF3D0F927ED600C00684DAA /* ServiceIntroViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF3D0F827ED600C00684DAA /* ServiceIntroViewModel.swift */; };
 		D833F6823C6837FD12223BE9 /* Pods_Study_Room.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A602662C61FB01414F3C797 /* Pods_Study_Room.framework */; };
 /* End PBXBuildFile section */
 
@@ -110,6 +111,7 @@
 		CE9BE8EF278F10C6009338D9 /* Study_RoomUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Study_RoomUITests.swift; sourceTree = "<group>"; };
 		CE9BE8F1278F10C6009338D9 /* Study_RoomUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Study_RoomUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		CEEA6ECF27E44EB300C648C7 /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
+		CEF3D0F827ED600C00684DAA /* ServiceIntroViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceIntroViewModel.swift; sourceTree = "<group>"; };
 		F5F2031ADD3D7FC8EDF2F6C9 /* Pods-Study_Room.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Study_Room.release.xcconfig"; path = "Target Support Files/Pods-Study_Room/Pods-Study_Room.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -226,6 +228,7 @@
 			children = (
 				CE50B5F727E84724007B7A4C /* ServiceIntroView.swift */,
 				CE50B5F927E84738007B7A4C /* ServiceIntroDetailView.swift */,
+				CEF3D0F827ED600C00684DAA /* ServiceIntroViewModel.swift */,
 			);
 			path = ServiceInfo;
 			sourceTree = "<group>";
@@ -604,6 +607,7 @@
 				CE9BE8D7278F10C3009338D9 /* MainView.swift in Sources */,
 				CE396B7127B76908001966F9 /* UserManager.swift in Sources */,
 				CE50B5F827E84724007B7A4C /* ServiceIntroView.swift in Sources */,
+				CEF3D0F927ED600C00684DAA /* ServiceIntroViewModel.swift in Sources */,
 				CE04178A279BE9E000FA8520 /* LoginBootModule.swift in Sources */,
 				CE50B60327EC2E79007B7A4C /* MainViewModel.swift in Sources */,
 				CE6FC8CB279A3B6F0093BC4C /* LogRecorder.swift in Sources */,
