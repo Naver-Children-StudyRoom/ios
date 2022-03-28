@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ServiceIntroDetailView: View {
     let model: ServiceIntroModel?
+    @State private var isPresented = false
     var body: some View {
         GeometryReader { geometry in
             HStack {
@@ -20,6 +21,7 @@ struct ServiceIntroDetailView: View {
                     Text(model?.serviceIntro.description ?? "")
                         .frame(width: geometry.size.width / 2, height: geometry.size.height / 2)
                     Button {
+                        isPresented.toggle()
                         debugLog("서비스 소개로 이동")
                     } label: {
                         Text("자세히 알아보기")
@@ -33,6 +35,9 @@ struct ServiceIntroDetailView: View {
                             )
                     }
                     .visibility(model?.btnVisible ?? true)
+                    .fullScreenCover(isPresented: $isPresented) {
+                        TutorialView(tutorialTopic: model?.serviceIntro)
+                    }
                 }
             }
         }
