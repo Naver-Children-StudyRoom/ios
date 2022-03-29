@@ -11,8 +11,8 @@ class ServiceIntroViewModel: ObservableObject {
     @Published var models: [ServiceIntroModel]?
     @Published var test_models: [ServiceIntroModel] = [
         ServiceIntroModel(btnVisible: true, serviceIntro: .studyExplore),
-        ServiceIntroModel(btnVisible: true, serviceIntro: .planner),
-        ServiceIntroModel(btnVisible: false, serviceIntro: .login)
+        ServiceIntroModel(btnVisible: false, serviceIntro: .planner),
+        ServiceIntroModel(btnVisible: true, serviceIntro: .login)
     ]
 }
 

@@ -16,6 +16,7 @@ struct LoginView: View {
     
     var body: some View {
         VStack {
+            NavigationBarView(title: "로그인")
             Spacer()
             HStack {
                 Image(systemName: "envelope")

@@ -36,7 +36,11 @@ struct ServiceIntroDetailView: View {
                     }
                     .visibility(model?.btnVisible ?? true)
                     .fullScreenCover(isPresented: $isPresented) {
-                        TutorialView(tutorialTopic: model?.serviceIntro)
+                        if model?.serviceIntro == .login {
+                            LoginView()
+                        } else {
+                            TutorialView(tutorialTopic: model?.serviceIntro)
+                        }
                     }
                 }
             }
@@ -48,8 +52,8 @@ struct ServiceIntroDetailView_Previews: PreviewProvider {
     static var previews: some View {
         ServiceIntroDetailView(
             model: ServiceIntroModel(
-            btnVisible: true,
-            serviceIntro: .studyExplore
+                btnVisible: true,
+                serviceIntro: .studyExplore
             )
         )
     }
