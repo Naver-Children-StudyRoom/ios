@@ -25,10 +25,13 @@ struct NavigationBarView: View {
                     .frame(maxHeight: .infinity, alignment: .leading)
                     .padding(EdgeInsets(top: 0.0, leading: 13.0, bottom: 2.0, trailing: 16.0))
             })
+            Spacer()
             Text(title)
                 .kerning(0.0)
+                .offset(x: -20) // TODO: 나중에 가운데 정렬 할수있을만한 방법 있나 확인해보기 
                 .foregroundColor(Color.black)
                 .font(.custom("AppleSDGothicNeo-SemiBold", size: 18))
+            Spacer()
         }
         .modifier(NavigationViewModifier())
     }
