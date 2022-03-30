@@ -19,7 +19,7 @@ struct MainView: View {
     
     var body: some View {
         GeometryReader { geometry in
-            if userManager.loginCheck ?? false { // 일단 테스트 용도로 false 로 설정
+            if userManager.loginCheck ?? true { // 일단 테스트 용도로 false 로 설정
                 TabView(selection: $viewModel.currentTab) {
 //                    Text("test") // TODO: 나중에 로그인 했을 때 처음에 나의 독서실 요약, 추천독서실, 마이플래너 미리보기가 구현된 View를 출력할 예정
 //                        .frame(width: geometry.size.width, height: geometry.size.height)

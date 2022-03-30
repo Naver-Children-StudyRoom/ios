@@ -12,17 +12,19 @@ class ServiceIntroViewModel: ObservableObject {
     @Published var test_models: [ServiceIntroModel] = [
         ServiceIntroModel(btnVisible: true, serviceIntro: .studyExplore),
         ServiceIntroModel(btnVisible: false, serviceIntro: .planner),
-        ServiceIntroModel(btnVisible: true, serviceIntro: .login)
+        ServiceIntroModel(btnVisible: true, serviceIntro: .login, buttonTitle: "Login")
     ]
 }
 
 class ServiceIntroModel: NSObject {
     let btnVisible: Bool?
     let serviceIntro: ServiceIntro
+    let buttonTitle: String
     
-    init(btnVisible: Bool?, serviceIntro: ServiceIntro) {
+    init(btnVisible: Bool?, serviceIntro: ServiceIntro, buttonTitle: String = "자세히 알아보기") {
         self.btnVisible = btnVisible
         self.serviceIntro = serviceIntro
+        self.buttonTitle = buttonTitle
     }
 }
 

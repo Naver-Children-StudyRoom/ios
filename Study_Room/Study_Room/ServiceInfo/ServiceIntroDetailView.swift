@@ -10,6 +10,7 @@ import SwiftUI
 struct ServiceIntroDetailView: View {
     let model: ServiceIntroModel?
     @State private var isPresented = false
+    
     var body: some View {
         GeometryReader { geometry in
             HStack {
@@ -24,7 +25,7 @@ struct ServiceIntroDetailView: View {
                         isPresented.toggle()
                         debugLog("서비스 소개로 이동")
                     } label: {
-                        Text("자세히 알아보기")
+                        Text(model?.buttonTitle ?? "")
                             .fontWeight(.bold)
                             .font(.system(size: 15))
                             .foregroundColor(.black)

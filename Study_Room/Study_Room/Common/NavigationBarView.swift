@@ -28,7 +28,7 @@ struct NavigationBarView: View {
             Spacer()
             Text(title)
                 .kerning(0.0)
-                .offset(x: -20) // TODO: 나중에 가운데 정렬 할수있을만한 방법 있나 확인해보기 
+                .offset(x: -20) // TODO: 나중에 가운데 정렬 할수있을만한 방법 있나 확인해보기
                 .foregroundColor(Color.black)
                 .font(.custom("AppleSDGothicNeo-SemiBold", size: 18))
             Spacer()
