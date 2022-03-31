@@ -19,19 +19,19 @@ struct MainView: View {
     
     var body: some View {
         GeometryReader { geometry in
-            if userManager.loginCheck ?? true {
+            if userManager.loginCheck ?? true { // 일단 테스트 용도로 false 로 설정
                 TabView(selection: $viewModel.currentTab) {
 //                    Text("test") // TODO: 나중에 로그인 했을 때 처음에 나의 독서실 요약, 추천독서실, 마이플래너 미리보기가 구현된 View를 출력할 예정
 //                        .frame(width: geometry.size.width, height: geometry.size.height)
 //                        .tag(Tab.Home)
-                    ServiceIntroDetailView()
+                    ServiceIntroView() // 서비스 소개
                         .frame(width: geometry.size.width, height: geometry.size.height)
                         .tag(Tab.ServiceInfo)
-                    ServiceIntroDetailView()
+                    ServiceIntroView()  // 독서실 둘러보기
                         .tag(Tab.StudyExplore)
-                    ServiceIntroDetailView()
+                    ServiceIntroView()  // 마이플래너
                         .tag(Tab.Planner)
-                    Text("sdf")
+                    Text("sdf") // 마이페이지
                         .tag(Tab.Mypage)
                 }
                 .overlay(
@@ -79,7 +79,7 @@ struct MainView: View {
                     , alignment: .bottom
                 )
             } else {
-                ServiceIntroDetailView()
+                ServiceIntroView() 
                     .frame(width: geometry.size.width, height: geometry.size.height)
             }
         }
