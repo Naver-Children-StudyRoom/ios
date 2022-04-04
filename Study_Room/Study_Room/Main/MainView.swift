@@ -27,11 +27,11 @@ struct MainView: View {
                     ServiceIntroView() // 서비스 소개
                         .frame(width: geometry.size.width, height: geometry.size.height)
                         .tag(Tab.ServiceInfo)
-                    ServiceIntroView()  // 독서실 둘러보기
+                    StudyRoomExploreView()  // 독서실 둘러보기
                         .tag(Tab.StudyExplore)
-                    ServiceIntroView()  // 마이플래너
+                    MyPlannerView()  // 마이플래너
                         .tag(Tab.Planner)
-                    Text("sdf") // 마이페이지
+                    MypageView() // 마이페이지
                         .tag(Tab.Mypage)
                 }
                 .overlay(
