@@ -8,8 +8,7 @@
 import Foundation
 
 class MainViewModel: ObservableObject {
-    @Published var currentTab: Tab = .ServiceInfo
-//    @Published var currentTab: Tab = .Home // TODO: 나중에 메인화면 개발 완료되면 변경할 예정
+    @Published var currentTab: Tab = .Home
 }
 
 // MARK: - TAB ITEM CASE
