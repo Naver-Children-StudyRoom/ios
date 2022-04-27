@@ -34,6 +34,11 @@ struct Study_RoomApp: App {
     var body: some Scene {
         WindowGroup {
             MainView()
+                .onAppear {
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 1.0, execute: {
+                        debugLog("config 정보 로드할 부분") // 여기서 로그인 여부 판단해야함
+                    })
+                }
         }
         .onChange(of: scenePhase) { (newScenePhase) in
             switch newScenePhase {

@@ -18,6 +18,14 @@
 		CE396B7127B76908001966F9 /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE396B7027B76908001966F9 /* UserManager.swift */; };
 		CE396B7327B76930001966F9 /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE396B7227B76930001966F9 /* UserInfo.swift */; };
 		CE396B7627B76A0D001966F9 /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = CE396B7527B76A0D001966F9 /* SwiftyJSON */; };
+		CE41013F27FABBDA00B3C0F8 /* StudyRoomExploreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE41013E27FABBDA00B3C0F8 /* StudyRoomExploreView.swift */; };
+		CE41014127FABBE300B3C0F8 /* MyPlannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE41014027FABBE300B3C0F8 /* MyPlannerView.swift */; };
+		CE41014327FABBEE00B3C0F8 /* MypageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE41014227FABBEE00B3C0F8 /* MypageView.swift */; };
+		CE50B5F527E83D7A007B7A4C /* MenuDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE50B5F427E83D7A007B7A4C /* MenuDetailView.swift */; };
+		CE50B5F827E84724007B7A4C /* ServiceIntroView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE50B5F727E84724007B7A4C /* ServiceIntroView.swift */; };
+		CE50B5FA27E84738007B7A4C /* ServiceIntroDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE50B5F927E84738007B7A4C /* ServiceIntroDetailView.swift */; };
+		CE50B5FE27EB11F9007B7A4C /* SideMenuViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE50B5FD27EB11F9007B7A4C /* SideMenuViewModel.swift */; };
+		CE50B60327EC2E79007B7A4C /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE50B60227EC2E78007B7A4C /* MainViewModel.swift */; };
 		CE6FC8C527980CC30093BC4C /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6FC8C427980CC30093BC4C /* Logger.swift */; };
 		CE6FC8C9279A2BE60093BC4C /* LoggerEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6FC8C8279A2BE60093BC4C /* LoggerEnum.swift */; };
 		CE6FC8CB279A3B6F0093BC4C /* LogRecorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6FC8CA279A3B6F0093BC4C /* LogRecorder.swift */; };
@@ -39,6 +47,9 @@
 		CE9BE8F0278F10C6009338D9 /* Study_RoomUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9BE8EF278F10C6009338D9 /* Study_RoomUITests.swift */; };
 		CE9BE8F2278F10C6009338D9 /* Study_RoomUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9BE8F1278F10C6009338D9 /* Study_RoomUITestsLaunchTests.swift */; };
 		CEEA6ED027E44EB300C648C7 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEA6ECF27E44EB300C648C7 /* MenuView.swift */; };
+		CEF3D0F927ED600C00684DAA /* ServiceIntroViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF3D0F827ED600C00684DAA /* ServiceIntroViewModel.swift */; };
+		CEF3D0FC27F179C700684DAA /* TutorialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF3D0FB27F179C700684DAA /* TutorialView.swift */; };
+		CEF3D0FE27F17CDD00684DAA /* NavigationBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF3D0FD27F17CDD00684DAA /* NavigationBarView.swift */; };
 		D833F6823C6837FD12223BE9 /* Pods_Study_Room.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A602662C61FB01414F3C797 /* Pods_Study_Room.framework */; };
 /* End PBXBuildFile section */
 
@@ -78,6 +89,14 @@
 		CE396B6D27AE2136001966F9 /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 		CE396B7027B76908001966F9 /* UserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
 		CE396B7227B76930001966F9 /* UserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
+		CE41013E27FABBDA00B3C0F8 /* StudyRoomExploreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudyRoomExploreView.swift; sourceTree = "<group>"; };
+		CE41014027FABBE300B3C0F8 /* MyPlannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPlannerView.swift; sourceTree = "<group>"; };
+		CE41014227FABBEE00B3C0F8 /* MypageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MypageView.swift; sourceTree = "<group>"; };
+		CE50B5F427E83D7A007B7A4C /* MenuDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuDetailView.swift; sourceTree = "<group>"; };
+		CE50B5F727E84724007B7A4C /* ServiceIntroView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceIntroView.swift; sourceTree = "<group>"; };
+		CE50B5F927E84738007B7A4C /* ServiceIntroDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceIntroDetailView.swift; sourceTree = "<group>"; };
+		CE50B5FD27EB11F9007B7A4C /* SideMenuViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuViewModel.swift; sourceTree = "<group>"; };
+		CE50B60227EC2E78007B7A4C /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		CE6FC8C427980CC30093BC4C /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		CE6FC8C8279A2BE60093BC4C /* LoggerEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggerEnum.swift; sourceTree = "<group>"; };
 		CE6FC8CA279A3B6F0093BC4C /* LogRecorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogRecorder.swift; sourceTree = "<group>"; };
@@ -100,6 +119,9 @@
 		CE9BE8EF278F10C6009338D9 /* Study_RoomUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Study_RoomUITests.swift; sourceTree = "<group>"; };
 		CE9BE8F1278F10C6009338D9 /* Study_RoomUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Study_RoomUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		CEEA6ECF27E44EB300C648C7 /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
+		CEF3D0F827ED600C00684DAA /* ServiceIntroViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceIntroViewModel.swift; sourceTree = "<group>"; };
+		CEF3D0FB27F179C700684DAA /* TutorialView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialView.swift; sourceTree = "<group>"; };
+		CEF3D0FD27F17CDD00684DAA /* NavigationBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarView.swift; sourceTree = "<group>"; };
 		F5F2031ADD3D7FC8EDF2F6C9 /* Pods-Study_Room.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Study_Room.release.xcconfig"; path = "Target Support Files/Pods-Study_Room/Pods-Study_Room.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -176,9 +198,10 @@
 		CE396B6C27AE2125001966F9 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				CE50B5F327E83D6B007B7A4C /* Menu */,
 				CE396B6F27B768E6001966F9 /* User */,
 				CE396B6D27AE2136001966F9 /* Alert.swift */,
-				CEEA6ECF27E44EB300C648C7 /* MenuView.swift */,
+				CEF3D0FD27F17CDD00684DAA /* NavigationBarView.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -190,6 +213,53 @@
 				CE396B7227B76930001966F9 /* UserInfo.swift */,
 			);
 			path = User;
+			sourceTree = "<group>";
+		};
+		CE41013C27FABB9700B3C0F8 /* StudyRoom */ = {
+			isa = PBXGroup;
+			children = (
+				CE41013E27FABBDA00B3C0F8 /* StudyRoomExploreView.swift */,
+			);
+			path = StudyRoom;
+			sourceTree = "<group>";
+		};
+		CE41013D27FABBB700B3C0F8 /* MyInfo */ = {
+			isa = PBXGroup;
+			children = (
+				CE41014027FABBE300B3C0F8 /* MyPlannerView.swift */,
+				CE41014227FABBEE00B3C0F8 /* MypageView.swift */,
+			);
+			path = MyInfo;
+			sourceTree = "<group>";
+		};
+		CE50B5F327E83D6B007B7A4C /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+				CEEA6ECF27E44EB300C648C7 /* MenuView.swift */,
+				CE50B5F427E83D7A007B7A4C /* MenuDetailView.swift */,
+				CE50B5FD27EB11F9007B7A4C /* SideMenuViewModel.swift */,
+			);
+			path = Menu;
+			sourceTree = "<group>";
+		};
+		CE50B5F627E8461C007B7A4C /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				CE9BE8D6278F10C3009338D9 /* MainView.swift */,
+				CE50B60227EC2E78007B7A4C /* MainViewModel.swift */,
+				CEF3D0FB27F179C700684DAA /* TutorialView.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		CE50B5FF27EB4449007B7A4C /* ServiceInfo */ = {
+			isa = PBXGroup;
+			children = (
+				CE50B5F727E84724007B7A4C /* ServiceIntroView.swift */,
+				CE50B5F927E84738007B7A4C /* ServiceIntroDetailView.swift */,
+				CEF3D0F827ED600C00684DAA /* ServiceIntroViewModel.swift */,
+			);
+			path = ServiceInfo;
 			sourceTree = "<group>";
 		};
 		CE6FC8C327980CB60093BC4C /* Logger */ = {
@@ -215,7 +285,6 @@
 		CE6FC8CD279A3C890093BC4C /* Module */ = {
 			isa = PBXGroup;
 			children = (
-				CE04178B279BEA8300FA8520 /* Login */,
 				CE6FC8CC279A3C770093BC4C /* Boot */,
 			);
 			path = Module;
@@ -246,13 +315,17 @@
 		CE9BE8D3278F10C3009338D9 /* Study_Room */ = {
 			isa = PBXGroup;
 			children = (
+				CE41013D27FABBB700B3C0F8 /* MyInfo */,
+				CE41013C27FABB9700B3C0F8 /* StudyRoom */,
+				CE04178B279BEA8300FA8520 /* Login */,
+				CE50B5FF27EB4449007B7A4C /* ServiceInfo */,
+				CE50B5F627E8461C007B7A4C /* Main */,
 				CE396B6C27AE2125001966F9 /* Common */,
 				CE041785279BC10700FA8520 /* Utility */,
 				CE041784279BBFD000FA8520 /* Networking */,
 				CE6FC8CD279A3C890093BC4C /* Module */,
 				CE6FC8C327980CB60093BC4C /* Logger */,
 				CE9BE8D4278F10C3009338D9 /* Study_RoomApp.swift */,
-				CE9BE8D6278F10C3009338D9 /* MainView.swift */,
 				CE9BE8D8278F10C5009338D9 /* Assets.xcassets */,
 				CE9BE8DA278F10C5009338D9 /* Preview Content */,
 				CE04178E279BEDA700FA8520 /* info.plist */,
@@ -561,12 +634,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEF3D0FC27F179C700684DAA /* TutorialView.swift in Sources */,
 				CE396B6E27AE2137001966F9 /* Alert.swift in Sources */,
+				CE41014127FABBE300B3C0F8 /* MyPlannerView.swift in Sources */,
 				CE9BE8D7278F10C3009338D9 /* MainView.swift in Sources */,
 				CE396B7127B76908001966F9 /* UserManager.swift in Sources */,
+				CEF3D0FE27F17CDD00684DAA /* NavigationBarView.swift in Sources */,
+				CE50B5F827E84724007B7A4C /* ServiceIntroView.swift in Sources */,
+				CEF3D0F927ED600C00684DAA /* ServiceIntroViewModel.swift in Sources */,
 				CE04178A279BE9E000FA8520 /* LoginBootModule.swift in Sources */,
+				CE41014327FABBEE00B3C0F8 /* MypageView.swift in Sources */,
+				CE50B60327EC2E79007B7A4C /* MainViewModel.swift in Sources */,
 				CE6FC8CB279A3B6F0093BC4C /* LogRecorder.swift in Sources */,
 				CE9BE8D5278F10C3009338D9 /* Study_RoomApp.swift in Sources */,
+				CE50B5F527E83D7A007B7A4C /* MenuDetailView.swift in Sources */,
+				CE50B5FE27EB11F9007B7A4C /* SideMenuViewModel.swift in Sources */,
 				CE6FC8E027A23CB40093BC4C /* RegexParser.swift in Sources */,
 				CEEA6ED027E44EB300C648C7 /* MenuView.swift in Sources */,
 				CE6FC8D1279A3D270093BC4C /* LoggerBootModule.swift in Sources */,
@@ -577,9 +659,11 @@
 				CE6FC8CF279A3C9F0093BC4C /* BootLoader.swift in Sources */,
 				CE6FC8C9279A2BE60093BC4C /* LoggerEnum.swift in Sources */,
 				CE6FC8D927A2340A0093BC4C /* CommonError.swift in Sources */,
+				CE50B5FA27E84738007B7A4C /* ServiceIntroDetailView.swift in Sources */,
 				CE88C97E2792B279003A6C7E /* APIRequest.swift in Sources */,
 				CE04178D279BEAB400FA8520 /* LoginView.swift in Sources */,
 				CE04179127A3C47900FA8520 /* Result.swift in Sources */,
+				CE41013F27FABBDA00B3C0F8 /* StudyRoomExploreView.swift in Sources */,
 				CE041787279BC14500FA8520 /* View+Extension.swift in Sources */,
 				CE6FC8C527980CC30093BC4C /* Logger.swift in Sources */,
 			);

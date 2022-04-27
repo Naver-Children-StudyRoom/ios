@@ -9,12 +9,12 @@ import Foundation
 import Alamofire
 import SwiftyJSON
 
-open class UserManager {
-    public static let shared = UserManager()
-    
+class UserManager: ObservableObject {
     public var userInfo: UserInfo?
+    
+    @Published var loginCheck: Bool?
 
-    public func requestLoginUser(completion: @escaping ((Result<UserInfo,Error>) -> Void)) {
+    public func requestLoginUser(completion: @escaping ((Result<UserInfo, Error>) -> Void)) {
         // 여기서 로그인 api호출을 진행할 거고
     }
 }

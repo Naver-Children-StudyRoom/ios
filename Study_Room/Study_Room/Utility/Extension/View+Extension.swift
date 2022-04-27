@@ -16,3 +16,14 @@ extension View {
     }
   }
 }
+
+/// view custom hidden
+extension View {
+    @ViewBuilder func visibility(_ visibility: Bool) -> some View {
+        if visibility {
+            self
+        } else {
+            hidden()
+        }
+    }
+}

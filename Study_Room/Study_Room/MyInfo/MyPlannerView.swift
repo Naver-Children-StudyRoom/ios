@@ -1,20 +1,20 @@
 //
-//  MenuView.swift
+//  MyPlannerView.swift
 //  Study_Room
 //
-//  Created by Joo Young Kim on 2022/03/18.
+//  Created by JooYoung Kim on 2022/04/04.
 //
 
 import SwiftUI
 
-struct MenuView: View {
+struct MyPlannerView: View {
     var body: some View {
         Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
     }
 }
 
-struct MenuView_Previews: PreviewProvider {
+struct MyPlannerView_Previews: PreviewProvider {
     static var previews: some View {
-        MenuView()
+        MyPlannerView()
     }
 }
