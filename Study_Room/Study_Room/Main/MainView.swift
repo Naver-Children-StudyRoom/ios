@@ -21,52 +21,29 @@ struct MainView: View {
         GeometryReader { geometry in
             if userManager.loginCheck ?? true { // 일단 테스트 용도로 false 로 설정
                 TabView(selection: $viewModel.currentTab) {
-//                    Text("test") // TODO: 나중에 로그인 했을 때 처음에 나의 독서실 요약, 추천독서실, 마이플래너 미리보기가 구현된 View를 출력할 예정
-//                        .frame(width: geometry.size.width, height: geometry.size.height)
-//                        .tag(Tab.Home)
-                    ServiceIntroView() // 서비스 소개
-                        .frame(width: geometry.size.width, height: geometry.size.height)
-                        .tag(Tab.ServiceInfo)
-                    ServiceIntroView()  // 독서실 둘러보기
+                    
+                    StudyRoomExploreView()  // 독서실 둘러보기
                         .tag(Tab.StudyExplore)
-                    ServiceIntroView()  // 마이플래너
+                    ServiceIntroView() // 서비스 소개
+                        .tag(Tab.ServiceInfo)
+                    Text("홈 화면") // TODO: 나중에 로그인 했을 때 처음에 나의 독서실 요약, 추천독서실, 마이플래너 미리보기가 구현된 View를 출력할 예정
+                        .tag(Tab.Home)
+                    MyPlannerView()  // 마이플래너
                         .tag(Tab.Planner)
-                    Text("sdf") // 마이페이지
+                    MypageView() // 마이페이지
                         .tag(Tab.Mypage)
                 }
                 .overlay(
                     // MARK: - CUSTOM TAB BAR
                     HStack(spacing: 0) {
                         // MARK: - TAB BUTTON
-                        TabButton(Tab: .ServiceInfo)
                         TabButton(Tab: .StudyExplore)
-//                            .offset(x: -10)
-                        
-                        // MARK: CURVED BUTTON
-//                        Button {
-//
-//                        } label: {
-//                            Image("cart")
-//                                .resizable()
-//                                .renderingMode(.template)
-//                                .aspectRatio(contentMode: .fit)
-//                                .frame(width: 26, height: 26)
-//                                .offset(x: -1)
-//                                .padding(18)
-//                                .foregroundColor(Color.white)
-//                                .background(Color("Btnbg"))
-//                                .clipShape(Circle())
-//                            //MAR: - BUTTON SHADOWS
-//                                .shadow(color: Color.black.opacity(0.04), radius: 5, x: 5, y: 5)
-//                                .shadow(color: Color.black.opacity(0.04), radius: 5, x: -5, y: -5)
-//                        }
-//                        .offset(y: -30)
-                        
+                        TabButton(Tab: .ServiceInfo)
+                        TabButton(Tab: .Home)
                         TabButton(Tab: .Planner)
-//                            .offset(x: 10)
                         TabButton(Tab: .Mypage)
                     }
-                        .padding(.top, 20)
+                        .padding(EdgeInsets.init(top: 20, leading: 0.0, bottom: 20, trailing: 0.0))
                     .background(
                         Color.white
                             //.clipShape(CustomCurveShape())
@@ -74,12 +51,11 @@ struct MainView: View {
                             .shadow(color: Color.black.opacity(0.04), radius: 5, x: -5, y: -5)
                             .ignoresSafeArea(.container, edges: .bottom)
                     )
-                    //MARK: - HIDE TAB ON DETAIL VIEW
-                    //.offset(y: viewModel.showDetail ? 200 : 0)
                     , alignment: .bottom
                 )
+                .edgesIgnoringSafeArea(.bottom)
             } else {
-                ServiceIntroView() 
+                ServiceIntroView()
                     .frame(width: geometry.size.width, height: geometry.size.height)
             }
         }
