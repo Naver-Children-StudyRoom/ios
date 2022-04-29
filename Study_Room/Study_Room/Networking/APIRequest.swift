@@ -69,9 +69,10 @@ open class APIRequest {
         completion: ((Result<JSON, Error>) -> Void)?) -> DataRequest {
         let (dataRequest, sessionManagerID) = request(api: api, method: method, parameters: queryParameters, requestParameters: requestParameters, headers: headers, queue: queue, retrier: retrier)
         
-        dataRequest.responseJSON(queue: queue ?? .main) { (response: AFDataResponse<Any>) -> Void in
-            if let result = response.value, response.error == nil {
-                completion?(.success(JSON(result)))
+        dataRequest.response(queue: queue ?? .main) { (response: AFDataResponse<Data?>) -> Void in
+            if let data = response.value, response.error == nil {
+                let json = JSON(data ?? Data())
+                completion?(.success(json))
             } else {
                 let error = response.parsedError
                 recordError(response: response, method: method, queryParameters: queryParameters, requestParameters: requestParameters, error: error)

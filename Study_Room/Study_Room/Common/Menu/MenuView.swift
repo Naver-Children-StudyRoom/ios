@@ -4,7 +4,7 @@
 //
 //  Created by Joo Young Kim on 2022/03/18.
 //
-// side menu용으로 일단 임시로 만들어두기 
+// side menu용으로 일단 임시로 만들어두기
 
 import SwiftUI
 

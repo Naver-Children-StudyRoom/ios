@@ -43,7 +43,7 @@ struct LoginView: View {
 struct LoginAction: View {
     @State private var isOn = true
     @Environment(\.presentationMode) var presentationMode
-    @StateObject private var userManager: UserManager = UserManager()
+    @ObservedObject private var userManager: UserManager = UserManager()
     
     init() {
         UISwitch.appearance().onTintColor = .gray

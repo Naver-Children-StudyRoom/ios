@@ -9,8 +9,8 @@ import SwiftUI
 
 /// 메인 화면으로 쓰자
 struct MainView: View {
-    @StateObject private var userManager: UserManager = UserManager()
-    @StateObject private var viewModel: MainViewModel = MainViewModel()
+    @ObservedObject private var userManager: UserManager = UserManager()
+    @ObservedObject private var viewModel: MainViewModel = MainViewModel()
     
     // MARK: - HIDE TAB BAR
     init() {
@@ -44,14 +44,11 @@ struct MainView: View {
                         TabButton(Tab: .Mypage)
                     }
                         .padding(EdgeInsets.init(top: 20, leading: 0.0, bottom: 20, trailing: 0.0))
-                    .background(
-                        Color.white
-                            //.clipShape(CustomCurveShape())
-                            //MARK: - SHADOW
-                            .shadow(color: Color.black.opacity(0.04), radius: 5, x: -5, y: -5)
-                            .ignoresSafeArea(.container, edges: .bottom)
-                    )
-                    , alignment: .bottom
+                        .background(
+                            Color.white
+                                .ignoresSafeArea(.container, edges: .bottom)
+                        ),
+                    alignment: .bottom
                 )
                 .edgesIgnoringSafeArea(.bottom)
             } else {
