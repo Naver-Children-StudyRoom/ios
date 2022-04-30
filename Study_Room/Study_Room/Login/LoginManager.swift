@@ -1,15 +1,13 @@
 //
-//  UserManager.swift
+//  LoginManager.swift
 //  Study_Room
 //
-//  Created by Joo Young Kim on 2022/02/12.
+//  Created by JooYoung Kim on 2022/04/30.
 //
 
 import Foundation
-import Alamofire
-import SwiftyJSON
 
-class UserManager: ObservableObject {
+class LoginManager: ObservableObject {
     public var userModel: UserModel?
     
     @Published var loginCheck: Bool?

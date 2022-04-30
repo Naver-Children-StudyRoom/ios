@@ -14,9 +14,9 @@
 		CE04178D279BEAB400FA8520 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE04178C279BEAB400FA8520 /* LoginView.swift */; };
 		CE04179127A3C47900FA8520 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE04179027A3C47900FA8520 /* Result.swift */; };
 		CE04179427A4D99700FA8520 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = CE04179327A4D99700FA8520 /* Alamofire */; };
+		CE2D16C0281D4F6700CD0BCF /* LoginManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2D16BF281D4F6700CD0BCF /* LoginManager.swift */; };
 		CE396B6E27AE2137001966F9 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE396B6D27AE2136001966F9 /* Alert.swift */; };
-		CE396B7127B76908001966F9 /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE396B7027B76908001966F9 /* UserManager.swift */; };
-		CE396B7327B76930001966F9 /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE396B7227B76930001966F9 /* UserInfo.swift */; };
+		CE396B7327B76930001966F9 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE396B7227B76930001966F9 /* UserModel.swift */; };
 		CE396B7627B76A0D001966F9 /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = CE396B7527B76A0D001966F9 /* SwiftyJSON */; };
 		CE41013F27FABBDA00B3C0F8 /* StudyRoomExploreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE41013E27FABBDA00B3C0F8 /* StudyRoomExploreView.swift */; };
 		CE41014127FABBE300B3C0F8 /* MyPlannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE41014027FABBE300B3C0F8 /* MyPlannerView.swift */; };
@@ -86,9 +86,9 @@
 		CE04178C279BEAB400FA8520 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		CE04178E279BEDA700FA8520 /* info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = info.plist; sourceTree = "<group>"; };
 		CE04179027A3C47900FA8520 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		CE2D16BF281D4F6700CD0BCF /* LoginManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginManager.swift; sourceTree = "<group>"; };
 		CE396B6D27AE2136001966F9 /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
-		CE396B7027B76908001966F9 /* UserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
-		CE396B7227B76930001966F9 /* UserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
+		CE396B7227B76930001966F9 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		CE41013E27FABBDA00B3C0F8 /* StudyRoomExploreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudyRoomExploreView.swift; sourceTree = "<group>"; };
 		CE41014027FABBE300B3C0F8 /* MyPlannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPlannerView.swift; sourceTree = "<group>"; };
 		CE41014227FABBEE00B3C0F8 /* MypageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MypageView.swift; sourceTree = "<group>"; };
@@ -191,6 +191,7 @@
 			isa = PBXGroup;
 			children = (
 				CE04178C279BEAB400FA8520 /* LoginView.swift */,
+				CE2D16BF281D4F6700CD0BCF /* LoginManager.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -209,8 +210,7 @@
 		CE396B6F27B768E6001966F9 /* User */ = {
 			isa = PBXGroup;
 			children = (
-				CE396B7027B76908001966F9 /* UserManager.swift */,
-				CE396B7227B76930001966F9 /* UserInfo.swift */,
+				CE396B7227B76930001966F9 /* UserModel.swift */,
 			);
 			path = User;
 			sourceTree = "<group>";
@@ -638,7 +638,6 @@
 				CE396B6E27AE2137001966F9 /* Alert.swift in Sources */,
 				CE41014127FABBE300B3C0F8 /* MyPlannerView.swift in Sources */,
 				CE9BE8D7278F10C3009338D9 /* MainView.swift in Sources */,
-				CE396B7127B76908001966F9 /* UserManager.swift in Sources */,
 				CEF3D0FE27F17CDD00684DAA /* NavigationBarView.swift in Sources */,
 				CE50B5F827E84724007B7A4C /* ServiceIntroView.swift in Sources */,
 				CEF3D0F927ED600C00684DAA /* ServiceIntroViewModel.swift in Sources */,
@@ -652,7 +651,7 @@
 				CE6FC8E027A23CB40093BC4C /* RegexParser.swift in Sources */,
 				CEEA6ED027E44EB300C648C7 /* MenuView.swift in Sources */,
 				CE6FC8D1279A3D270093BC4C /* LoggerBootModule.swift in Sources */,
-				CE396B7327B76930001966F9 /* UserInfo.swift in Sources */,
+				CE396B7327B76930001966F9 /* UserModel.swift in Sources */,
 				CE6FC8D3279FC65D0093BC4C /* URLBuilder.swift in Sources */,
 				CE6FC8D727A22FDF0093BC4C /* Alamofire+Extension.swift in Sources */,
 				CE6FC8D527A22B710093BC4C /* String+Extension.swift in Sources */,
@@ -663,6 +662,7 @@
 				CE88C97E2792B279003A6C7E /* APIRequest.swift in Sources */,
 				CE04178D279BEAB400FA8520 /* LoginView.swift in Sources */,
 				CE04179127A3C47900FA8520 /* Result.swift in Sources */,
+				CE2D16C0281D4F6700CD0BCF /* LoginManager.swift in Sources */,
 				CE41013F27FABBDA00B3C0F8 /* StudyRoomExploreView.swift in Sources */,
 				CE041787279BC14500FA8520 /* View+Extension.swift in Sources */,
 				CE6FC8C527980CC30093BC4C /* Logger.swift in Sources */,
