@@ -14,5 +14,6 @@ class LoginViewModel: ObservableObject {
 
     public func requestLoginUser(completion: @escaping ((Result<UserModel, Error>) -> Void)) {
         // 여기서 로그인 api호출을 진행할 거고
+        // UserDefault or AppStorage -> Maybe Appstorage
     }
 }
