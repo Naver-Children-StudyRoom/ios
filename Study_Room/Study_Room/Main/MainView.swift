@@ -9,8 +9,8 @@ import SwiftUI
 
 /// 메인 화면으로 쓰자
 struct MainView: View {
-    @ObservedObject private var userManager: UserManager = UserManager()
     @ObservedObject private var viewModel: MainViewModel = MainViewModel()
+    @ObservedObject private var loginViewModel: LoginViewModel = LoginViewModel()
     
     // MARK: - HIDE TAB BAR
     init() {
@@ -19,7 +19,7 @@ struct MainView: View {
     
     var body: some View {
         GeometryReader { geometry in
-            if userManager.loginCheck ?? true { // 일단 테스트 용도로 false 로 설정
+            if loginViewModel.loginCheck ?? true { // 일단 테스트 용도로 false 로 설정
                 TabView(selection: $viewModel.currentTab) {
                     
                     StudyRoomExploreView()  // 독서실 둘러보기

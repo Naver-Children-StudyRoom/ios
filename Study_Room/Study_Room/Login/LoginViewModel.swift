@@ -7,10 +7,10 @@
 
 import Foundation
 
-class LoginManager: ObservableObject {
+class LoginViewModel: ObservableObject {
     public var userModel: UserModel?
     
-    @Published var loginCheck: Bool?
+    @Published var loginCheck: Bool? // UserDefault로 처음 실행 떄 확인할 거라서 이건 어떻게 될진 모르겠다.
 
     public func requestLoginUser(completion: @escaping ((Result<UserModel, Error>) -> Void)) {
         // 여기서 로그인 api호출을 진행할 거고

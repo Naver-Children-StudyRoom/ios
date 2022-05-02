@@ -13,6 +13,10 @@ import RxSwift
 struct LoginView: View {
     @State private var userEmail: String = ""
     @State private var userPassword: String = ""
+    @State private var isOn = true
+    @Environment(\.presentationMode) var presentationMode
+    
+    @ObservedObject private var viewModel: LoginViewModel = LoginViewModel()
     
     var body: some View {
         VStack {
@@ -34,23 +38,14 @@ struct LoginView: View {
                     .background(RoundedRectangle(cornerRadius: 10).strokeBorder())
             }
             
-            LoginAction()
-            LoginAccountManager()
+            loginAction()
+            loginAccountManager()
         }
     }
 }
 
-struct LoginAction: View {
-    @State private var isOn = true
-    @Environment(\.presentationMode) var presentationMode
-    @ObservedObject private var userManager: UserManager = UserManager()
-    
-    init() {
-        UISwitch.appearance().onTintColor = .gray
-        UISwitch.appearance().thumbTintColor = .white
-    }
-    
-    var body: some View {
+extension LoginView {
+    @ViewBuilder func loginAction() -> some View {
         HStack {
             Toggle(isOn: $isOn) {
                 Text("자동")
@@ -58,7 +53,7 @@ struct LoginAction: View {
             .frame(width: 90, height: 80)
             
             Button(action: {
-                requestLogin(userManager: userManager, completion: { result in
+                requestLogin(completion: { result in
                     switch result {
                     case .success:
                         self.presentationMode.wrappedValue.dismiss()
@@ -74,10 +69,8 @@ struct LoginAction: View {
             }
         }.padding()
     }
-}
-
-struct LoginAccountManager: View {
-    var body: some View {
+    
+    @ViewBuilder func loginAccountManager() -> some View {
         HStack(spacing: 20) {
             Button(action: {}) {
                 Text("아이디/비밀번호 찾기")
@@ -91,15 +84,18 @@ struct LoginAccountManager: View {
     }
 }
 
-private func requestLogin(userManager: UserManager, completion: @escaping (((Result<Void, Error>) -> Void))) {
-    userManager.requestLoginUser(completion: { result in
-        switch result {
-        case .success:
-            completion(.success(()))
-        case .failure(let error):
-            completion(.failure(error))
-        }
-    })
+// MARK: - func
+extension LoginView {
+    private func requestLogin(completion: @escaping (((Result<Void, Error>) -> Void))) {
+        viewModel.requestLoginUser(completion: { result in
+            switch result {
+            case .success:
+                completion(.success(()))
+            case .failure(let error):
+                completion(.failure(error))
+            }
+        })
+    }
 }
 
 struct LoginView_Previews: PreviewProvider {
