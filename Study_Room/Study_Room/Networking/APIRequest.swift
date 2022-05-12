@@ -24,37 +24,6 @@ open class APIRequest {
     ///   - headers: 헤더
     ///   - queue: completion handler가 호출될 Queue
     ///   - retrier: API 실패시 재시도 처리를 해주는 `RequestRetryHandler`
-    ///   - success: 성공 클로저
-    ///   - failure: 실패 클로저
-    /// - Returns: `DataRequest`
-    @discardableResult
-    open class func requestJSON(
-        api: String,
-        method: HTTPMethod = .get,
-        parameters queryParameters: Parameters? = nil,
-        requestParameters: Parameters? = nil,
-        headers: HTTPHeaders? = nil,
-        queue: DispatchQueue? = nil,
-        retrier: RequestInterceptor? = nil,
-        success: ((JSON) -> Void)? = nil,
-        failure: ((NSError?) -> Void)? = nil) -> DataRequest {
-        return requestJSON(api: api, method: method, parameters: queryParameters, requestParameters: requestParameters, headers: headers, queue: queue, retrier: retrier, completion: { result in
-            switch result {
-            case .success(let json): success?(json)
-            case .failure(let error): failure?(error as NSError)
-            }
-        })
-    }
-    
-    /// JSON response를 받는 API Request
-    /// - Parameters:
-    ///   - api: 사용할 API. relative path만 전달하는 경우는 `UrlBuilder`에서 api gateway 주소와 조합해서 full url을 생성합니다. (ex : "members/{memberId}/documents")
-    ///   - method: `HTTPMethod`. 기본값은 `get`
-    ///   - parameters: API URL에 추가하는 query parameter dictionary
-    ///   - requestParameters: HTTP Request body에 추가하는 parameter dictionary
-    ///   - headers: 헤더
-    ///   - queue: completion handler가 호출될 Queue
-    ///   - retrier: API 실패시 재시도 처리를 해주는 `RequestRetryHandler`
     ///   - completion: completion closure
     /// - Returns: `DataRequest`
     @discardableResult

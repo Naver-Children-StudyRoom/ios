@@ -9,8 +9,6 @@ import Foundation
 
 public class UrlBuilder {
     
-    static let consumer = "selectiveApp"
-    
     /// 현재 server phase 설정값에 기반한 API 주소를 생성하고 HMAC encryption을 한다.
     ///
     /// - Parameters:
@@ -33,7 +31,7 @@ public class UrlBuilder {
 extension UrlBuilder {
     
     fileprivate class func apiPath() -> String {
-        return "https://apis.naver.com/" + consumer + "/"
+        return "http://13.125.28.166/"
     }
     
     // 주소 앞에 /가 붙어있으면 제거한다.
