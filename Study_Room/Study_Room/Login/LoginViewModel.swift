@@ -12,8 +12,20 @@ class LoginViewModel: ObservableObject {
     
     @Published var loginCheck: Bool? // UserDefault로 처음 실행 떄 확인할 거라서 이건 어떻게 될진 모르겠다.
 
-    public func requestLoginUser(completion: @escaping ((Result<UserModel, Error>) -> Void)) {
-        // 여기서 로그인 api호출을 진행할 거고
-        // UserDefault or AppStorage -> Maybe Appstorage
+    private let networkModel = LoginNetworkModel()
+    
+    func fetchLoginUser(completion: @escaping (() -> Void)) {
+        networkModel.requestLoginUser(completion: { result in
+            switch result {
+            case .success(let user):
+                self.userModel = user
+                completion()
+            case .failure(let error):
+                debugLog("로그인 실패 : \(error.localizedDescription)")
+                return
+            }
+            completion()
+        })
     }
+    
 }

@@ -21,6 +21,8 @@ struct LoginView: View {
     var body: some View {
         VStack {
             NavigationBarView(title: "로그인")
+                .frame(height: 54)
+                .frame(maxWidth: .infinity)
             Spacer()
             HStack {
                 Image(systemName: "envelope")
@@ -53,21 +55,16 @@ extension LoginView {
             .frame(width: 90, height: 80)
             
             Button(action: {
-                requestLogin(completion: { result in
-                    switch result {
-                    case .success:
-                        self.presentationMode.wrappedValue.dismiss()
-                    case .failure(let error):
-                        debugLog("Login Api 실패 : \(error.localizedDescription)")
-                    }
-                })
+                viewModel.fetchLoginUser {
+                    presentationMode.wrappedValue.dismiss()
+                }
             }) { // api 호출
                 Text("로그인")
                     .frame(width: 80, height: 10)
                     .padding()
                     .background(RoundedRectangle(cornerRadius: 10).strokeBorder())
             }
-        }.padding()
+        }.padding(EdgeInsets.init())
     }
     
     @ViewBuilder func loginAccountManager() -> some View {
@@ -81,20 +78,6 @@ extension LoginView {
         }
         .frame(maxHeight: 250, alignment: .bottom)
         .padding()
-    }
-}
-
-// MARK: - func
-extension LoginView {
-    private func requestLogin(completion: @escaping (((Result<Void, Error>) -> Void))) {
-        viewModel.requestLoginUser(completion: { result in
-            switch result {
-            case .success:
-                completion(.success(()))
-            case .failure(let error):
-                completion(.failure(error))
-            }
-        })
     }
 }
 
