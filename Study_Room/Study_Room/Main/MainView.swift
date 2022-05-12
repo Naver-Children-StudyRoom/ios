@@ -12,9 +12,13 @@ struct MainView: View {
     @ObservedObject private var viewModel: MainViewModel = MainViewModel()
     @ObservedObject private var loginViewModel: LoginViewModel = LoginViewModel()
     
+    // 로그인 되있는지 체크
+    @AppStorage("isLogin") var isLogin: Bool = UserDefaults.standard.bool(forKey: "isLogin")
+    
     // MARK: - HIDE TAB BAR
-    init() {
+    init(isLogin: Bool) {
         UITabBar.appearance().isHidden = false
+        self.loginViewModel.loginCheck = isLogin
     }
     
     var body: some View {
@@ -106,6 +110,6 @@ struct CustomCurveShape: Shape {
 
 struct MainView_Previews: PreviewProvider {
     static var previews: some View {
-        MainView()
+        MainView(isLogin: true)
     }
 }

@@ -25,6 +25,9 @@ struct Study_RoomApp: App {
     // sceneDelegate 적용
     @Environment(\.scenePhase) private var scenePhase
     
+    // 로그인 되있는지 체크
+    @AppStorage("isLogin") var isLogin: Bool = UserDefaults.standard.bool(forKey: "isLogin")
+    
     /// 앱에서 처음에 기본 세팅해야하는 부분에 대해서 이곳에서 처리 , UIKit에서 Appdelegate 가 이부분이라고 생각하면됨
     /// 기본 configuration들을 여기서 관리하자 -> 모듈화 좋은 생각
     init() {
@@ -33,7 +36,7 @@ struct Study_RoomApp: App {
     
     var body: some Scene {
         WindowGroup {
-            MainView()
+            MainView(isLogin: isLogin)
                 .onAppear {
                     DispatchQueue.main.asyncAfter(deadline: .now() + 1.0, execute: {
                         debugLog("config 정보 로드할 부분") // 여기서 로그인 여부 판단해야함
