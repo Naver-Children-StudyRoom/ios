@@ -15,7 +15,7 @@
 		CE04179127A3C47900FA8520 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE04179027A3C47900FA8520 /* Result.swift */; };
 		CE04179427A4D99700FA8520 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = CE04179327A4D99700FA8520 /* Alamofire */; };
 		CE2D16C0281D4F6700CD0BCF /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2D16BF281D4F6700CD0BCF /* LoginViewModel.swift */; };
-		CE396B6E27AE2137001966F9 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE396B6D27AE2136001966F9 /* Alert.swift */; };
+		CE396B6E27AE2137001966F9 /* AlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE396B6D27AE2136001966F9 /* AlertView.swift */; };
 		CE396B7327B76930001966F9 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE396B7227B76930001966F9 /* UserModel.swift */; };
 		CE396B7627B76A0D001966F9 /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = CE396B7527B76A0D001966F9 /* SwiftyJSON */; };
 		CE41013F27FABBDA00B3C0F8 /* StudyRoomExploreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE41013E27FABBDA00B3C0F8 /* StudyRoomExploreView.swift */; };
@@ -26,6 +26,7 @@
 		CE50B5FA27E84738007B7A4C /* ServiceIntroDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE50B5F927E84738007B7A4C /* ServiceIntroDetailView.swift */; };
 		CE50B5FE27EB11F9007B7A4C /* SideMenuViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE50B5FD27EB11F9007B7A4C /* SideMenuViewModel.swift */; };
 		CE50B60327EC2E79007B7A4C /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE50B60227EC2E78007B7A4C /* MainViewModel.swift */; };
+		CE63050A282CF31700B6E86E /* ToastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE630509282CF31700B6E86E /* ToastView.swift */; };
 		CE6FC8C527980CC30093BC4C /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6FC8C427980CC30093BC4C /* Logger.swift */; };
 		CE6FC8C9279A2BE60093BC4C /* LoggerEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6FC8C8279A2BE60093BC4C /* LoggerEnum.swift */; };
 		CE6FC8CB279A3B6F0093BC4C /* LogRecorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6FC8CA279A3B6F0093BC4C /* LogRecorder.swift */; };
@@ -88,7 +89,7 @@
 		CE04178E279BEDA700FA8520 /* info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = info.plist; sourceTree = "<group>"; };
 		CE04179027A3C47900FA8520 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		CE2D16BF281D4F6700CD0BCF /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
-		CE396B6D27AE2136001966F9 /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
+		CE396B6D27AE2136001966F9 /* AlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertView.swift; sourceTree = "<group>"; };
 		CE396B7227B76930001966F9 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		CE41013E27FABBDA00B3C0F8 /* StudyRoomExploreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudyRoomExploreView.swift; sourceTree = "<group>"; };
 		CE41014027FABBE300B3C0F8 /* MyPlannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPlannerView.swift; sourceTree = "<group>"; };
@@ -98,6 +99,7 @@
 		CE50B5F927E84738007B7A4C /* ServiceIntroDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceIntroDetailView.swift; sourceTree = "<group>"; };
 		CE50B5FD27EB11F9007B7A4C /* SideMenuViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuViewModel.swift; sourceTree = "<group>"; };
 		CE50B60227EC2E78007B7A4C /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		CE630509282CF31700B6E86E /* ToastView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastView.swift; sourceTree = "<group>"; };
 		CE6FC8C427980CC30093BC4C /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		CE6FC8C8279A2BE60093BC4C /* LoggerEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggerEnum.swift; sourceTree = "<group>"; };
 		CE6FC8CA279A3B6F0093BC4C /* LogRecorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogRecorder.swift; sourceTree = "<group>"; };
@@ -202,10 +204,9 @@
 		CE396B6C27AE2125001966F9 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				CE630508282CF30200B6E86E /* UI */,
 				CE50B5F327E83D6B007B7A4C /* Menu */,
 				CE396B6F27B768E6001966F9 /* User */,
-				CE396B6D27AE2136001966F9 /* Alert.swift */,
-				CEF3D0FD27F17CDD00684DAA /* NavigationBarView.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -263,6 +264,16 @@
 				CEF3D0F827ED600C00684DAA /* ServiceIntroViewModel.swift */,
 			);
 			path = ServiceInfo;
+			sourceTree = "<group>";
+		};
+		CE630508282CF30200B6E86E /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				CE396B6D27AE2136001966F9 /* AlertView.swift */,
+				CEF3D0FD27F17CDD00684DAA /* NavigationBarView.swift */,
+				CE630509282CF31700B6E86E /* ToastView.swift */,
+			);
+			path = UI;
 			sourceTree = "<group>";
 		};
 		CE6FC8C327980CB60093BC4C /* Logger */ = {
@@ -637,8 +648,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE63050A282CF31700B6E86E /* ToastView.swift in Sources */,
 				CEF3D0FC27F179C700684DAA /* TutorialView.swift in Sources */,
-				CE396B6E27AE2137001966F9 /* Alert.swift in Sources */,
+				CE396B6E27AE2137001966F9 /* AlertView.swift in Sources */,
 				CE41014127FABBE300B3C0F8 /* MyPlannerView.swift in Sources */,
 				CE9BE8D7278F10C3009338D9 /* MainView.swift in Sources */,
 				CEF3D0FE27F17CDD00684DAA /* NavigationBarView.swift in Sources */,
