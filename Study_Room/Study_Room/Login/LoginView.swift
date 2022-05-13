@@ -15,6 +15,10 @@ struct LoginView: View {
     @State private var userPassword: String = ""
     @State private var isOn = true
     @Environment(\.presentationMode) var presentationMode
+    @EnvironmentObject private var currentUser: UserModel
+    
+    @State private var isToastShow = false
+    private var errorMessage: Error?
     
     @ObservedObject private var viewModel: LoginViewModel = LoginViewModel()
     
@@ -41,23 +45,27 @@ struct LoginView: View {
             }
             
             loginAction()
+            Spacer()
             loginAccountManager()
         }
+        .toast(message: viewModel.errorMessage?.localizedDescription ?? CommonError.failedToApply.localizedDescription, isShowing: $isToastShow)
     }
 }
 
 extension LoginView {
     @ViewBuilder func loginAction() -> some View {
         HStack {
-            Toggle(isOn: $isOn) {
-                Text("자동")
-            }
-            .frame(width: 90, height: 80)
-            
             Button(action: {
-                viewModel.fetchLoginUser {
-                    presentationMode.wrappedValue.dismiss()
-                }
+                viewModel.fetchLoginUser(completion: { result in
+                    switch result {
+                    case .success(let user):
+                        currentUser.setInfo(model: user)
+                        currentUser.isLogin = true
+                        presentationMode.wrappedValue.dismiss()
+                    case .failure:
+                        isToastShow = true
+                    }
+                })
             }) { // api 호출
                 Text("로그인")
                     .frame(width: 80, height: 10)
@@ -76,13 +84,14 @@ extension LoginView {
                 Text("회원가입")
             }
         }
-        .frame(maxHeight: 250, alignment: .bottom)
         .padding()
     }
 }
 
 struct LoginView_Previews: PreviewProvider {
+    @StateObject static var model: UserModel = UserModel()
     static var previews: some View {
         LoginView()
+            .environmentObject(model)
     }
 }

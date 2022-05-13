@@ -46,4 +46,11 @@ class UserModel: ObservableObject {
     func loginCheck() -> Bool {
         return isLogin ?? false
     }
+    
+    func setInfo(model: UserModel) {
+        self.email = model.email
+        self.nickname = model.nickname
+        self.accessToken = model.accessToken
+        self.refreshToken = model.refreshToken
+    }
 }
