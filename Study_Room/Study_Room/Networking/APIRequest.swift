@@ -86,7 +86,25 @@ open class APIRequest {
     }
 }
 
-// MARK:- 에러 처리
+// MARK: - Headers
+
+extension APIRequest {
+    
+    private class var userAccessToken: String { return "accessToken" }
+    
+    private class func createHeaders(with initialHeaders: HTTPHeaders?) -> HTTPHeaders {
+        var headers: HTTPHeaders = initialHeaders ?? [:]
+        
+        if let accessToken = UserDefaults.standard.string(forKey: "accessToken") { // 좀 다르게 접근하는 방법을 찾아보자.
+            // User AcessToken
+            headers[userAccessToken] = accessToken
+        }
+        
+        return headers
+    }
+}
+
+// MARK: - 에러 처리
 
 extension APIRequest {
     
