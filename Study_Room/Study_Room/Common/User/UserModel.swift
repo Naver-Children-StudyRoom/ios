@@ -8,11 +8,28 @@
 import Foundation
 import SwiftyJSON
 
-public struct UserModel: Codable {
-    public var email: String
-    public var nickname: String
-    public var accessToken: String
-    public var refreshToken: String
+class UserModel: ObservableObject {
+    var email: String
+    var nickname: String
+    var accessToken: String
+    var refreshToken: String
+    var isLogin: Bool?
+    
+    init() {
+        if UserDefaults.standard.bool(forKey: "isLogin") == true {
+            self.isLogin = true
+            self.email = UserDefaults.standard.string(forKey: "email") ?? ""
+            self.nickname = UserDefaults.standard.string(forKey: "nickname") ?? ""
+            self.accessToken = UserDefaults.standard.string(forKey: "accessToken") ?? ""
+            self.refreshToken = UserDefaults.standard.string(forKey: "refreshToken") ?? ""
+        } else {
+            self.isLogin = false
+            self.email = ""
+            self.nickname = ""
+            self.accessToken = ""
+            self.refreshToken = ""
+        }
+    }
     
     init?(json: JSON) {
         guard let email = json["email"].string,
@@ -24,5 +41,9 @@ public struct UserModel: Codable {
         self.nickname = nickname
         self.accessToken = accessToken
         self.refreshToken = refreshToken
+    }
+    
+    func loginCheck() -> Bool {
+        return isLogin ?? false
     }
 }

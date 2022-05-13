@@ -12,26 +12,23 @@ struct MainView: View {
     @ObservedObject private var viewModel: MainViewModel = MainViewModel()
     @ObservedObject private var loginViewModel: LoginViewModel = LoginViewModel()
     
-    // 로그인 되있는지 체크
-    @AppStorage("isLogin") var isLogin: Bool = UserDefaults.standard.bool(forKey: "isLogin")
+    @EnvironmentObject var currentUser: UserModel
     
     // MARK: - HIDE TAB BAR
-    init(isLogin: Bool) {
+    init() {
         UITabBar.appearance().isHidden = false
-        self.loginViewModel.loginCheck = isLogin
     }
     
     var body: some View {
         GeometryReader { geometry in
-            if loginViewModel.loginCheck ?? true { // 일단 테스트 용도로 false 로 설정
+            if currentUser.loginCheck() { // 일단 테스트 용도로 false 로 설정
                 TabView(selection: $viewModel.currentTab) {
-                    
                     StudyRoomExploreView()  // 독서실 둘러보기
                         .tag(Tab.StudyExplore)
                     ServiceIntroView() // 서비스 소개
                         .tag(Tab.ServiceInfo)
-                    Text("홈 화면") // TODO: 나중에 로그인 했을 때 처음에 나의 독서실 요약, 추천독서실, 마이플래너 미리보기가 구현된 View를 출력할 예정
-                        .tag(Tab.Home)
+                    HomeView()
+                        .tag(Tab.Home)// TODO: 나중에 로그인 했을 때 처음에 나의 독서실 요약, 추천독서실, 마이플래너 미리보기가 구현된 View를 출력할 예정
                     MyPlannerView()  // 마이플래너
                         .tag(Tab.Planner)
                     MypageView() // 마이페이지
@@ -109,7 +106,9 @@ struct CustomCurveShape: Shape {
 }
 
 struct MainView_Previews: PreviewProvider {
+    @StateObject static var currentUser: UserModel = UserModel()
     static var previews: some View {
-        MainView(isLogin: true)
+        MainView()
+            .environmentObject(currentUser)
     }
 }
