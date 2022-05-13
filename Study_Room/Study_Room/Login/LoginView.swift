@@ -11,14 +11,8 @@ import UIKit
 import RxSwift
 
 struct LoginView: View {
-    @State private var userEmail: String = ""
-    @State private var userPassword: String = ""
-    @State private var isOn = true
     @Environment(\.presentationMode) var presentationMode
     @EnvironmentObject private var currentUser: UserModel
-    
-    @State private var isToastShow = false
-    private var errorMessage: Error?
     
     @ObservedObject private var viewModel: LoginViewModel = LoginViewModel()
     
@@ -31,14 +25,14 @@ struct LoginView: View {
             HStack {
                 Image(systemName: "envelope")
                     .frame(width: 50.0, height: 50.0)
-                TextField("ID / Email", text: $userEmail)
+                TextField("ID / Email", text: $viewModel.userEmail)
                     .frame(width: 100.0, height: 10.0)
                     .padding()
                     .background(RoundedRectangle(cornerRadius: 10).strokeBorder())
             }
             HStack {
                 Image(systemName: "lock").frame(width: 50.0, height: 50.0)
-                SecureField("Password", text: $userPassword)
+                SecureField("Password", text: $viewModel.userPassword)
                     .frame(width: 100.0, height: 10.0)
                     .padding()
                     .background(RoundedRectangle(cornerRadius: 10).strokeBorder())
@@ -48,7 +42,10 @@ struct LoginView: View {
             Spacer()
             loginAccountManager()
         }
-        .toast(message: viewModel.errorMessage?.localizedDescription ?? CommonError.failedToApply.localizedDescription, isShowing: $isToastShow)
+        .toast(message: viewModel.errorMessage?.localizedDescription ?? CommonError.failedToApply.localizedDescription, isShowing: $viewModel.isToastShow)
+        .onAppear {
+            debugLog("로그인화면 진입")
+        }
     }
 }
 
@@ -63,7 +60,7 @@ extension LoginView {
                         currentUser.isLogin = true
                         presentationMode.wrappedValue.dismiss()
                     case .failure:
-                        isToastShow = true
+                        viewModel.isToastShow = true
                     }
                 })
             }) { // api 호출

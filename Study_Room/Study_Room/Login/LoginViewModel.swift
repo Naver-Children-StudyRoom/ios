@@ -9,6 +9,10 @@ import Foundation
 import SwiftyJSON
 
 class LoginViewModel: ObservableObject {
+    @Published var userEmail: String = ""
+    @Published var userPassword: String = ""
+    @Published var isToastShow: Bool = false
+    
     private let networkModel = LoginNetworkModel()
     
     var errorMessage: Error?
