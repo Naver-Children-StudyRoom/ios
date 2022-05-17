@@ -21,21 +21,11 @@ struct MainView: View {
     
     var body: some View {
         GeometryReader { geometry in
-            if currentUser.loginCheck() { // 일단 테스트 용도로 false 로 설정
-                TabView(selection: $viewModel.currentTab) {
-                    StudyRoomExploreView()  // 독서실 둘러보기
-                        .tag(Tab.StudyExplore)
-                    ServiceIntroView() // 서비스 소개
-                        .tag(Tab.ServiceInfo)
-                    HomeView()
-                        .tag(Tab.Home)// TODO: 나중에 로그인 했을 때 처음에 나의 독서실 요약, 추천독서실, 마이플래너 미리보기가 구현된 View를 출력할 예정
-                    MyPlannerView()  // 마이플래너
-                        .tag(Tab.Planner)
-                    MypageView() // 마이페이지
-                        .tag(Tab.Mypage)
-                }
-                .overlay(
-                    // MARK: - CUSTOM TAB BAR
+            if !currentUser.loginCheck() { // 일단 테스트 용도로 false 로 설정
+                VStack {
+                    MainTabView()
+                        .frame(maxHeight: geometry.size.height)
+                        .frame(width: geometry.size.width)
                     HStack(spacing: 0) {
                         // MARK: - TAB BUTTON
                         TabButton(Tab: .StudyExplore)
@@ -44,23 +34,27 @@ struct MainView: View {
                         TabButton(Tab: .Planner)
                         TabButton(Tab: .Mypage)
                     }
-                        .padding(EdgeInsets.init(top: 20, leading: 0.0, bottom: 20, trailing: 0.0))
-                        .background(
-                            Color.white
-                                .ignoresSafeArea(.container, edges: .bottom)
-                        ),
-                    alignment: .bottom
-                )
-                .edgesIgnoringSafeArea(.bottom)
+                    .padding(EdgeInsets.init(top: 20, leading: 0.0, bottom: 34, trailing: 0.0))
+                    .frame(maxWidth: .infinity)
+                    .edgesIgnoringSafeArea(.bottom)
+                    .background(
+                        Color.white
+                            .ignoresSafeArea(.container, edges: .bottom)
+                    )
+                }
+                .frame(width: geometry.size.width, height: geometry.size.height + geometry.safeAreaInsets.bottom)
             } else {
                 ServiceIntroView()
                     .frame(width: geometry.size.width, height: geometry.size.height)
             }
         }
     }
-    
+}
+
+// MARK: - func
+extension MainView {
     @ViewBuilder
-    func TabButton(Tab: Tab)-> some View {
+    func TabButton(Tab: Tab) -> some View {
         Button {
             withAnimation {
                 viewModel.currentTab = Tab
@@ -73,6 +67,23 @@ struct MainView: View {
                 .frame(width: 25, height: 25)
                 .foregroundColor(viewModel.currentTab == Tab ? Color("Btnbg") : Color.gray.opacity(0.5))
                 .frame(maxWidth: .infinity)
+        }
+    }
+    
+    @ViewBuilder
+    func MainTabView() -> some View {
+        switch viewModel.currentTab {
+        case .StudyExplore:
+            StudyRoomExploreView() // 독서실 둘러보기
+        case .ServiceInfo:
+            ServiceIntroView() // 서비스 소개
+                .environmentObject(currentUser)
+        case .Home:
+            HomeView() // TODO: 나중에 로그인 했을 때 처음에 나의 독서실 요약, 추천독서실, 마이플래너 미리보기가 구현된 View를 출력할 예정
+        case .Planner:
+            MyPlannerView()  // 마이플래너
+        case .Mypage:
+            MypageView() // 마이페이지
         }
     }
 }
