@@ -7,10 +7,6 @@
 
 import Foundation
 
-class MainViewModel: ObservableObject {
-    @Published var currentTab: Tab = .Home
-}
-
 // MARK: - TAB ITEM CASE
 enum Tab: String {
     case ServiceInfo = "serviceInfo"
@@ -18,4 +14,8 @@ enum Tab: String {
     case Planner = "planner"
     case Mypage = "mypage"
     case Home = "home"
+}
+
+class MainViewModel: ObservableObject {
+    @Published var currentTab: Tab = .Home
 }

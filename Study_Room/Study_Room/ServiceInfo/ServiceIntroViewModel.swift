@@ -12,8 +12,12 @@ class ServiceIntroViewModel: ObservableObject {
     @Published var test_models: [ServiceIntroModel] = [
         ServiceIntroModel(btnVisible: true, serviceIntro: .studyExplore),
         ServiceIntroModel(btnVisible: false, serviceIntro: .planner),
-        ServiceIntroModel(btnVisible: true, serviceIntro: .login, buttonTitle: "Login")
+        ServiceIntroModel(btnVisible: true, serviceIntro: .login, buttonTitle: "Login") // 로그인 여부 판단 후 로그인이 이미 되있다면 영역 제거
     ]
+    
+    func removeLoginArea() {
+        
+    }
 }
 
 class ServiceIntroModel: NSObject {

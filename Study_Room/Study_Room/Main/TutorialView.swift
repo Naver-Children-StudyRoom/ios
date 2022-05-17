@@ -13,11 +13,15 @@ struct TutorialView: View {
         GeometryReader { geometry in
             VStack {
                 NavigationBarView(title: "튜토리얼")
+                    .frame(height: 54)
                 Spacer()
                 Text(tutorialTopic?.description ?? "")
                 Spacer()
             }
             .frame(width: geometry.size.width)
+        }
+        .onAppear {
+            debugLog("서비스 소개 화면 진입")
         }
     }
 }

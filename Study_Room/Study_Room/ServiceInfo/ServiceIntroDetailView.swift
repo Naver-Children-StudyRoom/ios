@@ -23,7 +23,6 @@ struct ServiceIntroDetailView: View {
                         .frame(width: geometry.size.width / 2, height: geometry.size.height / 2)
                     Button {
                         isPresented.toggle()
-                        debugLog("서비스 소개로 이동")
                     } label: {
                         Text(model?.buttonTitle ?? "")
                             .fontWeight(.bold)
@@ -38,9 +37,13 @@ struct ServiceIntroDetailView: View {
                     .visibility(model?.btnVisible ?? true)
                     .fullScreenCover(isPresented: $isPresented) {
                         if model?.serviceIntro == .login {
-                            LoginView()
+                            withAnimation {
+                                LoginView()
+                            }
                         } else {
-                            TutorialView(tutorialTopic: model?.serviceIntro)
+                            withAnimation {
+                                TutorialView(tutorialTopic: model?.serviceIntro)
+                            }
                         }
                     }
                 }
