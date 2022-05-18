@@ -81,7 +81,7 @@ extension MainView {
         case .Home:
             HomeView() // TODO: 나중에 로그인 했을 때 처음에 나의 독서실 요약, 추천독서실, 마이플래너 미리보기가 구현된 View를 출력할 예정
         case .Planner:
-            MyPlannerView()  // 마이플래너
+            MyPlannerView() // 마이플래너
         case .Mypage:
             MypageView() // 마이페이지
         }
