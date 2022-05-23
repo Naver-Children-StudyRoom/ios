@@ -17,3 +17,5 @@
 - Alamofire
 - SwiftLint 
 - RxSwift 
+- Introspect 
+- Lottie

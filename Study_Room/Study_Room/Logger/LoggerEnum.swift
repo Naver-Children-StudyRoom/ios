@@ -24,4 +24,7 @@ public enum ErrorType: String {
     case nclicks
     case hardware
     case alert
+    
+    // MARK: API
+    case apiFail
 }

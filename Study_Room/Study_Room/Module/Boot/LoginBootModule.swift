@@ -9,7 +9,7 @@ import Foundation
 import NaverThirdPartyLogin
 
 class LoginBootModule: BootLoaderProtocol {
-    
+    /// 로그인 관련 로드 모듈
     class func loadModule() {
         let instance = NaverThirdPartyLoginConnection.getSharedInstance()
         ///  네이버앱으로 로그인
