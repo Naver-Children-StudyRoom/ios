@@ -90,7 +90,7 @@ open class APIRequest {
 
 extension APIRequest {
     
-    private class var userAccessToken: String { return "accessToken" }
+    private class var userAccessToken: String { return "Authorization" }
     
     private class func createHeaders(with initialHeaders: HTTPHeaders?) -> HTTPHeaders {
         var headers: HTTPHeaders = initialHeaders ?? [:]

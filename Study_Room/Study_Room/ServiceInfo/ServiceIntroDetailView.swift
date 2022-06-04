@@ -38,7 +38,7 @@ struct ServiceIntroDetailView: View {
                     .fullScreenCover(isPresented: $isPresented) {
                         if model?.serviceIntro == .login {
                             withAnimation {
-                                LoginView()
+                                LoginView(isShow: $isPresented)
                             }
                         } else {
                             withAnimation {

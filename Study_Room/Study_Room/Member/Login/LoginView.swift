@@ -16,35 +16,40 @@ struct LoginView: View {
     
     @ObservedObject private var viewModel: LoginViewModel = LoginViewModel()
     
+    @Binding var isShow: Bool
+    
     var body: some View {
-        VStack {
-            NavigationBarView(title: "로그인")
-                .frame(height: 54)
-                .frame(maxWidth: .infinity)
-            Spacer()
-            HStack {
-                Image(systemName: "envelope")
-                    .frame(width: 50.0, height: 50.0)
-                TextField("ID / Email", text: $viewModel.userEmail)
-                    .frame(width: 100.0, height: 10.0)
-                    .padding()
-                    .background(RoundedRectangle(cornerRadius: 10).strokeBorder())
+        NavigationView {
+            VStack {
+                NavigationBarView(isShow: $isShow, title: "로그인")
+                    .frame(height: 54)
+                    .frame(maxWidth: .infinity)
+                Spacer()
+                HStack {
+                    Image(systemName: "envelope")
+                        .frame(width: 50.0, height: 50.0)
+                    TextField("ID / Email", text: $viewModel.userEmail)
+                        .frame(width: 100.0, height: 10.0)
+                        .padding()
+                        .background(RoundedRectangle(cornerRadius: 10).strokeBorder())
+                }
+                HStack {
+                    Image(systemName: "lock").frame(width: 50.0, height: 50.0)
+                    SecureField("Password", text: $viewModel.userPassword)
+                        .frame(width: 100.0, height: 10.0)
+                        .padding()
+                        .background(RoundedRectangle(cornerRadius: 10).strokeBorder())
+                }
+                
+                loginAction()
+                Spacer()
+                loginAccountManager()
             }
-            HStack {
-                Image(systemName: "lock").frame(width: 50.0, height: 50.0)
-                SecureField("Password", text: $viewModel.userPassword)
-                    .frame(width: 100.0, height: 10.0)
-                    .padding()
-                    .background(RoundedRectangle(cornerRadius: 10).strokeBorder())
+            .navigationBarHidden(true)
+            .toast(message: viewModel.errorMessage?.localizedDescription ?? CommonError.failedToApply.localizedDescription, isShowing: $viewModel.isToastShow)
+            .onAppear {
+                debugLog("로그인화면 진입")
             }
-            
-            loginAction()
-            Spacer()
-            loginAccountManager()
-        }
-        .toast(message: viewModel.errorMessage?.localizedDescription ?? CommonError.failedToApply.localizedDescription, isShowing: $viewModel.isToastShow)
-        .onAppear {
-            debugLog("로그인화면 진입")
         }
     }
 }
@@ -59,6 +64,7 @@ extension LoginView {
                         currentUser.setInfo(model: user)
                         currentUser.isLogin = true
                         presentationMode.wrappedValue.dismiss()
+                        isShow = false
                     case .failure:
                         viewModel.isToastShow = true
                     }
@@ -77,7 +83,9 @@ extension LoginView {
             Button(action: {}) {
                 Text("아이디/비밀번호 찾기")
             }
-            Button(action: {}) {
+            NavigationLink {
+                SignupView()
+            } label: {
                 Text("회원가입")
             }
         }
@@ -88,7 +96,7 @@ extension LoginView {
 struct LoginView_Previews: PreviewProvider {
     @StateObject static var model: UserModel = UserModel()
     static var previews: some View {
-        LoginView()
+        LoginView(isShow: .constant(false))
             .environmentObject(model)
     }
 }

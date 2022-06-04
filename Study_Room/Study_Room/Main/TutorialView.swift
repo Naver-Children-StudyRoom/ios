@@ -9,10 +9,13 @@ import SwiftUI
 
 struct TutorialView: View {
     let tutorialTopic: ServiceIntro?
+    
+    @State var isShow: Bool = false
+    
     var body: some View {
         GeometryReader { geometry in
             VStack {
-                NavigationBarView(title: "튜토리얼")
+                NavigationBarView(isShow: $isShow, title: "튜토리얼")
                     .frame(height: 54)
                 Spacer()
                 Text(tutorialTopic?.description ?? "")

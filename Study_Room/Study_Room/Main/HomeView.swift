@@ -12,11 +12,13 @@ struct HomeView: View {
     
     var body: some View {
         Button(action: {
-            isLoginView.toggle()
+            isLoginView = true
         }, label: {
             Text("테스트로 로그인 화면 진입")
         })
-        .fullScreenCover(isPresented: $isLoginView, content: LoginView.init) 
+        .fullScreenCover(isPresented: $isLoginView) {
+            LoginView(isShow: $isLoginView)
+        }
     }
 }
 

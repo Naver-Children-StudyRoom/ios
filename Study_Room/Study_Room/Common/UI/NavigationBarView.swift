@@ -11,6 +11,8 @@ import SwiftUI
 struct NavigationBarView: View {
     @Environment(\.presentationMode) var presentationMode
     
+    @Binding var isShow: Bool
+    
     /// 헤더 타이틀
     var title: String
     
@@ -18,6 +20,7 @@ struct NavigationBarView: View {
         ZStack(alignment: .leading) {
             Button(action: {
                 withAnimation {
+                    isShow = false
                     presentationMode.wrappedValue.dismiss()
                 }
             }, label: {
@@ -57,7 +60,7 @@ struct NavigationBarView_Previews: PreviewProvider {
     static var previews: some View {
         GeometryReader { proxy in
             VStack(alignment: .leading) {
-                NavigationBarView(title: "알림")
+                NavigationBarView(isShow: .constant(false), title: "알림")
             }
             .frame(width: proxy.size.width, alignment: .leading)
         }
