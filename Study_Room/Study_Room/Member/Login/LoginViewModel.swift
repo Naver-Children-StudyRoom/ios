@@ -18,7 +18,7 @@ class LoginViewModel: ObservableObject {
     var errorMessage: Error?
     
     func fetchLoginUser(completion: @escaping ((Result<UserModel, Error>) -> Void)) {
-        networkModel.requestLoginUser(completion: { [weak self] result in
+        networkModel.requestLoginUser(userEmail: userEmail, userPassword: userPassword, completion: { [weak self] result in
             switch result {
             case .success(let user):
                 completion(.success((user)))

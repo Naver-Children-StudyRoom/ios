@@ -12,8 +12,8 @@ class UserModel: ObservableObject {
     var email: String
     var nickname: String
     var accessToken: String
-    var refreshToken: String
     var isLogin: Bool?
+    var profileImageUri: String
     
     init() {
         if UserDefaults.standard.bool(forKey: "isLogin") == true {
@@ -21,13 +21,13 @@ class UserModel: ObservableObject {
             self.email = UserDefaults.standard.string(forKey: "email") ?? ""
             self.nickname = UserDefaults.standard.string(forKey: "nickname") ?? ""
             self.accessToken = UserDefaults.standard.string(forKey: "accessToken") ?? ""
-            self.refreshToken = UserDefaults.standard.string(forKey: "refreshToken") ?? ""
+            self.profileImageUri = UserDefaults.standard.string(forKey: "profileImageUri") ?? ""
         } else {
             self.isLogin = false
             self.email = ""
             self.nickname = ""
             self.accessToken = ""
-            self.refreshToken = ""
+            self.profileImageUri = ""
         }
     }
     
@@ -35,12 +35,12 @@ class UserModel: ObservableObject {
         guard let email = json["email"].string,
               let nickname = json["nickname"].string,
               let accessToken = json["accessToken"].string,
-              let refreshToken = json["refreshToken"].string else { return nil }
+              let profileImageUri = json["profileImageUri"].string else { return nil }
         
         self.email = email
         self.nickname = nickname
         self.accessToken = accessToken
-        self.refreshToken = refreshToken
+        self.profileImageUri = profileImageUri
     }
     
     func loginCheck() -> Bool {
@@ -51,6 +51,6 @@ class UserModel: ObservableObject {
         self.email = model.email
         self.nickname = model.nickname
         self.accessToken = model.accessToken
-        self.refreshToken = model.refreshToken
+        self.profileImageUri = model.profileImageUri
     }
 }

@@ -79,7 +79,7 @@ open class APIRequest {
         let sessionManagerID = UUID().uuidString
         shared.add(sessionManager: sessionManager, id: sessionManagerID)
         
-        let encoding: ParameterEncoding = URLEncoding.default
+        let encoding: ParameterEncoding = requestParameters == nil ? URLEncoding.default : JSONEncoding.default
             
         let dataRequest = sessionManager.request(url, method: method, parameters: requestParameters, encoding: encoding, headers: headers).validate()
         return (dataRequest, sessionManagerID)
@@ -97,6 +97,7 @@ extension APIRequest {
         
         if let accessToken = UserDefaults.standard.string(forKey: "accessToken") { // 좀 다르게 접근하는 방법을 찾아보자.
             // User AcessToken
+            debugLog("현재 저장되있는 accessToken은 다음과 같습니다. -> \(accessToken)")
             headers[userAccessToken] = accessToken
         }
         
