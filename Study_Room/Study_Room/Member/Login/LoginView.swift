@@ -85,6 +85,7 @@ extension LoginView {
             }
             NavigationLink {
                 SignupView()
+                    .navigationBarHidden(true)
             } label: {
                 Text("회원가입")
             }
