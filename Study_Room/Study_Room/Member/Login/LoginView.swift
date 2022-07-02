@@ -12,7 +12,7 @@ import RxSwift
 
 struct LoginView: View {
     @Environment(\.presentationMode) var presentationMode
-    @EnvironmentObject private var currentUser: UserModel
+    @EnvironmentObject var currentUser: UserModel
     
     @ObservedObject private var viewModel: LoginViewModel = LoginViewModel()
     

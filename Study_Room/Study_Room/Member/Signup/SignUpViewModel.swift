@@ -15,9 +15,14 @@ class SignUpViewModel: ObservableObject {
     
     private var networkModel = SignUpNetworkModel()
     
-    func requestSignUpUser() {
-        networkModel.requestSignUpUser(userEmail: userEmail, userPassword: userPassword, userName: userName, completion: { [weak self] result in
-            
+    func requestSignUpUser(completion: @escaping ((UserModel) -> Void)) {
+        networkModel.requestSignUpUser(userEmail: userEmail, userPassword: userPassword, userName: userName, completion: { result in
+            switch result {
+            case .success(let userModel):
+                completion(userModel)
+            case .failure(let error):
+                debugLog("회원가입 실패 error: \(error)")
+            }
         })
     }
 }

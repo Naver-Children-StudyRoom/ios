@@ -9,7 +9,7 @@ import Foundation
 
 class SignUpNetworkModel {
     func requestSignUpUser(userEmail: String, userPassword: String, userName: String, completion: @escaping ((Result<UserModel, Error>) -> Void)) {
-        validEmailCheck(email: userEmail, completion: { [weak self] result in
+        validEmailCheck(email: userEmail, completion: { result in
             switch result {
             case .success(let emailReceiveYn):
                 
@@ -23,8 +23,14 @@ class SignUpNetworkModel {
                     "emailReceiveYn" : emailReceiveYn
                 ]
                 
-                APIRequest.requestJSON(api: api, method: .post, requestParameters: param, completion: { [weak self] result in
-                    
+                APIRequest.requestJSON(api: api, method: .post, requestParameters: param, completion: { result in
+                    switch result {
+                    case .success(let json):
+                        guard let userModel = UserModel(json: json) else { completion(.failure(CommonError.failedToFetch)); return }
+                        completion(.success(userModel))
+                    case .failure(let error):
+                        completion(.failure(error))
+                    }
                 })
                 
                 return

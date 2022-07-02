@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct SignupView: View {
+    @EnvironmentObject var currentUser: UserModel
+    
     @ObservedObject var viewModel: SignUpViewModel = SignUpViewModel()
     var body: some View {
         VStack {
@@ -37,7 +39,9 @@ struct SignupView: View {
                     .background(RoundedRectangle(cornerRadius: 10).strokeBorder())
             }
             Button {
-                viewModel.requestSignUpUser()
+                viewModel.requestSignUpUser(completion: { userModel in
+                    currentUser.setInfo(model: userModel)
+                })
                 debugLog("회원가입")
             } label: {
                 Text("회원가입")
@@ -49,7 +53,9 @@ struct SignupView: View {
 }
 
 struct SignupView_Previews: PreviewProvider {
+    @StateObject static var model: UserModel = UserModel()
     static var previews: some View {
         SignupView()
+            .environmentObject(model)
     }
 }
