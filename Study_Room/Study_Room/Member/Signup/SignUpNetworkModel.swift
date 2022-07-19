@@ -11,16 +11,16 @@ class SignUpNetworkModel {
     func requestSignUpUser(userEmail: String, userPassword: String, userName: String, completion: @escaping ((Result<UserModel, Error>) -> Void)) {
         validEmailCheck(email: userEmail, completion: { result in
             switch result {
-            case .success(let emailReceiveYn):
+            case .success:
                 
-                debugLog("이메일 중복 여부 : \(emailReceiveYn)")
+                debugLog("이메일 검증 성공")
                 let api = "signup"
                 
                 let param: [String: Any] = [
                     "email": userEmail,
                     "password": userPassword,
                     "name": userName,
-                    "emailReceiveYn" : emailReceiveYn
+                    "emailReceiveYn": true
                 ]
                 
                 APIRequest.requestJSON(api: api, method: .post, requestParameters: param, completion: { result in
@@ -50,8 +50,26 @@ class SignUpNetworkModel {
         
         APIRequest.requestJSON(api: api, parameters: param, completion: { result in
             switch result {
-            case .success(let value):
-                completion(.success(value["value"].bool ?? false))
+            case .success(let json):
+                completion(.success(json.bool ?? false))
+            case .failure(let error):
+                completion(.failure(error))
+            }
+        })
+    }
+    
+    func verifyEmailCheck(email: String, confirmKey: String, completion: @escaping ((Result<Void, Error>) -> Void)) {
+        let api = "verify-email"
+        
+        let param: [String: Any] = [
+            "email": email,
+            "key": confirmKey
+        ]
+        
+        APIRequest.requestJSON(api: api, parameters: param, completion: { result in
+            switch result {
+            case .success:
+                completion(.success(()))
             case .failure(let error):
                 completion(.failure(error))
             }
