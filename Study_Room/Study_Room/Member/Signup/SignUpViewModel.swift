@@ -11,7 +11,7 @@ class SignUpViewModel: ObservableObject {
     @Published var userEmail: String = "" {
         didSet {
             guard oldValue != userEmail else { return }
-            startSearchProductTimer()
+            startValidEmailTimer()
         }
     }
     @Published var userPassword: String = ""
@@ -30,7 +30,7 @@ class SignUpViewModel: ObservableObject {
     var errorMessage: Error?
     
     deinit {
-        stopSearchProductTimer()
+        stopValidEmailTimer()
     }
     
     func requestSignUpUser(completion: @escaping ((UserModel) -> Void)) {
@@ -47,6 +47,7 @@ class SignUpViewModel: ObservableObject {
     }
     
     func requestValidEmail() {
+        stopValidEmailTimer()
         
         networkModel.validEmailCheck(email: userEmail, completion: { [weak self] result in
             switch result {
@@ -80,18 +81,18 @@ class SignUpViewModel: ObservableObject {
 
 // MARK: - Timer
 extension SignUpViewModel {
-    private var timerDelay: Double { return 0.5 }
+    private var timerDelay: Double { return 1.0 }
     
     // 상품명 텍스트를 입력하면 약간의 딜레이 후 fetchProduct API 호출
-    private func startSearchProductTimer() {
-        stopSearchProductTimer()
+    private func startValidEmailTimer() {
+        stopValidEmailTimer()
         
         validEmailTimer = Timer.scheduledTimer(withTimeInterval: timerDelay, repeats: false, block: { [weak self] _ in
             self?.requestValidEmail()
         })
     }
     
-    private func stopSearchProductTimer() {
+    private func stopValidEmailTimer() {
         validEmailTimer?.invalidate()
         validEmailTimer = nil
     }
